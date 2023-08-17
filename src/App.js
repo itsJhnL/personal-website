@@ -5,13 +5,13 @@ import About from "./Pages/About";
 import Projects from "./Pages/Projects";
 import Experience from "./Pages/Experience";
 import Contact from "./Pages/Contact";
-import NavBar from "./components/NavBar";
 import Home from "./Pages/Home";
+import Main from "./components/Main";
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
+      <Main />
       <Routes>
         <Route exact path="/Home" element={<Home />}></Route>
         <Route exact path="/About" element={<About />}></Route>

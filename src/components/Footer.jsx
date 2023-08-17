@@ -1,50 +1,12 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 
-function Main() {
+function Footer() {
   return (
-    <div className="flex flex-row items-center justify-between max-w-6xl mx-auto px-4 py-14 md:pb-40">
-      <div className="text-xl font-black">
-        <NavLink to="/Home">JanggoDev</NavLink>
+    <div className="flex items-center justify-between max-w-6xl mx-auto border-solid border-t-4 border-gray-200">
+      <div className="p-10">
+        <h1>John Leo Bruno.</h1>
       </div>
-      <div className="text-base text-gray-600 font-normal">
-        {/* Navbar */}
-        <ul className="flex space-x-12">
-          <li>
-            <NavLink
-              to="/About"
-              className="focus:text-gray-900 focus:font-bold"
-            >
-              About
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/Projects"
-              className="focus:text-gray-900 focus:font-bold"
-            >
-              Projects
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/Experience"
-              className="focus:text-gray-900 focus:font-bold"
-            >
-              Experience
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/Contact"
-              className="focus:text-gray-900 focus:font-bold"
-            >
-              Contact
-            </NavLink>
-          </li>
-        </ul>
-      </div>
-      <div className="text-2xl">
+      <div className="p-10 text-2xl">
         {/* Socials */}
         <ul className="flex flex-row items-center space-x-4">
           <li>
@@ -89,13 +51,10 @@ function Main() {
               </svg>
             </a>
           </li>
-          <li>
-            <button>LD</button>
-          </li>
         </ul>
       </div>
     </div>
   );
 }
 
-export default Main;
+export default Footer;

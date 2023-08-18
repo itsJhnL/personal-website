@@ -5,15 +5,17 @@ import About from "./Pages/About";
 import Projects from "./Pages/Projects";
 import Experience from "./Pages/Experience";
 import Contact from "./Pages/Contact";
-import Home from "./Pages/Home";
-import Main from "./components/Main";
+import Home from "./components/HomePage";
+import NavBar from "./components/NavBar";
+import HomePage from "./components/HomePage";
 
 function App() {
   return (
     <div className="App">
-      <Main />
+      <NavBar />
+      {/* <HomePage /> */}
       <Routes>
-        <Route exact path="/Home" element={<Home />}></Route>
+        <Route exact path="/" element={<Home />}></Route>
         <Route exact path="/About" element={<About />}></Route>
         <Route exact path="/Projects" element={<Projects />}></Route>
         <Route exact path="/Experience" element={<Experience />}></Route>

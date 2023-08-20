@@ -15,6 +15,7 @@ function Main() {
         >
           About
         </NavLink>
+        <NavLink to="/Services" className="text-base text-gray-600 font-normal focus-within:text-[#a3262e] focus-within:font-bold focus:text-lg">Services</NavLink>
         <NavLink
           to="/Projects"
           className="text-base text-gray-600 font-normal focus:text-[#a3262e] focus:font-bold focus:text-lg"

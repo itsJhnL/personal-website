@@ -6,26 +6,62 @@ function About() {
   return (
     <div className="bg-[#f1f1f1]">
       <div className="flex flex-col items-center justify-center">
-        <div className="relative fixed text-9xl font-bold">
-          <h1>About</h1>
-        </div>
-        <div className="grid grid-cols-2 gap-7 max-w-6xl mx-auto px-4 pt-36">
+        <header className="relative fixed text-6xl font-bold pt-4">
+          <p>About</p>
+        </header>
+        <div className="grid grid-cols-2 gap-7 max-w-6xl mx-auto py-24">
           <div className="mb-5">
-            <sup className="underline underline-offset-4 decoration-[#a3262e]">Introduce</sup>
+            <sup className="underline underline-offset-4 decoration-[#a3262e]">
+              Introduce
+            </sup>
             <h1 className="text-3xl mb-3">
-              Hi! I'm{" "}<span className="font-semibold text-[#a3262e]">John Leo Bruno</span>
+              Hi! I'm{" "}
+              <span className="font-semibold text-[#a3262e]">
+                John Leo Bruno
+              </span>
             </h1>
             <p className="mb-5 text-justify text-gray-700">
-              An aspiring <span className="font-bold underline underline-offset-4 decoration-[#a3262e]">Web Developer</span> based in philippines. Since
-              the beginning of my journey as a front end eng'r, I've done so
-              many work I created successful responsive website that are fast,
-              easy to use, and built with best practices. I'm quietly confident,
-              naturally curious, and perpetually working on improving my chops
-              one problem at a time.
+              An aspiring{" "}
+              <span className="font-bold underline underline-offset-4 decoration-[#a3262e]">
+                Web Developer
+              </span>{" "}
+              based in philippines. Since the beginning of my journey as a front
+              end eng'r, I've done so many work I created successful responsive
+              website that are fast, easy to use, and built with best practices.
+              I'm quietly confident, naturally curious, and perpetually working
+              on improving my chops one problem at a time.
+            </p>
+            <p className="mb-5 text-justify text-gray-700">
+              When I'm not writing code, I clean my workspace to create a good
+              environment around me. Sometimes, I design things from scratch,
+              and I enjoy sharing my knowledge about web development through
+              blogs or short videos on{" "}
+              <a
+                href="https://www.tiktok.com/@janggodev"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <b className="underline underline-offset-4 decoration-[#a3262e]">
+                  TikTok
+                </b>
+              </a>{" "}
+              and{" "}
+              <a
+                href="https://medium.com/@johnleobruno"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <b className="underline underline-offset-4 decoration-[#a3262e]">
+                  Medium
+                </b>
+              </a>
+              .
             </p>
             <div className="pt-4">
               {/* Tech Stacks */}
-              <sup className="underline underline-offset-4 decoration-[#a3262e]">Technology Stack</sup>
+              <sup className="underline underline-offset-4 decoration-[#a3262e]">
+                Technology Stack
+              </sup>
               <div className="grid grid-cols-4 gap-4">
                 <div className="relative hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i>
@@ -678,7 +714,9 @@ function About() {
             </div>
           </div>
           <div>
-            <sup className="underline underline-offset-4 decoration-[#a3262e]">Main Skills</sup>
+            <sup className="underline underline-offset-4 decoration-[#a3262e]">
+              Main Skills
+            </sup>
             <div className="relative hover:scale-105 ease-out duration-500 bg-white p-5 mb-2 rounded-md">
               <div className="flex items-center justify-between font-semibold">
                 <h1 className="text-[#a3262e]">Web Development</h1>
@@ -704,7 +742,9 @@ function About() {
             </div>
             <div className="relative hover:scale-105 ease-out duration-500 bg-white p-5 mb-5  rounded-md">
               <div className="flex items-center justify-between font-semibold">
-                <h1 className="text-[#a3262e]">Web and User Interface Design</h1>
+                <h1 className="text-[#a3262e]">
+                  Web and User Interface Design
+                </h1>
                 <div className="SVG">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -724,7 +764,9 @@ function About() {
                 Websites, User Experience, Visual Design
               </small>
             </div>
-            <sup className="underline underline-offset-4 decoration-[#a3262e]">Educations</sup>
+            <sup className="underline underline-offset-4 decoration-[#a3262e]">
+              Educations
+            </sup>
             <div className="relative hover:scale-105 ease-out duration-500 bg-white p-5  rounded-md">
               <div className="flex items-center justify-between font-semibold">
                 <h1 className="text-[#a3262e]">BS in Information Technology</h1>

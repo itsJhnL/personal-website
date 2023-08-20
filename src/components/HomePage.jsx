@@ -2,6 +2,7 @@ import React from "react";
 import Janggo from "../assets/images/Janggo.png";
 import bg from "../assets/images/bg.png";
 import { NavLink } from "react-router-dom";
+import Footer from "./Footer";
 
 export default function HomePage() {
   return (
@@ -59,11 +60,24 @@ export default function HomePage() {
         </div>
       </div>
       <div className="bg-[#f1f1f1]">
-        <div className="flex items-center justify-center">
-          <div className="grid grid-col-2 gap-4 max-w-6xl py-11">
-            <h1>Recent Projects</h1>
+        <div className="flex flex-col items-center justify-center max-w-6xl mx-auto mb-5">
+          <div className="relative fixed text-9xl font-bold max-w-6xl mx-auto pt-4">
+            <h1 className="text-6xl font-bold my-36">Recent Projects</h1>
+          </div>
+          <p>Carousell</p>
+          <div className="grid grid-cols-3 gap-4 max-w-6xl">
+            <div>
+              <h1>project 1</h1>
+            </div>
+            <div>
+              <h1>project 2</h1>
+            </div>
+            <div>
+              <h1>project 3</h1>
+            </div>
           </div>
         </div>
+        <Footer />
       </div>
     </div>
   );

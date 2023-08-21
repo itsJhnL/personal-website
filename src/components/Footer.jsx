@@ -3,8 +3,17 @@ import React from "react";
 function Footer() {
   return (
     <div className="flex items-center justify-between max-w-6xl mx-auto border-solid border-t-2 border-[#a3262e]">
-      <div className="p-10 font-medium">
-        <h1 className="font-bold text-[#a3262e]">John Leo Bruno.</h1>
+      <div className="flex flex-row p-10 font-medium">
+        {/* <p>
+          &copy;{" "}
+          <span className="font-bold text-[#a3262e]">John Leo Bruno</span>{" "}
+          2023. All Rights Reserved
+        </p> */}
+        <p>
+          &copy;{" "}
+          <span className="font-bold text-[#a3262e]">JanggoDev</span>{" "}
+          2023. All Rights Reserved
+        </p>
       </div>
       <div className="p-10 text-2xl">
         {/* Socials */}

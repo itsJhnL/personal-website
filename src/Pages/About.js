@@ -6,10 +6,10 @@ function About() {
   return (
     <div className="bg-[#f1f1f1]">
       <div className="flex flex-col items-center justify-center">
-        <header className="relative fixed text-6xl font-bold pt-4">
-          <p>About</p>
+        <header className="relative fixed text-6xl font-bold max-w-6xl mx-auto py-24">
+          <p className="underline underline-offset-4 decoration-2 decoration-[#a3262e] text-gray-700">About</p>
         </header>
-        <div className="grid grid-cols-2 gap-7 max-w-6xl mx-auto py-24">
+        <div className="grid grid-cols-2 gap-7 max-w-6xl mx-auto pb-24 p-4">
           <div className="mb-5">
             <sup className="underline underline-offset-4 decoration-[#a3262e]">
               Introduce
@@ -25,17 +25,18 @@ function About() {
               <span className="font-bold underline underline-offset-4 decoration-[#a3262e]">
                 Web Developer
               </span>{" "}
-              based in philippines. Since the beginning of my journey as a front
-              end eng'r, I've done so many work I created successful responsive
-              website that are fast, easy to use, and built with best practices.
-              I'm quietly confident, naturally curious, and perpetually working
-              on improving my chops one problem at a time.
+              based in philippines. Since I started my journey as a front-end
+              developer, I've worked on many personal projects, crafting
+              responsive websites that are both fast and user-friendly while
+              following best practices. I have a quiet confidence, a natural
+              curiosity, and I'm always working to improve my skills and
+              constantly working on getting better at solving problems.
             </p>
             <p className="mb-5 text-justify text-gray-700">
-              When I'm not writing code, I clean my workspace to create a good
-              environment around me. Sometimes, I design things from scratch,
-              and I enjoy sharing my knowledge about web development through
-              blogs or short videos on{" "}
+              When I'm not writing code, I tidy up my workspace to create a
+              conducive environment. At times, I engage in designing from
+              scratch, and I derive pleasure from sharing my web development
+              expertise through blogs and short videos on platforms like{" "}
               <a
                 href="https://www.tiktok.com/@janggodev"
                 target="_blank"
@@ -654,7 +655,7 @@ function About() {
                   </i>
                   <small>Figma</small>
                 </div>
-                <div className="relative hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
+                {/* <div className="relative hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -669,7 +670,7 @@ function About() {
                     </svg>
                   </i>
                   <small>Git</small>
-                </div>
+                </div> */}
                 <div className="relative hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i>
                     <svg
@@ -736,8 +737,8 @@ function About() {
               </div>
 
               <small className="text-gray-700">
-                Build websites and web apps using javascript and it's
-                frameworks.
+                Developing websites and web applications using JavaScript and
+                its frameworks.
               </small>
             </div>
             <div className="relative hover:scale-105 ease-out duration-500 bg-white p-5 mb-5  rounded-md">
@@ -750,22 +751,22 @@ function About() {
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
-                    viewBox="0 0 24 24"
+                    viewBox="0 0 16 16"
                   >
                     <path
                       fill="#a3262e"
-                      d="M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25m19.61 1.11l-4.25 4.25l-5.2-5.2l1.77-1.77l1 1l2.47-2.48l1.42 1.42L18.36 17l1.06 1l1.42-1.4l1.77 1.76m-16-7.53L1.39 5.64l4.25-4.25L7.4 3.16L4.93 5.64L6 6.7l2.46-2.48l1.42 1.42l-1.42 1.41l1 1l-2.85 2.78M20.71 7c.39-.39.39-1 0-1.41l-2.34-2.3c-.37-.39-1.02-.39-1.41 0l-1.84 1.83l3.75 3.75L20.71 7Z"
+                      d="M7.5 3.5c-.56 0-1.083.153-1.53.42a3.398 3.398 0 0 0-.48-1.448A4.5 4.5 0 0 1 11.973 6h1.278c.966 0 1.75.784 1.75 1.75v4.5A1.75 1.75 0 0 1 13.25 14h-4.5A1.75 1.75 0 0 1 7 12.25v-1.277a4.474 4.474 0 0 1-1.016-.235c.01-.236.016-.482.016-.738v-.08c0-.24 0-.523-.01-.827A2.98 2.98 0 0 0 7 9.46V7.75C7 6.784 7.784 6 8.75 6h1.709A3 3 0 0 0 7.5 3.5Zm4.389 4A4.507 4.507 0 0 1 8.5 10.889v1.361c0 .138.112.25.25.25h4.5a.25.25 0 0 0 .25-.25v-4.5a.25.25 0 0 0-.25-.25h-1.361Zm-1.56 0H8.75a.25.25 0 0 0-.25.25v1.58a3.008 3.008 0 0 0 1.83-1.83ZM3.581 1.125a.5.5 0 0 1 .119.598a.33.33 0 0 0-.013.09c0 .063.016.183.167.333c.073.073.129.125.19.182c.05.046.103.094.17.16c.13.124.267.27.39.453c.255.383.396.862.396 1.559c0 .832-.3 1.543-.772 1.992c.292.296.462.683.567 1.07C5 8.314 5 9.244 5 9.963V10c0 2.058-.385 3.28-.821 4.007a2.674 2.674 0 0 1-.638.747a1.645 1.645 0 0 1-.33.2S3.084 15 3 15a.8.8 0 0 1-.211-.046a1.645 1.645 0 0 1-.33-.2a2.674 2.674 0 0 1-.638-.747C1.385 13.281 1 12.058 1 10v-.036c0-.72 0-1.649.205-2.403c.105-.386.275-.773.567-1.07C1.3 6.044 1 5.332 1 4.5c0-.326.087-.715.207-1.074c.12-.36.288-.732.482-1.032c.231-.39.556-.717.808-.937a5.487 5.487 0 0 1 .432-.343l.03-.02l.009-.007l.003-.002l.002-.001a.5.5 0 0 1 .608.041Z"
                     />
                   </svg>
                 </div>
               </div>
 
               <small className="text-gray-700">
-                Websites, User Experience, Visual Design
+                Website Creation, User Experience, Visual Design.
               </small>
             </div>
             <sup className="underline underline-offset-4 decoration-[#a3262e]">
-              Educations
+              Education
             </sup>
             <div className="relative hover:scale-105 ease-out duration-500 bg-white p-5  rounded-md">
               <div className="flex items-center justify-between font-semibold">

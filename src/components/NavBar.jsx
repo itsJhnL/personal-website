@@ -18,19 +18,19 @@ function Main() {
         <NavLink to="/Services" className="text-base text-gray-600 font-normal focus-within:text-[#a3262e] focus-within:font-bold focus:text-lg">Services</NavLink>
         <NavLink
           to="/Projects"
-          className="text-base text-gray-600 font-normal focus:text-[#a3262e] focus:font-bold focus:text-lg"
+          className="text-base text-gray-600 font-normal focus-within:text-[#a3262e] focus-within:font-bold focus:text-lg active:"
         >
           Projects
         </NavLink>
-        <NavLink
+        {/* <NavLink
           to="/Experience"
-          className="text-base text-gray-600 font-normal focus:text-[#a3262e] focus:font-bold focus:text-lg"
+          className="text-base text-gray-600 font-normal focus-within:text-[#a3262e] focus-within:font-bold focus:text-lg"
         >
           Experience
-        </NavLink>
+        </NavLink> */}
         <NavLink
           to="/Contact"
-          className="text-base text-gray-600 font-normal focus:text-[#a3262e] focus:font-bold focus:text-lg"
+          className="text-base text-gray-600 font-normal focus-within:text-[#a3262e] focus-within:font-bold focus:text-lg"
         >
           Contact
         </NavLink>{" "}
@@ -85,8 +85,6 @@ function Main() {
               />
             </svg>
           </a>
-
-          <button>LD</button>
         </ul>
       </div>
     </div>

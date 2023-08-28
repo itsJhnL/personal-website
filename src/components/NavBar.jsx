@@ -1,36 +1,68 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 function Main() {
   return (
     <div className="flex flex-row items-center justify-between max-w-6xl mx-auto px-4 py-14 md:pb-35">
-      <div className="text-flicker-in-glow text-xl font-black text-[#a3262e]">
-        <NavLink to="/">JanggoDev</NavLink>
+      <div className="text-xl font-black text-[#a3262e]">
+        <NavLink to="/">
+          {"<"}<span className="text-flicker-in-glow ">JanggoDev</span>{"/>"}
+        </NavLink>
       </div>
       <div className="space-x-8">
         {/* Navbar */}
         <NavLink
           to="/About"
-          className="text-base text-gray-600 font-normal focus-within:text-[#a3262e] focus-within:font-bold focus:text-lg"
+          style={({ isActive }) => ({
+            color: isActive ? "#a3262e" : "",
+            fontSize: isActive ? "18px" : "",
+            fontWeight: isActive ? "bold" : "",
+          })}
+          className="text-base text-gray-600 font-normal"
         >
           About
         </NavLink>
-        <NavLink to="/Services" className="text-base text-gray-600 font-normal focus-within:text-[#a3262e] focus-within:font-bold focus:text-lg">Services</NavLink>
+        <NavLink
+          to="/Services"
+          style={({ isActive }) => ({
+            color: isActive ? "#a3262e" : "",
+            fontSize: isActive ? "18px" : "",
+            fontWeight: isActive ? "bold" : "",
+          })}
+          className="text-base text-gray-600 font-normal"
+        >
+          Services
+        </NavLink>
         <NavLink
           to="/Projects"
-          className="text-base text-gray-600 font-normal focus-within:text-[#a3262e] focus-within:font-bold focus:text-lg active:"
+          style={({ isActive }) => ({
+            color: isActive ? "#a3262e" : "",
+            fontSize: isActive ? "18px" : "",
+            fontWeight: isActive ? "bold" : "",
+          })}
+          className="text-base text-gray-600 font-normal"
         >
-          Projects
+          Works
         </NavLink>
         {/* <NavLink
           to="/Experience"
-          className="text-base text-gray-600 font-normal focus-within:text-[#a3262e] focus-within:font-bold focus:text-lg"
+          style={({ isActive }) => ({
+            color: isActive ? "#a3262e" : "",
+            fontSize: isActive ? "18px" : "",
+            fontWeight: isActive ? "bold" : "",
+          })}
+          className="text-base text-gray-600 font-normal"
         >
           Experience
         </NavLink> */}
         <NavLink
           to="/Contact"
-          className="text-base text-gray-600 font-normal focus-within:text-[#a3262e] focus-within:font-bold focus:text-lg"
+          style={({ isActive }) => ({
+            color: isActive ? "#a3262e" : "",
+            fontSize: isActive ? "18px" : "",
+            fontWeight: isActive ? "bold" : "",
+          })}
+          className="text-base text-gray-600 font-normal"
         >
           Contact
         </NavLink>{" "}

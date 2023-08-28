@@ -6,9 +6,13 @@ function About() {
   return (
     <div className="bg-[#f1f1f1]">
       <div className="flex flex-col items-center justify-center">
-        <header className="relative fixed text-6xl font-bold max-w-6xl mx-auto py-24">
-          <p className="underline underline-offset-4 decoration-2 decoration-[#a3262e] text-gray-700">About</p>
-        </header>
+        <div className="relative text-center fixed py-24">
+          <h1 className="font-bold text-lg text-[#a3262e]">WHO AM I</h1>
+          <header className="text-6xl font-bold max-w-6xl mx-auto">
+            <p className=" text-gray-700">About Me</p>
+          </header>
+          <p className="border-t-4 border-[#a3262e] mx-auto w-20"></p>
+        </div>
         <div className="grid grid-cols-2 gap-7 max-w-6xl mx-auto pb-24 p-4">
           <div className="mb-5">
             <sup className="underline underline-offset-4 decoration-[#a3262e]">
@@ -25,7 +29,7 @@ function About() {
               <span className="font-bold underline underline-offset-4 decoration-[#a3262e]">
                 Web Developer
               </span>{" "}
-              based in philippines. Since I started my journey as a front-end
+              based in Philippines. Since I started my journey as a front-end
               developer, I've worked on many personal projects, crafting
               responsive websites that are both fast and user-friendly while
               following best practices. I have a quiet confidence, a natural

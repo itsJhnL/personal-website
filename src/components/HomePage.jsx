@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import Janggo from "../assets/images/Janggo.png";
 import bg from "../assets/images/bg.png";
 import { NavLink } from "react-router-dom";
 import Footer from "./Footer";
 import Projects from "../assets/Projects/port.png";
+import FreshBites from "../assets/Projects/freshbites.png";
 
 export default function HomePage() {
+  const [clicked, setClicked] = useState();
+
+  //Scroll up fucntion and Syntax
+  const scrollUp = () => {
+    window.scrollTo({
+      top: 0, // Specified position
+      behavior: "auto", // auto scroll to top page, no animation.
+    });
+    setClicked(true);
+  };
+
   return (
     <div>
       <div className="bg-white pt-11">
@@ -34,9 +46,10 @@ export default function HomePage() {
             <div className="flex gap-5">
               <NavLink
                 to="/Contact"
+                onClick={scrollUp}
                 className="rounded-lg text-base font-medium bg-[#a3262e] border border-[#a3262e] text-white p-2"
               >
-                Let's work together!
+                {clicked ? "Scrolling..." : "Let's work together!"}
               </NavLink>
               <NavLink
                 to="/"
@@ -62,14 +75,15 @@ export default function HomePage() {
       </div>
       <div className="bg-[#f1f1f1]">
         <div className="flex flex-col items-center justify-center p-4 max-w-6xl mx-auto mb-5">
-          <header className="relative fixed text-6xl font-bold max-w-6xl mx-auto py-24">
-            <p className="underline underline-offset-4 decoration-2 decoration-[#a3262e] text-gray-700">
-              Recent Projects
-            </p>
-          </header>
-          <div className="grid grid-cols-2 gap-7 max-w-6xl pb-14">
+          <div className="relative text-center fixed py-24">
+            <header className="text-6xl font-bold max-w-6xl mx-auto">
+              <p className=" text-gray-700">Recent Projects</p>
+            </header>
+            {/* <p className="border-t-4 border-[#a3262e] mx-auto w-36"></p> */}
+          </div>
+          <div className="grid grid-cols-2 gap-4 max-w-6xl pb-14">
             <div className="hover:scale-105 ease-out duration-500">
-              <img src={Projects} alt="" className="rounded-lg" />
+              <img src={FreshBites} alt="" className="rounded-lg" />
             </div>
             <div className="hover:scale-105 ease-out duration-500">
               <img src={Projects} alt="" className="rounded-lg" />
@@ -78,26 +92,13 @@ export default function HomePage() {
               <img src={Projects} alt="" className="rounded-lg" />
             </div>
           </div>
-          <div className="border rounded-lg bg-white font-bold text-gray-700 p-5">
-            <NavLink to="/Projects">
-              <div className="flex space-x-2">
-                <i className="border border-[#a3262e]">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="#a3262e"
-                      d="M6 7c0 .55.45 1 1 1h7.59l-8.88 8.88a.996.996 0 1 0 1.41 1.41L16 9.41V17c0 .55.45 1 1 1s1-.45 1-1V7c0-.55-.45-1-1-1H7c-.55 0-1 .45-1 1z"
-                    />
-                  </svg>
-                </i>{" "}
-                <span className="text-[#a3262e]">View All</span>
-              </div>
-            </NavLink>
-          </div>
+          <NavLink to="/Projects" onClick={scrollUp}>
+            <div className="relative border rounded-lg bg-white font-bold text-gray-700 p-3 hover:bg-rose-50">
+              <span className="text-[#a3262e]">
+                {clicked ? "Scrolling..." : "View All"}
+              </span>
+            </div>
+          </NavLink>
         </div>
         <Footer />
       </div>

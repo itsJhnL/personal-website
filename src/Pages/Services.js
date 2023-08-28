@@ -6,11 +6,13 @@ function Services() {
   return (
     <div className="bg-[#f1f1f1]">
       <div className="flex flex-col items-center justify-center pb-24">
-        <header className="relative fixed text-6xl font-bold max-w-6xl mx-auto py-24">
-          <p className="underline underline-offset-4 decoration-2 decoration-[#a3262e] text-gray-700">
-            Services
-          </p>
-        </header>
+        <div className="relative text-center fixed py-24">
+          <h1 className="font-bold text-lg text-[#a3262e]">WHAT I DO</h1>
+          <header className="text-6xl font-bold max-w-6xl mx-auto">
+            <p className=" text-gray-700">Services</p>
+          </header>
+          <p className="border-t-4 border-[#a3262e] mx-auto w-20"></p>
+        </div>
 
         <div className="text-center grid grid-cols-3 gap-4 p-4 max-w-6xl mx-auto text-gray-700">
           <div className="border bg-white p-5 rounded-lg space-y-5 hover:scale-105 ease-out duration-500">

@@ -13,7 +13,7 @@ function Contact() {
           <p className="border-t-4 border-[#a3262e] mx-auto w-20"></p>
         </div>
         <div className="flex max-w-6xl mx-auto pb-24">
-          <div className="">
+          <div>
             <div className="text-4xl text-black font-bold p-5">
               <h1>Get in touch, let's talk.</h1>
               <p className="border-t-4 border-[#a3262e] w-24"></p>
@@ -82,7 +82,11 @@ function Contact() {
                   </svg>
                 </i>
                 <p>
-                  <a href="mailto:JanggoDev@gmail.com" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="mailto:JanggoDev@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     JanggoDev@gmail.com
                   </a>
                 </p>
@@ -155,7 +159,7 @@ function Contact() {
               </div>
             </div>
           </div>
-          <div className="flex border p-5">
+          {/* <div className="flex border p-5">
             <form action="">
               <div className="space-y-5">
                 <div className="flex flex-col">
@@ -210,13 +214,15 @@ function Contact() {
               <div className="text-center pt-6">
                 <button
                   type="submit"
-                  className="border rounded-lg px-5 py-2 bg-[#a3262e] text-white cursor-not-allowed" disabled title="Not yet. Thank you."
+                  className="border rounded-lg px-5 py-2 bg-[#a3262e] text-white cursor-not-allowed"
+                  disabled
+                  title="Not yet. Thank you."
                 >
                   Send message
                 </button>
               </div>
             </form>
-          </div>
+          </div> */}
         </div>
       </div>
       <Footer />

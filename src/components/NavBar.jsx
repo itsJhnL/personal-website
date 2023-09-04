@@ -2,9 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 function Main() {
-  const showMenu = () => {
-    
-  }
+  const showMenu = () => {};
   return (
     <div className="flex flex-row items-center justify-between max-w-6xl mx-auto px-4 py-8">
       <div className="text-xl font-black text-[#a3262e]">
@@ -136,9 +134,9 @@ function Main() {
               <path
                 fill="none"
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2.5"
                 d="M3 6h18M3 12h18M3 18h18"
               />
             </svg>

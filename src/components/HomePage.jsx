@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Janggo from "../assets/images/me.png";
-import bg from "../assets/images/bg.png";
+// import bg from "../assets/images/bg.png";
 import { NavLink } from "react-router-dom";
 import Footer from "./Footer";
 import Projects from "../assets/Projects/port.png";

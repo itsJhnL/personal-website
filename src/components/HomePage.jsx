@@ -20,7 +20,7 @@ export default function HomePage() {
 
   return (
     <div>
-      <div className="bg-white pt-11">
+      <div className="bg-white pt-11 h-screen">
         <div className="flex flex-row items-center justify-between max-w-6xl mx-auto px-4">
           <div className="grid grid-row-2 gap-4 max-w-6xl">
             <div className="text-4xl">
@@ -92,7 +92,7 @@ export default function HomePage() {
               <img src={Projects} alt="" className="rounded-lg" />
             </div>
           </div>
-          <NavLink to="/Projects" onClick={scrollUp}>
+          <NavLink to="/Works" onClick={scrollUp}>
             <div className="relative border rounded-lg bg-white font-bold text-gray-700 p-3 hover:bg-rose-50">
               <span className="text-[#a3262e]">
                 {clicked ? "Scrolling..." : "View All"}

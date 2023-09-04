@@ -23,7 +23,7 @@ function Projects() {
             <h1>Fresh Bites</h1>
             <p>Brief Information</p>
             <p>technology used</p>
-            <a href="http://" target="_blank">
+            <a href="http://" target="_blank" rel="noopener noreferrer">
               View Demo
             </a>
             <p>Github</p>
@@ -33,7 +33,7 @@ function Projects() {
             <h1>Resto</h1>
             <p>Brief Information</p>
             <p>technology used</p>
-            <a href="http://" target="_blank">
+            <a href="http://" target="_blank" rel="noopener noreferrer">
               View Demo
             </a>
             <p>Github</p>
@@ -49,7 +49,7 @@ function Projects() {
             <h1>Resto</h1>
             <p>Brief Information</p>
             <p>technology used</p>
-            <a href="http://" target="_blank">
+            <a href="http://" target="_blank" rel="noopener noreferrer">
               View Demo
             </a>
             <p>Github</p>
@@ -59,7 +59,7 @@ function Projects() {
             <h1>Resto</h1>
             <p>Brief Information</p>
             <p>technology used</p>
-            <a href="http://" target="_blank">
+            <a href="http://" target="_blank" rel="noopener noreferrer">
               View Demo
             </a>
             <p>Github</p>

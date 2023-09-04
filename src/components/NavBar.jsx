@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 
 function Main() {
@@ -34,7 +34,7 @@ function Main() {
           Services
         </NavLink>
         <NavLink
-          to="/Projects"
+          to="/Works"
           style={({ isActive }) => ({
             color: isActive ? "#a3262e" : "",
             fontSize: isActive ? "18px" : "",

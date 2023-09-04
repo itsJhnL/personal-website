@@ -20,8 +20,8 @@ export default function HomePage() {
 
   return (
     <div>
-      <div className="bg-white pt-11 h-screen">
-        <div className="flex flex-row items-center justify-between max-w-6xl mx-auto px-4">
+      <div className="bg-white h-screen">
+        <div className="flex flex-row items-center justify-between max-w-6xl mx-auto px-4 h-full w-screen">
           <div className="grid grid-row-2 gap-4 max-w-6xl">
             <div className="text-4xl">
               <h1>

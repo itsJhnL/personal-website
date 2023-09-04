@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Janggo from "../assets/images/Janggo.png";
+import Janggo from "../assets/images/me.png";
 import bg from "../assets/images/bg.png";
 import { NavLink } from "react-router-dom";
 import Footer from "./Footer";
@@ -20,8 +20,8 @@ export default function HomePage() {
 
   return (
     <div>
-      <div className="bg-[#FFF] h-screen -mt-20">
-        <div className="flex flex-row items-center justify-between max-w-6xl mx-auto px-4 h-full w-screen">
+      <div className="bg-[#FFF] h-screen -mt-24">
+        <div className="flex flex-row items-center justify-between max-w-6xl mx-auto px-4 h-full w-screen MobileS:justify-center Tablet:justify-center">
           <div className="grid grid-row-2 gap-4 max-w-6xl">
             <div className="text-4xl">
               <h1>
@@ -59,14 +59,14 @@ export default function HomePage() {
               </NavLink>
             </div>
           </div>
-          <div className="flex px-10 rounded-2xl max-w-xl relative">
-            <img
+          <div className="flex px-10 rounded-2xl max-w-xl relative MobileS:hidden Tablet:hidden Laptop:block">
+            {/* <img
               className="object-contain h-100vh w-96 md:w-auto contrast-0 relative blur-xl"
               src={bg}
               alt=""
-            />
+            /> */}
             <img
-              className="object-contain h-100vh max-w-md absolute mx-16"
+              className="bg-[#f1f1f1] object-fit rounded-xl rounded-tr-[50px] rounded-bl-[50px] border-8"
               src={Janggo}
               alt=""
             />
@@ -81,7 +81,7 @@ export default function HomePage() {
             </header>
             {/* <p className="border-t-4 border-[#a3262e] mx-auto w-36"></p> */}
           </div>
-          <div className="grid grid-cols-2 gap-4 max-w-6xl pb-14">
+          <div className="grid grid-cols-2 gap-4 max-w-6xl pb-14 MobileS:grid-cols-1 Laptop:grid-cols-2">
             <div className="hover:scale-105 ease-out duration-500">
               <img src={FreshBites} alt="" className="rounded-lg" />
             </div>

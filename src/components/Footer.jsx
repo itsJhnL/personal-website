@@ -2,14 +2,15 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="flex items-center justify-between max-w-6xl mx-auto border-solid border-t-2 border-[#a3262e] py-10">
-      <div className="flex flex-row font-medium">
+    <div className="flex items-center justify-between max-w-6xl mx-auto border-solid border-t-2 border-[#a3262e] py-10 MobileS:flex-col Tablet:flex-row Tablet:px-5 Laptop:px-0">
+      <div className="flex flex-row font-medium MobileS:text-center">
         <p>
-          Made by <span className="font-bold text-[#a3262e]">JanggoDev</span>{" | "}
+          Made by <span className="font-bold text-[#a3262e]">JanggoDev</span>
+          {" | "}
           {""} &copy; 2023. All Rights Reserved
         </p>
       </div>
-      <div className="text-2xl">
+      <div className="text-2xl MobileS:pt-5 Tablet:pt-0">
         {/* Socials */}
         <ul className="flex flex-row items-center space-x-4">
           <a

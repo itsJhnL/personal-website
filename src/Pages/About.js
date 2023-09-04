@@ -13,7 +13,7 @@ function About() {
           </header>
           <p className="border-t-4 border-[#a3262e] mx-auto w-20"></p>
         </div>
-        <div className="grid grid-cols-2 gap-7 max-w-6xl mx-auto pb-24 p-4">
+        <div className="grid grid-cols-2 gap-7 max-w-6xl mx-auto pb-24 p-4 MobileS:grid-cols-1 Tablet:grid-cols-2">
           <div className="mb-5">
             <sup className="underline underline-offset-4 decoration-[#a3262e]">
               Introduce
@@ -67,7 +67,7 @@ function About() {
               <sup className="underline underline-offset-4 decoration-[#a3262e]">
                 Technology Stack
               </sup>
-              <div className="grid grid-cols-4 gap-4">
+              <div className="grid gap-4 MobileS:grid-cols-3 Laptop:grid-cols-4">
                 <div className="relative hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i>
                     <svg

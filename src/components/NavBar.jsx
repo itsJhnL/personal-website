@@ -2,8 +2,11 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 function Main() {
+  const showMenu = () => {
+    
+  }
   return (
-    <div className="flex flex-row items-center justify-between max-w-6xl mx-auto px-4 py-12">
+    <div className="flex flex-row items-center justify-between max-w-6xl mx-auto px-4 py-8">
       <div className="text-xl font-black text-[#a3262e]">
         <NavLink to="/">
           {"<"}
@@ -11,7 +14,7 @@ function Main() {
           {"/>"}
         </NavLink>
       </div>
-      <div className="space-x-8">
+      <div className="space-x-8 MobileS:hidden Tablet:block">
         {/* Navbar */}
         <NavLink
           to="/About"
@@ -69,7 +72,7 @@ function Main() {
           Contact
         </NavLink>{" "}
       </div>
-      <div className="text-2xl">
+      <div className="text-2xl MobileS:hidden Tablet:hidden Laptop:block">
         {/* Socials */}
         <ul className="flex flex-row items-center space-x-4">
           <a
@@ -120,6 +123,27 @@ function Main() {
             </svg>
           </a>
         </ul>
+      </div>
+      <div className="flex Tablet:hidden">
+        <button onClick={showMenu} className="text-[#a3262e]">
+          <i>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                d="M3 6h18M3 12h18M3 18h18"
+              />
+            </svg>
+          </i>
+        </button>
       </div>
     </div>
   );

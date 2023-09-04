@@ -3,10 +3,12 @@ import { NavLink } from "react-router-dom";
 
 function Main() {
   return (
-    <div className="flex flex-row items-center justify-between max-w-6xl mx-auto px-4 py-14 md:pb-35">
+    <div className="flex flex-row items-center justify-between max-w-6xl mx-auto px-4 py-12">
       <div className="text-xl font-black text-[#a3262e]">
         <NavLink to="/">
-          {"<"}<span className="text-flicker-in-glow ">JanggoDev</span>{"/>"}
+          {"<"}
+          <span className="text-flicker-in-glow ">JanggoDev</span>
+          {"/>"}
         </NavLink>
       </div>
       <div className="space-x-8">
@@ -104,7 +106,7 @@ function Main() {
             </svg>
           </a>
 
-          <a href="https://www.behance.net/iamjohnleo" target="blank">
+          <a href="https://www.behance.net/janggodev" target="blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"

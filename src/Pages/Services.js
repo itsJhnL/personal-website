@@ -14,7 +14,7 @@ function Services() {
           <p className="border-t-4 border-[#a3262e] mx-auto w-20"></p>
         </div>
 
-        <div className="text-center grid grid-cols-3 gap-4 p-4 max-w-6xl mx-auto text-gray-700">
+        <div className="text-center grid grid-cols-3 gap-4 p-4 max-w-6xl mx-auto text-gray-700 MobileS:grid-cols-1 Tablet:grid-cols-2 Laptop:grid-cols-3">
           <div className="border bg-white p-5 rounded-lg space-y-5 hover:scale-105 ease-out duration-500">
             <h1 className="font-bold text-lg text-[#a3262e]">
               Web Development

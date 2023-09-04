@@ -82,7 +82,7 @@ function Contact() {
                   </svg>
                 </i>
                 <p>
-                  <a href="mailto:JanggoDev@gmail.com" target="_blank">
+                  <a href="mailto:JanggoDev@gmail.com" target="_blank" rel="noopener noreferrer">
                     JanggoDev@gmail.com
                   </a>
                 </p>

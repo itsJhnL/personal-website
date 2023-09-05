@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "../components/Footer";
 import "../App.css";
+import Janggo from "../assets/images/Janggo.png";
 
 function About() {
   return (
@@ -12,6 +13,13 @@ function About() {
             <p className=" text-gray-700">About Me</p>
           </header>
           <p className="border-t-4 border-[#a3262e] mx-auto w-20"></p>
+        </div>
+        <div>
+          <img
+            src={Janggo}
+            alt=""
+            className="border-4 border-[#a3262e] object-cover rounded-full MobileS:h-80 Laptop:hidden"
+          />
         </div>
         <div className="grid grid-cols-2 gap-7 max-w-6xl mx-auto pb-24 p-4 MobileS:grid-cols-1 Tablet:grid-cols-2">
           <div className="mb-5">
@@ -27,7 +35,13 @@ function About() {
             <p className="mb-5 text-justify text-gray-700">
               An aspiring{" "}
               <span className="font-bold underline underline-offset-4 decoration-[#a3262e]">
-                Web Developer
+                <a
+                  href="https://g.co/kgs/jTBr1h"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Web Developer
+                </a>
               </span>{" "}
               based in Philippines. Since I started my journey as a front-end
               developer, I've worked on many personal projects, crafting

@@ -21,8 +21,15 @@ export default function HomePage() {
   return (
     <div>
       <div className="bg-[#FFF] h-screen -mt-24">
-        <div className="flex flex-row items-center justify-between max-w-6xl mx-auto px-4 h-full w-screen MobileS:justify-center Tablet:justify-center">
-          <div className="grid grid-row-2 gap-4 max-w-6xl">
+        <div className="flex items-center justify-between max-w-6xl mx-auto h-full w-screen MobileS:justify-center Tablet:justify-center">
+          <div className="grid grid-row-2 gap-4 MobileS:max-w-lg MobileS:mx-5 Laptop:max-w-6xl Laptop:mx-5">
+            <div className="mx-auto pb-8 MobileS:hidden Tablet:block Laptop:hidden">
+              <img
+                src={Janggo}
+                alt=""
+                className="object-cover Tablet:h-60 rounded-full border-8"
+              />
+            </div>
             <div className="text-4xl">
               <h1>
                 Hey there, I'm{" "}
@@ -37,7 +44,7 @@ export default function HomePage() {
                 </span>
               </h1>
             </div>
-            <div className="max-w-xl">
+            <div className="Tablet:max-w-lg Laptop:max-w-3xl">
               <p>
                 Helping startups, small businesses, and agencies in achieving
                 high quality websites and providing remarkable user experiences.
@@ -59,14 +66,14 @@ export default function HomePage() {
               </NavLink>
             </div>
           </div>
-          <div className="flex px-10 rounded-2xl max-w-xl relative MobileS:hidden Tablet:hidden Laptop:block">
+          <div className="rounded-2xl relative MobileS:hidden Tablet:hidden Laptop:block Laptop:mx-5">
             {/* <img
               className="object-contain h-100vh w-96 md:w-auto contrast-0 relative blur-xl"
               src={bg}
               alt=""
             /> */}
             <img
-              className="bg-[#f1f1f1] object-fit rounded-xl rounded-tr-[50px] rounded-bl-[50px] border-8"
+              className="bg-[#f1f1f1] object-cover h-80 hover:scale-110 duration-300 ease-in-out rounded-xl rounded-tr-[50px] rounded-bl-[50px] border-8"
               src={Janggo}
               alt=""
             />

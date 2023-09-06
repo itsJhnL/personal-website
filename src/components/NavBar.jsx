@@ -2,7 +2,6 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 function Main() {
-  const showMenu = () => {};
   return (
     <div className="flex flex-row items-center justify-between max-w-6xl mx-auto px-4 py-8">
       <div className="text-xl font-black text-[#a3262e]">
@@ -12,7 +11,7 @@ function Main() {
           {"/>"}
         </NavLink>
       </div>
-      <div className="space-x-8 MobileS:hidden Tablet:block">
+      <div className="space-x-8 MobileS:hidden Laptop:block">
         {/* Navbar */}
         <NavLink
           to="/About"
@@ -54,10 +53,9 @@ function Main() {
             fontSize: isActive ? "18px" : "",
             fontWeight: isActive ? "bold" : "",
           })}
-          className="text-base text-gray-600 font-normal"
-        >
+          className="text-base text-gray-600 font-normal">
           Experience
-        </NavLink> */}
+          </NavLink> */}
         <NavLink
           to="/Contact"
           style={({ isActive }) => ({
@@ -69,6 +67,27 @@ function Main() {
         >
           Contact
         </NavLink>{" "}
+      </div>
+      <div className="flex Laptop:hidden">
+        <button className="text-[#a3262e]">
+          <i>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2.5"
+                d="M3 6h18M3 12h18M3 18h18"
+              />
+            </svg>
+          </i>
+        </button>
       </div>
       <div className="text-2xl MobileS:hidden Tablet:hidden Laptop:block">
         {/* Socials */}
@@ -121,27 +140,6 @@ function Main() {
             </svg>
           </a>
         </ul>
-      </div>
-      <div className="flex Tablet:hidden">
-        <button onClick={showMenu} className="text-[#a3262e]">
-          <i>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2.5"
-                d="M3 6h18M3 12h18M3 18h18"
-              />
-            </svg>
-          </i>
-        </button>
       </div>
     </div>
   );

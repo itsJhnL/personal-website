@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import Footer from "./Footer";
 import Projects from "../assets/Projects/port.png";
 import FreshBites from "../assets/Projects/freshbites.png";
+import "../styles/Wave.css";
 
 export default function HomePage() {
   const [clicked, setClicked] = useState();
@@ -20,19 +21,15 @@ export default function HomePage() {
 
   return (
     <div>
-      <div className="bg-[#FFF] h-screen -mt-24">
+      <div className="bg-[#FFF] h-screen">
         <div className="flex items-center justify-between max-w-6xl mx-auto h-full w-screen MobileS:justify-center Tablet:justify-center">
           <div className="grid grid-row-2 gap-4 MobileS:max-w-lg MobileS:mx-5 Laptop:max-w-6xl Laptop:mx-5">
-            <div className="mx-auto pb-8 MobileS:hidden Tablet:block Laptop:hidden">
-              <img
-                src={Janggo}
-                alt=""
-                className="object-cover Tablet:h-60 rounded-full border-8"
-              />
+            <div className="rounded-full border-8 overflow-hidden mx-auto pb-8 MobileS:hidden MobileS:h-60 MobileS:w-60 Tablet:h-60 Tablet:block Laptop:hidden">
+              <img src={Janggo} alt="" className="object-cover h-42" />
             </div>
             <div className="text-4xl">
               <h1>
-                Hey there, I'm{" "}
+                Hey there <span className="wave">👋</span>, I'm{" "}
                 <span className="font-bold text-[#a3262e]">John Leo Bruno</span>
               </h1>
             </div>
@@ -66,14 +63,14 @@ export default function HomePage() {
               </NavLink>
             </div>
           </div>
-          <div className="rounded-2xl relative MobileS:hidden Tablet:hidden Laptop:block Laptop:mx-5">
+          <div className="relative border-8 overflow-hidden rounded-xl rounded-tr-[50px] rounded-bl-[50px] relative MobileS:hidden Tablet:hidden Laptop:block Laptop:mx-5">
             {/* <img
               className="object-contain h-100vh w-96 md:w-auto contrast-0 relative blur-xl"
               src={bg}
               alt=""
             /> */}
             <img
-              className="bg-[#f1f1f1] object-cover h-80 hover:scale-110 duration-300 ease-in-out rounded-xl rounded-tr-[50px] rounded-bl-[50px] border-8"
+              className="bg-[#f1f1f1] object-cover h-80 hover:scale-110 duration-1000 ease-out"
               src={Janggo}
               alt=""
             />

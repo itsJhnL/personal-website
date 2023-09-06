@@ -14,12 +14,8 @@ function About() {
           </header>
           <p className="border-t-4 border-[#a3262e] mx-auto w-20"></p>
         </div>
-        <div>
-          <img
-            src={Janggo}
-            alt=""
-            className="border-4 border-[#a3262e] object-cover rounded-full MobileS:h-80 Laptop:hidden"
-          />
+        <div className="border-4 border-[#a3262e] mb-14 rounded-full overflow-hidden MobileS:h-52 MobileS:w-52 Laptop:hidden">
+          <img src={Janggo} alt="" className="object-cover h-42" />
         </div>
         <div className="grid grid-cols-2 gap-7 max-w-6xl mx-auto pb-24 p-4 MobileS:grid-cols-1 Tablet:grid-cols-2">
           <div className="mb-5">

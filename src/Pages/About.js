@@ -19,9 +19,9 @@ function About() {
         </div>
         <div className="grid grid-cols-2 gap-7 max-w-6xl mx-auto pb-24 p-4 MobileS:grid-cols-1 Tablet:grid-cols-2">
           <div className="mb-5">
-            <h1 className="underline underline-offset-4 decoration-[#a3262e]">
+            <sup className="underline underline-offset-4 decoration-[#a3262e]">
               Introduce
-            </h1>
+            </sup>
             <h1 className="text-3xl mb-3">
               Hi! I'm{" "}
               <span className="font-semibold text-[#a3262e]">
@@ -186,7 +186,7 @@ function About() {
                   </i>
                   <small>MongoDB</small>
                 </div>
-                <div className="relative hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
+                <div className=" hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -199,7 +199,7 @@ function About() {
                   </i>
                   <small>ExpressJS</small>
                 </div>
-                <div className="relative hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
+                <div className=" hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -215,7 +215,7 @@ function About() {
                   </i>
                   <small>ReactJS</small>
                 </div>
-                <div className="relative hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
+                <div className=" hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -231,7 +231,7 @@ function About() {
                   </i>
                   <small>NodeJS</small>
                 </div>
-                <div className="relative hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
+                <div className=" hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -259,7 +259,7 @@ function About() {
                   </i>
                   <small>HTML5</small>
                 </div>
-                <div className="relative hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
+                <div className=" hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -295,7 +295,7 @@ function About() {
                   </i>
                   <small>CSS3</small>
                 </div>
-                <div className="relative hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
+                <div className=" hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -323,7 +323,7 @@ function About() {
                   </i>
                   <small>Tailwind CSS</small>
                 </div>
-                <div className="relative hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
+                <div className=" hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -339,7 +339,7 @@ function About() {
                   </i>
                   <small>Material UI</small>
                 </div>
-                <div className="relative hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
+                <div className=" hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -417,7 +417,7 @@ function About() {
                   </i>
                   <small>Bootstrap</small>
                 </div>
-                <div className="relative hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
+                <div className=" hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -433,7 +433,7 @@ function About() {
                   </i>
                   <small>Redux</small>
                 </div>
-                <div className="relative hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
+                <div className=" hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -495,7 +495,7 @@ function About() {
                   </i>
                   <small>NextJS</small>
                 </div>
-                <div className="relative hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
+                <div className=" hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -621,7 +621,7 @@ function About() {
                   </i>
                   <small>Firebase</small>
                 </div>
-                <div className="relative hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
+                <div className=" hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -637,7 +637,7 @@ function About() {
                   </i>
                   <small>MySQL</small>
                 </div>
-                <div className="relative hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
+                <div className=" hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -669,7 +669,7 @@ function About() {
                   </i>
                   <small>Figma</small>
                 </div>
-                {/* <div className="relative hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
+                {/* <div className=" hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -685,7 +685,7 @@ function About() {
                   </i>
                   <small>Git</small>
                 </div> */}
-                <div className="relative hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
+                <div className=" hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -701,27 +701,27 @@ function About() {
                   </i>
                   <small>Github</small>
                 </div>
-                {/* <div className="relative hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
+                {/* <div className=" hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i></i>
                   <small></small>
                 </div>
-                <div className="relative hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
+                <div className=" hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i></i>
                   <small></small>
                 </div>
-                <div className="relative hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
+                <div className=" hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i></i>
                   <small></small>
                 </div>
-                <div className="relative hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
+                <div className=" hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i></i>
                   <small></small>
                 </div>
-                <div className="relative hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
+                <div className=" hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i></i>
                   <small></small>
                 </div>
-                <div className="relative hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
+                <div className=" hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i></i>
                   <small></small>
                 </div> */}
@@ -732,7 +732,7 @@ function About() {
             <sup className="underline underline-offset-4 decoration-[#a3262e]">
               Main Skills
             </sup>
-            <div className="relative hover:scale-105 ease-out duration-500 bg-white p-5 mb-2 rounded-md">
+            <div className="hover:scale-105 ease-out duration-500 bg-white p-5 mb-2 rounded-md">
               <div className="flex items-center justify-between font-semibold">
                 <h1 className="text-[#a3262e]">Web Development</h1>
                 <div className="text-gray-600">
@@ -755,7 +755,7 @@ function About() {
                 its frameworks.
               </small>
             </div>
-            <div className="relative hover:scale-105 ease-out duration-500 bg-white p-5 mb-5  rounded-md">
+            <div className="hover:scale-105 ease-out duration-500 bg-white p-5 mb-5  rounded-md">
               <div className="flex items-center justify-between font-semibold">
                 <h1 className="text-[#a3262e]">
                   Web and User Interface Design
@@ -782,7 +782,7 @@ function About() {
             <sup className="underline underline-offset-4 decoration-[#a3262e]">
               Education
             </sup>
-            <div className="relative hover:scale-105 ease-out duration-500 bg-white p-5  rounded-md">
+            <div className="hover:scale-105 ease-out duration-500 bg-white p-5  rounded-md">
               <div className="flex items-center justify-between font-semibold">
                 <h1 className="text-[#a3262e]">BS in Information Technology</h1>
                 <div className="SVG">

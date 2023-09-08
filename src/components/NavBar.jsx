@@ -99,6 +99,12 @@ function Main() {
     );
   };
 
+  const [style, setStyle] = useState("");
+
+  const changeStyle = () => {
+    setStyle("fullNav");
+  };
+
   return (
     <>
       <nav className="bg-white MobileS:sticky Laptop:relative top-0 flex flex-row items-center justify-between max-w-6xl mx-auto px-4 py-8">
@@ -171,7 +177,10 @@ function Main() {
           </ul>
         </div>
       </nav>
-      <div className="bg-[#f1f1f1] fixed flex flex-col w-screen Laptop:hidden">
+      <div
+        className="bg-[#f1f1f1] fixed flex flex-col w-screen Laptop:hidden"
+        onClick={changeStyle}
+      >
         <button
           className="flex flex-col items-center justify-center space-y-10"
           onClick={showNav}

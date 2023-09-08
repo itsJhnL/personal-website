@@ -7,7 +7,7 @@ function About() {
   return (
     <div className="bg-[#f1f1f1]">
       <div className="flex flex-col items-center justify-center">
-        <div className="relative text-center fixed py-24">
+        <div className="text-center py-24">
           <h1 className="font-bold text-lg text-[#a3262e]">WHO AM I</h1>
           <header className="text-6xl font-bold max-w-6xl mx-auto">
             <p className=" text-gray-700">About Me</p>
@@ -19,9 +19,9 @@ function About() {
         </div>
         <div className="grid grid-cols-2 gap-7 max-w-6xl mx-auto pb-24 p-4 MobileS:grid-cols-1 Tablet:grid-cols-2">
           <div className="mb-5">
-            <sup className="underline underline-offset-4 decoration-[#a3262e]">
+            <h1 className="underline underline-offset-4 decoration-[#a3262e]">
               Introduce
-            </sup>
+            </h1>
             <h1 className="text-3xl mb-3">
               Hi! I'm{" "}
               <span className="font-semibold text-[#a3262e]">
@@ -78,7 +78,7 @@ function About() {
                 Technology Stack
               </sup>
               <div className="grid gap-4 MobileS:grid-cols-3 Laptop:grid-cols-4">
-                <div className="relative hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
+                <div className="hover:scale-105 ease-out duration-500 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

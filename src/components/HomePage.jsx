@@ -21,7 +21,7 @@ export default function HomePage() {
 
   return (
     <div>
-      <div className="bg-[#FFF] h-screen">
+      <div className="bg-[#FFF] h-screen ">
         <div className="flex items-center justify-between max-w-6xl mx-auto h-full w-screen MobileS:justify-center Tablet:justify-center">
           <div className="grid grid-row-2 gap-4 MobileS:max-w-lg MobileS:mx-5 Laptop:max-w-6xl Laptop:mx-5">
             <div className="rounded-full border-8 overflow-hidden mx-auto pb-8 MobileS:hidden MobileS:h-60 MobileS:w-60 Tablet:h-60 Tablet:block Laptop:hidden">
@@ -79,7 +79,7 @@ export default function HomePage() {
       </div>
       <div className="bg-[#f1f1f1]">
         <div className="flex flex-col items-center justify-center p-4 max-w-6xl mx-auto mb-5">
-          <div className="relative text-center fixed py-24">
+          <div className="text-center py-24">
             <header className="text-6xl font-bold max-w-6xl mx-auto">
               <p className=" text-gray-700">Recent Projects</p>
             </header>

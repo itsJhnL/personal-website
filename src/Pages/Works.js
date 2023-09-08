@@ -7,7 +7,7 @@ function Projects() {
   return (
     <div className="bg-[#f1f1f1]">
       <div className="flex flex-col items-center justify-center">
-        <div className="relative text-center fixed py-24">
+        <div className="text-center py-24">
           <h1 className="font-bold text-lg text-[#a3262e]">MY WORKS</h1>
           <header className="text-6xl font-bold max-w-6xl mx-auto">
             <p className=" text-gray-700">Portfolio</p>

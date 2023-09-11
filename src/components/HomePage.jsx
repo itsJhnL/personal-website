@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import Projects from "../assets/Projects/port.png";
 import FreshBites from "../assets/Projects/freshbites.png";
 import "../styles/Wave.css";
+import waving from "../assets/images/wave.png";
 
 export default function HomePage() {
   const [clicked, setClicked] = useState();
@@ -29,7 +30,17 @@ export default function HomePage() {
             </div>
             <div className="text-4xl">
               <h1>
-                Hey there <span className="wave">👋</span>, I'm{" "}
+                Hey there{" "}
+                <span className="wave">
+                  <img
+                    src={waving}
+                    alt=""
+                    className="overflow-clip"
+                    style={{ height: "40px" }}
+                  />{" "}
+                  {/* Need to fix this on mobile view, it keeps overflow navbar.*/}
+                </span>
+                , I'm{" "}
                 <span className="font-bold text-[#a3262e]">John Leo Bruno</span>
               </h1>
             </div>
@@ -97,7 +108,7 @@ export default function HomePage() {
             </div>
           </div>
           <NavLink to="/Works" onClick={scrollUp}>
-            <div className="relative border rounded-lg bg-white font-bold text-gray-700 p-3 hover:bg-rose-50">
+            <div className="border rounded-lg bg-white font-bold text-gray-700 p-3 hover:bg-rose-50">
               <span className="text-[#a3262e]">
                 {clicked ? "Scrolling..." : "View All"}
               </span>

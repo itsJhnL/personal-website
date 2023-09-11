@@ -9,6 +9,16 @@ function Main() {
     setOpenNav(!openNav);
   };
 
+  const [clicked, setScroll] = useState();
+
+  const scrollUp = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "auto",
+    });
+    setScroll(true);
+  };
+
   const NavLinks = () => {
     return (
       <>
@@ -20,8 +30,9 @@ function Main() {
             fontWeight: isActive ? "bold" : "",
           })}
           className="text-base text-gray-600 font-normal"
+          onClick={scrollUp}
         >
-          About
+          {clicked ? "About" : "About"}
         </NavLink>
         <NavLink
           to="/Services"
@@ -31,8 +42,9 @@ function Main() {
             fontWeight: isActive ? "bold" : "",
           })}
           className="text-base text-gray-600 font-normal"
+          onClick={scrollUp}
         >
-          Services
+          {clicked ? "Services" : "Services"}
         </NavLink>
         <NavLink
           to="/Works"
@@ -42,8 +54,9 @@ function Main() {
             fontWeight: isActive ? "bold" : "",
           })}
           className="text-base text-gray-600 font-normal"
+          onClick={scrollUp}
         >
-          Works
+          {clicked ? "Works" : "Works"}
         </NavLink>
         <NavLink
           to="/Contact"
@@ -53,8 +66,9 @@ function Main() {
             fontWeight: isActive ? "bold" : "",
           })}
           className="text-base text-gray-600 font-normal"
+          onClick={scrollUp}
         >
-          Contact
+          {clicked ? "Contact" : "Contact"}
         </NavLink>
       </>
     );
@@ -99,19 +113,15 @@ function Main() {
     );
   };
 
-  const [style, setStyle] = useState("");
-
-  const changeStyle = () => {
-    setStyle("fullNav");
-  };
-
   return (
     <>
-      <nav className="bg-white MobileS:sticky Laptop:relative top-0 flex flex-row items-center justify-between max-w-6xl mx-auto px-4 py-8">
+      <nav className="bg-white z-50 relative MobileS:sticky Laptop:relative top-0 flex flex-row items-center justify-between max-w-6xl mx-auto px-4 py-8">
         <div className="text-xl font-black text-[#a3262e]">
           <NavLink to="/">
             {"<"}
-            <span className="text-flicker-in-glow ">JanggoDev</span>
+            <button className="text-flicker-in-glow " onClick={scrollUp}>
+              {clicked ? "JanggoDev" : "JanggoDev"}
+            </button>
             {"/>"}
           </NavLink>
         </div>
@@ -177,17 +187,24 @@ function Main() {
           </ul>
         </div>
       </nav>
-      <div
-        className="bg-[#f1f1f1] fixed flex flex-col w-screen Laptop:hidden"
-        onClick={changeStyle}
-      >
-        <button
-          className="flex flex-col items-center justify-center space-y-10"
-          onClick={showNav}
-        >
-          {openNav ? <NavLinks /> : ""}
-        </button>
-      </div>
+      {openNav && (
+        <>
+          <div className="z-[300] bg-[#f1f1f1] fixed top-0 fixed flex flex-col items-center justify-center h-[100vh] w-full Laptop:hidden">
+            <span
+              className="text-[#a3262e] absolute top-10 right-5"
+              onClick={showNav}
+            >
+              {openNav ? <Close /> : ""}
+            </span>
+            <button
+              className="flex flex-col items-center justify-center space-y-10 text-lg"
+              onClick={showNav}
+            >
+              {openNav ? <NavLinks /> : ""}
+            </button>
+          </div>
+        </>
+      )}
     </>
   );
 }

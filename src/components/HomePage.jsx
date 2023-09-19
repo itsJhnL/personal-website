@@ -4,7 +4,7 @@ import Janggo from "../assets/images/me.png";
 import { NavLink } from "react-router-dom";
 import Footer from "./Footer";
 import Projects from "../assets/Projects/port.png";
-import FreshBites from "../assets/Projects/freshbites.png";
+import FreshBites from "../assets/Projects/recentFreshbites.png";
 import "../styles/Wave.css";
 import waving from "../assets/images/wave.png";
 

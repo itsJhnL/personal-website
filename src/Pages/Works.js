@@ -16,8 +16,12 @@ function Projects() {
         </div>
         <div className="grid grid-cols-2 gap-4 max-w-6xl mx-auto p-4 pb-24 MobileS:grid-cols-1 Tablet:grid-cols-2">
           {/* 1 */}
-          <div className="bg-white rounded-lg p-5">
-            <img src={freshbites} alt="" className="rounded-lg" />
+          <div className="relative overflow-hidden flex items-center bg-white h-96 rounded-lg">
+            <img
+              src={freshbites}
+              alt=""
+              className="hover:scale-125 ease-in-out duration-1000"
+            />
           </div>
           <div className="flex flex-col m-14 ">
             <h1 className="text-2xl pb-5 font-bold">Fresh Bites</h1>
@@ -68,7 +72,7 @@ function Projects() {
                 <span className="text-gray-700">TailwindCSS</span>
               </div>
             </div>
-            <div>
+            <div className="flex gap-4">
               <a
                 href="http://freshbites.vercel.app"
                 target="_blank"
@@ -76,6 +80,14 @@ function Projects() {
                 className="border border-[#a3262e] rounded-full p-2 text-base font-semibold text-gray-700"
               >
                 Live Demo
+              </a>
+              <a
+                href="https://github.com/itsJhnL/fresh-bites"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-[#a3262e] rounded-full p-2 text-base font-semibold text-gray-700"
+              >
+                {"< View Code />"}
               </a>
             </div>
           </div>

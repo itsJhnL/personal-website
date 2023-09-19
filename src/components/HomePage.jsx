@@ -97,14 +97,26 @@ export default function HomePage() {
             {/* <p className="border-t-4 border-[#a3262e] mx-auto w-36"></p> */}
           </div>
           <div className="grid grid-cols-2 gap-4 max-w-6xl pb-14 MobileS:grid-cols-1 Laptop:grid-cols-2">
-            <div className="hover:scale-105 ease-out duration-500">
-              <img src={FreshBites} alt="" className="rounded-lg" />
+            <div className="relative overflow-hidden rounded-lg">
+              <img
+                src={FreshBites}
+                alt=""
+                className="hover:scale-105 ease-out duration-500 rounded-lg"
+              />
             </div>
-            <div className="hover:scale-105 ease-out duration-500">
-              <img src={Projects} alt="" className="rounded-lg" />
+            <div className="relative overflow-hidden rounded-lg">
+              <img
+                src={FreshBites}
+                alt=""
+                className="hover:scale-105 ease-out duration-500 rounded-lg"
+              />
             </div>
-            <div className="hover:scale-105 ease-out duration-500">
-              <img src={Projects} alt="" className="rounded-lg" />
+            <div className="relative overflow-hidden rounded-lg">
+              <img
+                src={FreshBites}
+                alt=""
+                className="hover:scale-105 ease-out duration-500 rounded-lg"
+              />
             </div>
           </div>
           <NavLink to="/Works" onClick={scrollUp}>

@@ -21,7 +21,7 @@ function Projects() {
           </div>
           <div className="flex flex-col m-14 ">
             <h1 className="text-2xl pb-5 font-bold">Fresh Bites</h1>
-            <p className="text-md text-gray-700">Technologies Used:</p>
+            {/* <p className="text-md text-gray-700">Technologies Used:</p> */}
             <div className="flex space-x-5 pb-10 pt-2">
               <div className="flex rounded-full space-x-1">
                 <i>

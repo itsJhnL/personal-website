@@ -19,6 +19,8 @@ function Main() {
     setScroll(true);
   };
 
+  // const styleNav = {};
+
   const NavLinks = () => {
     return (
       <>

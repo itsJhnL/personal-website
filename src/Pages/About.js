@@ -40,7 +40,7 @@ function About() {
                 </a>
               </span>{" "}
               based in Philippines. Since I started my journey as a front-end
-              developer, I've worked on many personal projects, crafting
+              developer, I've worked on personal projects, crafting
               responsive websites that are both fast and user-friendly while
               following best practices. I have a quiet confidence, a natural
               curiosity, and I'm always working to improve my skills and
@@ -78,7 +78,7 @@ function About() {
                 Technology Stack
               </sup>
               <div className="grid gap-4 MobileS:grid-cols-3 Laptop:grid-cols-4">
-                <div className="ease-out duration-500 hover:scale-105 flex flex-col items-center justify-center p-5 bg-white rounded-md">
+                {/* <div className="ease-out duration-500 hover:scale-105 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -185,8 +185,8 @@ function About() {
                     </svg>
                   </i>
                   <small>MongoDB</small>
-                </div>
-                <div className=" ease-out duration-500 hover:scale-105 flex flex-col items-center justify-center p-5 bg-white rounded-md">
+                </div> */}
+                {/* <div className=" ease-out duration-500 hover:scale-105 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -198,7 +198,7 @@ function About() {
                     </svg>
                   </i>
                   <small>ExpressJS</small>
-                </div>
+                </div> */}
                 <div className=" ease-out duration-500 hover:scale-105 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i>
                     <svg
@@ -215,7 +215,7 @@ function About() {
                   </i>
                   <small>ReactJS</small>
                 </div>
-                <div className=" ease-out duration-500 hover:scale-105 flex flex-col items-center justify-center p-5 bg-white rounded-md">
+                {/* <div className=" ease-out duration-500 hover:scale-105 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -230,7 +230,7 @@ function About() {
                     </svg>
                   </i>
                   <small>NodeJS</small>
-                </div>
+                </div> */}
                 <div className=" ease-out duration-500 hover:scale-105 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i>
                     <svg

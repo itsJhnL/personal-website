@@ -3,7 +3,9 @@ import Janggo from "../assets/images/me.png";
 // import bg from "../assets/images/bg.png";
 import { NavLink } from "react-router-dom";
 import Footer from "./Footer";
-import Projects from "../assets/Projects/port.png";
+// import Projects from "../assets/Projects/port.png";
+import loginPage from "../assets/Projects/login.png";
+import Barangay from "../assets/Projects/barangay.png";
 import FreshBites from "../assets/Projects/recentFreshbites.png";
 import "../styles/Wave.css";
 import waving from "../assets/images/wave.png";
@@ -66,12 +68,14 @@ export default function HomePage() {
               >
                 {clicked ? "Scrolling..." : "Let's work together!"}
               </NavLink>
-              <NavLink
-                to="/"
+              <a
+                href="https://drive.google.com/file/d/1bg35sbSVKsmPRfszf_SebT8i2pInuNXj/view?usp=sharing"
+                target="blank"
+                rel="noopenner"
                 className="rounded-lg text-base font-medium border border-[#a3262e] text-[#a3262e] p-2 hover:bg-rose-50"
               >
                 View Resume
-              </NavLink>
+              </a>
             </div>
           </div>
           <div className="relative border-8 overflow-hidden rounded-xl rounded-tr-[50px] rounded-bl-[50px] relative MobileS:hidden Tablet:hidden Laptop:block Laptop:mx-5">
@@ -106,14 +110,14 @@ export default function HomePage() {
             </div>
             <div className="relative overflow-hidden rounded-lg">
               <img
-                src={FreshBites}
+                src={loginPage}
                 alt=""
                 className="hover:scale-105 ease-out duration-500 rounded-lg"
               />
             </div>
             <div className="relative overflow-hidden rounded-lg">
               <img
-                src={FreshBites}
+                src={Barangay}
                 alt=""
                 className="hover:scale-105 ease-out duration-500 rounded-lg"
               />

@@ -191,7 +191,7 @@ function Main() {
       </nav>
       {openNav && (
         <>
-          <div className="z-[300] bg-[#f1f1f1] fixed top-0 fixed flex flex-col items-center justify-center h-[100vh] w-full Laptop:hidden">
+          <div className="z-[300] bg-[#f1f1f1] top-0 fixed flex flex-col items-center justify-center h-[100vh] w-full Laptop:hidden">
             <span
               className="text-[#a3262e] absolute top-10 right-5"
               onClick={showNav}

@@ -64,7 +64,7 @@ function Contact() {
                     />
                   </svg>
                 </i>
-                <p>{"(906) 360-4260"}</p>
+                <p>{"(+63) 992-718-0980"}</p>
               </div>
               <div className="flex">
                 <i className="pr-5 text-[#a3262e]">
@@ -83,11 +83,11 @@ function Contact() {
                 </i>
                 <p>
                   <a
-                    href="mailto:JanggoDev@gmail.com"
+                    href="mailto:johnleo.bruno@gmail.com"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    JanggoDev@gmail.com
+                    johnleo.bruno@gmail.com
                   </a>
                 </p>
               </div>

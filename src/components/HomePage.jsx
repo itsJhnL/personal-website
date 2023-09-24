@@ -69,7 +69,7 @@ export default function HomePage() {
                 {clicked ? "Scrolling..." : "Let's work together!"}
               </NavLink>
               <a
-                href="https://drive.google.com/file/d/1bg35sbSVKsmPRfszf_SebT8i2pInuNXj/view?usp=sharing"
+                href="https://drive.google.com/file/d/1plqX5YV8iKKNbzsfJQtcLKj9voI0gewl/view?usp=sharing"
                 target="blank"
                 rel="noopenner"
                 className="rounded-lg text-base font-medium border border-[#a3262e] text-[#a3262e] p-2 hover:bg-rose-50"

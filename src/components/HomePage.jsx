@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import Janggo from "../assets/images/me.png";
 // import bg from "../assets/images/bg.png";
 import { NavLink } from "react-router-dom";
 import Footer from "./Footer";
-// import Projects from "../assets/Projects/port.png";
 import loginPage from "../assets/Projects/login.png";
 import Barangay from "../assets/Projects/barangay.png";
 import FreshBites from "../assets/Projects/recentFreshbites.png";
@@ -25,12 +23,9 @@ export default function HomePage() {
   return (
     <div>
       <div className="bg-[#FFF] h-screen ">
-        <div className="flex items-center justify-between max-w-6xl mx-auto h-full w-screen MobileS:justify-center Tablet:justify-center">
-          <div className="grid grid-row-2 gap-4 MobileS:max-w-lg MobileS:mx-5 Laptop:max-w-6xl Laptop:mx-5">
-            <div className="rounded-full border-8 overflow-hidden mx-auto pb-8 MobileS:hidden MobileS:h-60 MobileS:w-60 Tablet:h-60 Tablet:block Laptop:hidden">
-              <img src={Janggo} alt="" className="object-cover h-42" />
-            </div>
-            <div className="text-4xl">
+        <div className="flex max-w-6xl mx-auto h-3/4 w-screen MobileS:justify-center Tablet:justify-center">
+          <div className="flex flex-col MobileS:gap-2 Laptop:gap-3 items-center justify-center">
+            <div className="text-lg text-center">
               <h1>
                 Hey there{" "}
                 <span className="wave">
@@ -38,28 +33,26 @@ export default function HomePage() {
                     src={waving}
                     alt=""
                     className="overflow-clip"
-                    style={{ height: "40px" }}
-                  />{" "}
-                  {/* Need to fix this on mobile view, it keeps overflow navbar.*/}
+                    style={{ height: "20px" }}
+                  />
                 </span>
-                , I'm{" "}
-                <span className="font-bold text-[#a3262e]">John Leo Bruno</span>
+                , I am
               </h1>
+              <p className="font-extrabold text-[#a3262e] MobileS:text-4xl Tablet:text-6xl Laptop:text-8xl">
+                John Leo Bruno
+              </p>
             </div>
             <div className="text-xl">
-              <h1>
-                Aspiring{" "}
-                <span className="font-bold underline underline-offset-4 decoration-[#a3262e]">
-                  Web Developer
-                </span>
-              </h1>
+              <p className="font-medium underline underline-offset-4 decoration-[#a3262e]">
+                Software Developer
+              </p>
             </div>
-            <div className="Tablet:max-w-lg Laptop:max-w-3xl">
+            {/* <div className="Tablet:max-w-lg Laptop:max-w-3xl">
               <p>
                 Helping startups, small businesses, and agencies in achieving
                 high quality websites and providing remarkable user experiences.
               </p>
-            </div>
+            </div> */}
             <div className="flex gap-5">
               <NavLink
                 to="/Contact"
@@ -72,23 +65,11 @@ export default function HomePage() {
                 href="https://drive.google.com/file/d/1plqX5YV8iKKNbzsfJQtcLKj9voI0gewl/view?usp=sharing"
                 target="blank"
                 rel="noopenner"
-                className="rounded-lg text-base font-medium border border-[#a3262e] text-[#a3262e] p-2 hover:bg-rose-50"
+                className="rounded-lg text-base font-medium border border-[#a3262e] text-[#a3262e] p-2 px-6 hover:bg-rose-50"
               >
                 View Resume
               </a>
             </div>
-          </div>
-          <div className="relative border-8 overflow-hidden rounded-xl rounded-tr-[50px] rounded-bl-[50px] relative MobileS:hidden Tablet:hidden Laptop:block Laptop:mx-5">
-            {/* <img
-              className="object-contain h-100vh w-96 md:w-auto contrast-0 relative blur-xl"
-              src={bg}
-              alt=""
-            /> */}
-            <img
-              className="bg-[#f1f1f1] object-cover h-80 hover:scale-110 duration-1000 ease-out"
-              src={Janggo}
-              alt=""
-            />
           </div>
         </div>
       </div>

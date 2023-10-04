@@ -92,7 +92,8 @@ function Contact() {
                 </p>
               </div>
               {/* Socials */}
-              <div className="flex space-x-5 text-[#a3262e] pt-44">
+              <div className="flex space-x-5 text-[#a3262e] pt-20">
+                <h1 className="text-xl font-semibold">Social Links:</h1>
                 <div>
                   <a
                     href="https://www.facebook.com/LeoXyRDG/"

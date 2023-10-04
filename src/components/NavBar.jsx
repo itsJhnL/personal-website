@@ -206,10 +206,10 @@ function Main() {
         <>
           <div className="z-[300] bg-[#f1f1f1] top-0 fixed flex flex-col items-center justify-center h-[100vh] w-full Laptop:hidden">
             <span
-              className="text-[#a3262e] absolute top-10 right-5"
+              className="flex text-[#a3262e] font-bold absolute top-10 right-5"
               onClick={showNav}
             >
-              {openNav ? <Close /> : ""}
+              Close{openNav ? <Close /> : ""}
             </span>
             <button
               className="flex flex-col items-center justify-center space-y-10 text-lg"

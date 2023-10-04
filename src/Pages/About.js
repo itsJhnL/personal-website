@@ -27,7 +27,7 @@ function About() {
               Hi! I'm{" "}
               <span className="font-bold text-[#a3262e]">John Leo Bruno</span>
             </h1>
-            <p className="mb-5 text-justify text-gray-700">
+            <p className="mb-5 text-justify text-gray-700 text-lg">
               An aspiring{" "}
               <span className="font-bold underline underline-offset-4 decoration-[#a3262e]">
                 <a
@@ -45,7 +45,7 @@ function About() {
               always working to improve my skills and constantly working on
               getting better at solving problems.
             </p>
-            <p className="mb-5 text-justify text-gray-700">
+            <p className="mb-5 text-justify text-gray-700 text-lg">
               When I'm not writing code, I tidy up my workspace to create a
               conducive environment. At times, I engage in designing from
               scratch, and I derive pleasure from sharing my web development
@@ -76,7 +76,7 @@ function About() {
               <sup className="overflow-hidden whitespace-nowrap underline underline-offset-4 decoration-[#a3262e]">
                 Technology Stack
               </sup>
-              <div className="grid gap-4 MobileS:grid-cols-3 Laptop:grid-cols-4">
+              <div className="grid gap-4 MobileS:grid-cols-3 Laptop:grid-cols-4 text-lg">
                 <div className=" ease-out duration-500 hover:scale-105 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i>
                     <svg
@@ -800,7 +800,7 @@ function About() {
             <sup className="underline underline-offset-4 decoration-[#a3262e]">
               Main Skills
             </sup>
-            <div className="ease-out duration-500 hover:scale-105 bg-white p-5 mb-2 rounded-md">
+            <div className="ease-out duration-500 hover:scale-105 bg-white p-5 mb-2 rounded-md text-lg">
               <div className="flex items-center justify-between font-semibold">
                 <h1 className="text-[#a3262e]">Web Development</h1>
                 <div className="text-gray-600">
@@ -823,7 +823,7 @@ function About() {
                 its frameworks.
               </small>
             </div>
-            <div className="ease-out duration-500 hover:scale-105 bg-white p-5 mb-5  rounded-md">
+            <div className="ease-out duration-500 hover:scale-105 bg-white p-5 mb-5 rounded-md text-lg">
               <div className="flex items-center justify-between font-semibold">
                 <h1 className="text-[#a3262e]">
                   Web and User Interface Design
@@ -850,7 +850,7 @@ function About() {
             <sup className="underline underline-offset-4 decoration-[#a3262e]">
               Education
             </sup>
-            <div className="ease-out duration-500 hover:scale-105 bg-white p-5  rounded-md">
+            <div className="ease-out duration-500 hover:scale-105 bg-white p-5 rounded-md text-lg">
               <div className="flex items-center justify-between font-semibold">
                 <h1 className="text-[#a3262e]">BS in Information Technology</h1>
                 <div className="SVG">

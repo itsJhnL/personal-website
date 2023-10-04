@@ -57,111 +57,117 @@ function Experience() {
           </div>
         </div>
       </div>
-      <div className="border mt-24"></div>
-      <div className="flex flex-col space-y-10 pb-24 m-5">
+      <div className="border mt-24 m-5"></div>
+      <div className="flex flex-col pb-24 mx-5">
         <div className="text-center py-10">
-          <header className="text-6xl font-bold max-w-6xl mx-auto">
-            <p className=" text-gray-700">Certifications</p>
+          <header className=" font-bold max-w-6xl mx-auto">
+            <p className=" text-gray-700 Laptop:text-6xl MobileS:text-5xl">
+              Certifications
+            </p>
           </header>
           <p className="border-t-4 border-[#a3262e] mx-auto w-20"></p>
         </div>
 
         {/* Certificates */}
-        <div className="flex items-center justify-between">
-          <div className="">
-            <h1>IRCITE</h1>
-            <p>Desc</p>
-            <p>Date</p>
+        <div className="flex flex-col items-center justify-between pt-24">
+          <div className="items-center grid MobileS:grid-cols-1 Laptop:grid-cols-2 space-y-10">
+            <div>
+              <h1 className="text-2xl font-bold">IRCITE</h1>
+              <p className="text-xl">Desc</p>
+              <p className="text-xl">Date</p>
+            </div>
+            <div className="py-5">
+              <img src={Cert6} alt="" className="h-auto w-96 rounded-xl" />
+            </div>
+            <div>
+              <h1 className="text-2xl font-bold">Cert Name</h1>
+              <p className="text-xl">Desc</p>
+              <p className="text-xl">Date</p>
+            </div>
+            <div className="py-5">
+              <img src={Cert8} alt="" className="h-auto w-96 rounded-xl	" />
+            </div>
+            <div>
+              <h1 className="text-2xl font-bold">Cert Name</h1>
+              <p className="text-xl">Desc</p>
+              <p className="text-xl">Date</p>
+            </div>
+            <div className="py-5">
+              <img src={Cert1} alt="" className="h-auto w-96 rounded-xl	" />
+            </div>
+            <div>
+              <h1 className="text-2xl font-bold">Cert Name</h1>
+              <p className="text-xl">Desc</p>
+              <p className="text-xl">Date</p>
+            </div>{" "}
+            <div className="py-5">
+              <img src={Cert4} alt="" className="h-auto w-96 rounded-xl	" />
+            </div>
+            <div>
+              <h1 className="text-2xl font-bold">Cert Name</h1>
+              <p className="text-xl">Desc</p>
+              <p className="text-xl">Date</p>
+            </div>
+            <div className="py-5">
+              <img src={Cert5} alt="" className="h-auto w-96 rounded-xl	" />
+            </div>
+            <div>
+              <h1 className="text-2xl font-bold">Cert Name</h1>
+              <p className="text-xl">Desc</p>
+              <p className="text-xl">Date</p>
+            </div>
+            <div className="py-5">
+              <img src={Cert3} alt="" className="h-auto w-96 rounded-xl	" />
+            </div>
+            <div>
+              <h1 className="text-2xl font-bold">Cert Name</h1>
+              <p className="text-xl">Desc</p>
+              <p className="text-xl">Date</p>
+            </div>
+            <div className="py-5">
+              <img src={Cert7} alt="" className="h-auto w-96 rounded-xl	" />
+            </div>
+            <div>
+              <h1 className="text-2xl font-bold">Cert Name</h1>
+              <p className="text-xl">Desc</p>
+              <p className="text-xl">Date</p>
+            </div>
+            <div className="py-5">
+              <img src={Cert2} alt="" className="h-auto w-96 rounded-xl	" />
+            </div>
+            <div>
+              <h1 className="text-2xl font-bold">Cert Name</h1>
+              <p className="text-xl">Desc</p>
+              <p className="text-xl">Date</p>
+            </div>
+            <div className="py-5">
+              <img src={Cert9} alt="" className="h-auto w-96 rounded-xl	" />
+            </div>
+            <div>
+              <h1 className="text-2xl font-bold">Cert Name</h1>
+              <p className="text-xl">Desc</p>
+              <p className="text-xl">Date</p>
+            </div>
+            <div className="py-5">
+              <img src={Cert10} alt="" className="h-auto w-96 rounded-xl	" />
+            </div>
+            <div>
+              <h1 className="text-2xl font-bold">Cert Name</h1>
+              <p className="text-xl">Desc</p>
+              <p className="text-xl">Date</p>
+            </div>
+            <div className="py-5">
+              <img src={Cert11} alt="" className="h-auto w-96 rounded-xl	" />
+            </div>
+            <div>
+              <h1 className="text-2xl font-bold">Cert Name</h1>
+              <p className="text-xl">Desc</p>
+              <p className="text-xl">Date</p>
+            </div>
+            <div className="py-5">
+              <img src={Cert12} alt="" className="h-auto w-96 rounded-xl	" />
+            </div>
           </div>
-          <img src={Cert6} alt="" className="h-96 rounded-xl" />
-        </div>
-        <div className="flex items-center justify-between">
-          <div className="">
-            <h1>Cert Name</h1>
-            <p>Desc</p>
-            <p>Date</p>
-          </div>
-          <img src={Cert8} alt="" className="h-96 rounded-xl	" />
-        </div>
-        <div className="flex items-center justify-between">
-          <div className="">
-            <h1>Cert Name</h1>
-            <p>Desc</p>
-            <p>Date</p>
-          </div>
-          <img src={Cert1} alt="" className="h-96 rounded-xl	" />
-        </div>
-        <div className="flex items-center justify-between">
-          <div className="">
-            <h1>Cert Name</h1>
-            <p>Desc</p>
-            <p>Date</p>
-          </div>
-          <img src={Cert4} alt="" className="h-96 rounded-xl	" />
-        </div>
-        <div className="flex items-center justify-between">
-          <div className="">
-            <h1>Cert Name</h1>
-            <p>Desc</p>
-            <p>Date</p>
-          </div>
-          <img src={Cert5} alt="" className="h-96 rounded-xl	" />
-        </div>
-        <div className="flex items-center justify-between">
-          <div className="">
-            <h1>Cert Name</h1>
-            <p>Desc</p>
-            <p>Date</p>
-          </div>
-          <img src={Cert3} alt="" className="h-96 rounded-xl	" />
-        </div>
-        <div className="flex items-center justify-between">
-          <div className="">
-            <h1>Cert Name</h1>
-            <p>Desc</p>
-            <p>Date</p>
-          </div>
-          <img src={Cert7} alt="" className="h-96 rounded-xl	" />
-        </div>
-        <div className="flex items-center justify-between">
-          <div className="">
-            <h1>Cert Name</h1>
-            <p>Desc</p>
-            <p>Date</p>
-          </div>
-          <img src={Cert2} alt="" className="h-96 rounded-xl	" />
-        </div>
-        <div className="flex items-center justify-between">
-          <div className="">
-            <h1>Cert Name</h1>
-            <p>Desc</p>
-            <p>Date</p>
-          </div>
-          <img src={Cert9} alt="" className="h-96 rounded-xl	" />
-        </div>
-        <div className="flex items-center justify-between">
-          <div className="">
-            <h1>Cert Name</h1>
-            <p>Desc</p>
-            <p>Date</p>
-          </div>
-          <img src={Cert10} alt="" className="h-96 rounded-xl	" />
-        </div>
-        <div className="flex items-center justify-between">
-          <div className="">
-            <h1>Cert Name</h1>
-            <p>Desc</p>
-            <p>Date</p>
-          </div>
-          <img src={Cert11} alt="" className="h-96 rounded-xl	" />
-        </div>
-        <div className="flex items-center justify-between">
-          <div className="">
-            <h1>Cert Name</h1>
-            <p>Desc</p>
-            <p>Date</p>
-          </div>
-          <img src={Cert12} alt="" className="h-96 rounded-xl	" />
         </div>
       </div>
       <Footer />

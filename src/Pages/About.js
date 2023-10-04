@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../components/Footer";
 import "../App.css";
-import Janggo from "../assets/images/Janggo.png";
+import Janggo from "../assets/images/me.png";
 
 function About() {
   return (
@@ -14,9 +14,9 @@ function About() {
           </header>
           <p className="border-t-4 border-[#a3262e] mx-auto w-20"></p>
         </div>
-        <div className="border-4 border-[#a3262e] mb-14 rounded-full overflow-hidden MobileS:h-52 MobileS:w-52 Laptop:hidden">
+        {/* <div className="border-4 border-[#a3262e] mb-14 rounded-full overflow-hidden MobileS:h-52 MobileS:w-52 Laptop:hidden">
           <img src={Janggo} alt="" className="object-cover h-42" />
-        </div>
+        </div> */}
         <div className="grid grid-cols-2 gap-7 max-w-6xl mx-auto pb-24 p-4 MobileS:grid-cols-1 Tablet:grid-cols-2">
           <div className="mb-5">
             <sup className="underline underline-offset-4 decoration-[#a3262e]">
@@ -40,11 +40,11 @@ function About() {
                 </a>
               </span>{" "}
               based in Philippines. Since I started my journey as a front-end
-              developer, I've worked on personal projects, crafting
-              responsive websites that are both fast and user-friendly while
-              following best practices. I have a quiet confidence, a natural
-              curiosity, and I'm always working to improve my skills and
-              constantly working on getting better at solving problems.
+              developer, I've worked on personal projects, crafting responsive
+              websites that are both fast and user-friendly while following best
+              practices. I have a quiet confidence, a natural curiosity, and I'm
+              always working to improve my skills and constantly working on
+              getting better at solving problems.
             </p>
             <p className="mb-5 text-justify text-gray-700">
               When I'm not writing code, I tidy up my workspace to create a
@@ -78,6 +78,84 @@ function About() {
                 Technology Stack
               </sup>
               <div className="grid gap-4 MobileS:grid-cols-3 Laptop:grid-cols-4">
+                <div className=" ease-out duration-500 hover:scale-105 flex flex-col items-center justify-center p-5 bg-white rounded-md">
+                  <i>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="45"
+                      height="45"
+                      viewBox="0 0 32 32"
+                    >
+                      <path
+                        fill="#e44f26"
+                        d="M5.902 27.201L3.655 2h24.69l-2.25 25.197L15.985 30L5.902 27.201z"
+                      />
+                      <path
+                        fill="#f1662a"
+                        d="m16 27.858l8.17-2.265l1.922-21.532H16v23.797z"
+                      />
+                      <path
+                        fill="#ebebeb"
+                        d="M16 13.407h-4.09l-.282-3.165H16V7.151H8.25l.074.83l.759 8.517H16v-3.091zm0 8.027l-.014.004l-3.442-.929l-.22-2.465H9.221l.433 4.852l6.332 1.758l.014-.004v-3.216z"
+                      />
+                      <path
+                        fill="#fff"
+                        d="M15.989 13.407v3.091h3.806l-.358 4.009l-3.448.93v3.216l6.337-1.757l.046-.522l.726-8.137l.076-.83h-7.185zm0-6.256v3.091h7.466l.062-.694l.141-1.567l.074-.83h-7.743z"
+                      />
+                    </svg>
+                  </i>
+                  <small>HTML5</small>
+                </div>
+                <div className=" ease-out duration-500 hover:scale-105 flex flex-col items-center justify-center p-5 bg-white rounded-md">
+                  <i>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="45"
+                      height="45"
+                      viewBox="0 0 32 32"
+                    >
+                      <path
+                        fill="#1572b6"
+                        d="M5.902 27.201L3.656 2h24.688l-2.249 25.197L15.985 30L5.902 27.201z"
+                      />
+                      <path
+                        fill="#33a9dc"
+                        d="m16 27.858l8.17-2.265l1.922-21.532H16v23.797z"
+                      />
+                      <path
+                        fill="#fff"
+                        d="M16 13.191h4.09l.282-3.165H16V6.935h7.75l-.074.829l-.759 8.518H16v-3.091z"
+                      />
+                      <path
+                        fill="#ebebeb"
+                        d="m16.019 21.218l-.014.004l-3.442-.93l-.22-2.465H9.24l.433 4.853l6.331 1.758l.015-.004v-3.216z"
+                      />
+                      <path
+                        fill="#fff"
+                        d="m19.827 16.151l-.372 4.139l-3.447.93v3.216l6.336-1.756l.047-.522l.537-6.007h-3.101z"
+                      />
+                      <path
+                        fill="#ebebeb"
+                        d="M16.011 6.935v3.091H8.545l-.062-.695l-.141-1.567l-.074-.829h7.743zM16 13.191v3.091h-3.399l-.062-.695l-.14-1.567l-.074-.829H16z"
+                      />
+                    </svg>
+                  </i>
+                  <small>CSS3</small>
+                </div>
+                <div className=" ease-out duration-500 hover:scale-105 flex flex-col items-center justify-center p-5 bg-white rounded-md">
+                  <i>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="45"
+                      height="45"
+                      viewBox="0 0 256 256"
+                    >
+                      <path fill="#F7DF1E" d="M0 0h256v256H0V0Z" />
+                      <path d="m67.312 213.932l19.59-11.856c3.78 6.701 7.218 12.371 15.465 12.371c7.905 0 12.89-3.092 12.89-15.12v-81.798h24.057v82.138c0 24.917-14.606 36.259-35.916 36.259c-19.245 0-30.416-9.967-36.087-21.996m85.07-2.576l19.588-11.341c5.157 8.421 11.859 14.607 23.715 14.607c9.969 0 16.325-4.984 16.325-11.858c0-8.248-6.53-11.17-17.528-15.98l-6.013-2.58c-17.357-7.387-28.87-16.667-28.87-36.257c0-18.044 13.747-31.792 35.228-31.792c15.294 0 26.292 5.328 34.196 19.247l-18.732 12.03c-4.125-7.389-8.591-10.31-15.465-10.31c-7.046 0-11.514 4.468-11.514 10.31c0 7.217 4.468 10.14 14.778 14.608l6.014 2.577c20.45 8.765 31.963 17.7 31.963 37.804c0 21.654-17.012 33.51-39.867 33.51c-22.339 0-36.774-10.654-43.819-24.574" />
+                    </svg>
+                  </i>
+                  <small>JavaScript</small>
+                </div>
                 {/* <div className="ease-out duration-500 hover:scale-105 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i>
                     <svg
@@ -237,70 +315,6 @@ function About() {
                       xmlns="http://www.w3.org/2000/svg"
                       width="45"
                       height="45"
-                      viewBox="0 0 32 32"
-                    >
-                      <path
-                        fill="#e44f26"
-                        d="M5.902 27.201L3.655 2h24.69l-2.25 25.197L15.985 30L5.902 27.201z"
-                      />
-                      <path
-                        fill="#f1662a"
-                        d="m16 27.858l8.17-2.265l1.922-21.532H16v23.797z"
-                      />
-                      <path
-                        fill="#ebebeb"
-                        d="M16 13.407h-4.09l-.282-3.165H16V7.151H8.25l.074.83l.759 8.517H16v-3.091zm0 8.027l-.014.004l-3.442-.929l-.22-2.465H9.221l.433 4.852l6.332 1.758l.014-.004v-3.216z"
-                      />
-                      <path
-                        fill="#fff"
-                        d="M15.989 13.407v3.091h3.806l-.358 4.009l-3.448.93v3.216l6.337-1.757l.046-.522l.726-8.137l.076-.83h-7.185zm0-6.256v3.091h7.466l.062-.694l.141-1.567l.074-.83h-7.743z"
-                      />
-                    </svg>
-                  </i>
-                  <small>HTML5</small>
-                </div>
-                <div className=" ease-out duration-500 hover:scale-105 flex flex-col items-center justify-center p-5 bg-white rounded-md">
-                  <i>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="45"
-                      height="45"
-                      viewBox="0 0 32 32"
-                    >
-                      <path
-                        fill="#1572b6"
-                        d="M5.902 27.201L3.656 2h24.688l-2.249 25.197L15.985 30L5.902 27.201z"
-                      />
-                      <path
-                        fill="#33a9dc"
-                        d="m16 27.858l8.17-2.265l1.922-21.532H16v23.797z"
-                      />
-                      <path
-                        fill="#fff"
-                        d="M16 13.191h4.09l.282-3.165H16V6.935h7.75l-.074.829l-.759 8.518H16v-3.091z"
-                      />
-                      <path
-                        fill="#ebebeb"
-                        d="m16.019 21.218l-.014.004l-3.442-.93l-.22-2.465H9.24l.433 4.853l6.331 1.758l.015-.004v-3.216z"
-                      />
-                      <path
-                        fill="#fff"
-                        d="m19.827 16.151l-.372 4.139l-3.447.93v3.216l6.336-1.756l.047-.522l.537-6.007h-3.101z"
-                      />
-                      <path
-                        fill="#ebebeb"
-                        d="M16.011 6.935v3.091H8.545l-.062-.695l-.141-1.567l-.074-.829h7.743zM16 13.191v3.091h-3.399l-.062-.695l-.14-1.567l-.074-.829H16z"
-                      />
-                    </svg>
-                  </i>
-                  <small>CSS3</small>
-                </div>
-                <div className=" ease-out duration-500 hover:scale-105 flex flex-col items-center justify-center p-5 bg-white rounded-md">
-                  <i>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="45"
-                      height="45"
                       viewBox="0 0 256 154"
                     >
                       <defs>
@@ -432,6 +446,54 @@ function About() {
                     </svg>
                   </i>
                   <small>Redux</small>
+                </div>
+                <div className=" ease-out duration-500 hover:scale-105 flex flex-col items-center justify-center p-5 bg-white rounded-md">
+                  <i>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="45"
+                      height="45"
+                      viewBox="0 0 256 135"
+                    >
+                      <defs>
+                        <radialGradient
+                          id="logosPhp0"
+                          cx=".837"
+                          cy="-125.811"
+                          r="363.057"
+                          gradientTransform="matrix(.463 0 0 .463 76.464 81.918)"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop offset="0" stopColor="#FFF" />
+                          <stop offset=".5" stopColor="#4C6B97" />
+                          <stop offset="1" stopColor="#231F20" />
+                        </radialGradient>
+                      </defs>
+                      <ellipse
+                        cx="128"
+                        cy="67.3"
+                        fill="url(#logosPhp0)"
+                        rx="128"
+                        ry="67.3"
+                      />
+                      <ellipse
+                        cx="128"
+                        cy="67.3"
+                        fill="#6181B6"
+                        rx="123"
+                        ry="62.3"
+                      />
+                      <path
+                        fill="#FFF"
+                        d="m152.9 87.5l6.1-31.4c1.4-7.1.2-12.4-3.4-15.7c-3.5-3.2-9.5-4.8-18.3-4.8h-10.6l3-15.6c.1-.6 0-1.2-.4-1.7s-.9-.7-1.5-.7h-14.6c-1 0-1.8.7-2 1.6l-6.5 33.3c-.6-3.8-2-7-4.4-9.6c-4.3-4.9-11-7.4-20.1-7.4H52.1c-1 0-1.8.7-2 1.6L37 104.7c-.1.6 0 1.2.4 1.7s.9.7 1.5.7h14.7c1 0 1.8-.7 2-1.6l3.2-16.3h10.9c5.7 0 10.6-.6 14.3-1.8c3.9-1.3 7.4-3.4 10.5-6.3c2.5-2.3 4.6-4.9 6.2-7.7l-2.6 13.5c-.1.6 0 1.2.4 1.7s.9.7 1.5.7h14.6c1 0 1.8-.7 2-1.6l7.2-37h10c4.3 0 5.5.8 5.9 1.2c.3.3.9 1.5.2 5.2L134.1 87c-.1.6 0 1.2.4 1.7s.9.7 1.5.7h15c.9-.3 1.7-1 1.9-1.9zm-67.6-26c-.9 4.7-2.6 8.1-5.1 10c-2.5 1.9-6.6 2.9-12 2.9h-6.5l4.7-24.2h8.4c6.2 0 8.7 1.3 9.7 2.4c1.3 1.6 1.6 4.7.8 8.9zm130-18.6c-4.3-4.9-11-7.4-20.1-7.4h-28.3c-1 0-1.8.7-2 1.6l-13.1 67.5c-.1.6 0 1.2.4 1.7s.9.7 1.5.7h14.7c1 0 1.8-.7 2-1.6l3.2-16.3h10.9c5.7 0 10.6-.6 14.3-1.8c3.9-1.3 7.4-3.4 10.5-6.3c2.6-2.4 4.8-5.1 6.4-8c1.6-2.9 2.8-6.1 3.5-9.6c1.7-8.7.4-15.5-3.9-20.5zM200 61.5c-.9 4.7-2.6 8.1-5.1 10c-2.5 1.9-6.6 2.9-12 2.9h-6.5l4.7-24.2h8.4c6.2 0 8.7 1.3 9.7 2.4c1.4 1.6 1.7 4.7.8 8.9z"
+                      />
+                      <path
+                        fill="#000004"
+                        d="M74.8 48.2c5.6 0 9.3 1 11.2 3.1c1.9 2.1 2.3 5.6 1.3 10.6c-1 5.2-3 9-5.9 11.2c-2.9 2.2-7.3 3.3-13.2 3.3h-8.9l5.5-28.2h10zM39 105h14.7l3.5-17.9h12.6c5.6 0 10.1-.6 13.7-1.8c3.6-1.2 6.8-3.1 9.8-5.9c2.5-2.3 4.5-4.8 6-7.5s2.6-5.7 3.2-9c1.6-8 .4-14.2-3.5-18.7s-10.1-6.7-18.6-6.7H52.1L39 105zm74.3-85.4h14.6l-3.5 17.9h13c8.2 0 13.8 1.4 16.9 4.3c3.1 2.9 4 7.5 2.8 13.9L151 87.1h-14.8l5.8-29.9c.7-3.4.4-5.7-.7-6.9c-1.1-1.2-3.6-1.9-7.3-1.9h-11.7l-7.5 38.7h-14.6l13.1-67.5zm76.2 28.6c5.6 0 9.3 1 11.2 3.1c1.9 2.1 2.3 5.6 1.3 10.6c-1 5.2-3 9-5.9 11.2c-2.9 2.2-7.3 3.3-13.2 3.3H174l5.5-28.2h10zM153.7 105h14.7l3.5-17.9h12.6c5.6 0 10.1-.6 13.7-1.8c3.6-1.2 6.8-3.1 9.8-5.9c2.5-2.3 4.5-4.8 6-7.5s2.6-5.7 3.2-9c1.6-8 .4-14.2-3.5-18.7s-10.1-6.7-18.6-6.7h-28.3L153.7 105z"
+                      />
+                    </svg>
+                  </i>
+                  <small>PHP</small>
                 </div>
                 <div className=" ease-out duration-500 hover:scale-105 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i>

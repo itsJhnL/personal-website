@@ -77,7 +77,7 @@ function Projects() {
                 href="http://freshbites.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border border-[#a3262e] rounded-full p-2 text-base font-semibold text-gray-700"
+                className="text-base font-semibold text-gray-700"
               >
                 Live Demo
               </a>
@@ -85,9 +85,9 @@ function Projects() {
                 href="https://github.com/itsJhnL/fresh-bites"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border border-[#a3262e] rounded-full p-2 text-base font-semibold text-gray-700"
+                className="text-base font-semibold text-gray-700"
               >
-                {"< View Code />"}
+                View Code
               </a>
             </div>
           </div>

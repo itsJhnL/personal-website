@@ -64,7 +64,7 @@ function Contact() {
                     />
                   </svg>
                 </i>
-                <p>{"(+63) 992-718-0980"}</p>
+                <p>{"(+63) 906-360-4260"}</p>
               </div>
               <div className="flex">
                 <i className="pr-5 text-[#a3262e]">

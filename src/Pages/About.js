@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../components/Footer";
 import "../App.css";
-import Janggo from "../assets/images/me.png";
+// import Janggo from "../assets/images/me.png";
 import Picture from "../assets/images/IMG_2777.jpeg";
 
 function About() {

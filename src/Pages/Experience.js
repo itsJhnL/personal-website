@@ -1,61 +1,33 @@
 import React from "react";
+import userData from "../components/data/data";
 import Footer from "../components/Footer";
-import Cert1 from "../assets/Certificates/cert (1).jpg";
-import Cert2 from "../assets/Certificates/cert (2).jpg";
-import Cert3 from "../assets/Certificates/cert (3).jpg";
-import Cert4 from "../assets/Certificates/cert (4).jpg";
-import Cert5 from "../assets/Certificates/cert (5).jpg";
-import Cert6 from "../assets/Certificates/cert (6).jpg";
-import Cert7 from "../assets/Certificates/cert (7).jpg";
-import Cert8 from "../assets/Certificates/cert (8).jpg";
-import Cert9 from "../assets/Certificates/cert (9).jpg";
-import Cert10 from "../assets/Certificates/cert (10).jpg";
-import Cert11 from "../assets/Certificates/cert (11).jpg";
-import Cert12 from "../assets/Certificates/cert (12).jpg";
 
 function Experience() {
   return (
     <div className="max-w-6xl mx-auto">
-      <div className="flex flex-col items-center justify-center max-w-6xl mx-auto">
+      <div>
         <div className="text-center py-24">
+          {/* <h1 className="font-bold text-lg text-[#a3262e]">My experience</h1> */}
           <header className="text-6xl font-bold">
             <p className=" text-gray-700">Experience</p>
           </header>
           <p className="border-t-4 border-[#a3262e] mx-auto w-20"></p>
         </div>
-
-        <div className="relative flex flex-col space-y-24 ">
-          <div className="relative border border-gray-100 ease-out duration-500 hover:scale-105 rounded-lg max-w-2xl shadow-2xl p-5">
-            <div className="absolute text-4xl text-[#a3262e]/20 font-bold -mt-10 right-0 top-0">
-              2023
+        {userData.experience.map((item) => (
+          <div className="relative m-5 pb-24">
+            <div
+              key={item.id}
+              className="relative border border-gray-100 ease-out duration-500 hover:scale-105 rounded-lg shadow-2xl max-w-2xl mx-auto p-5"
+            >
+              <div className="absolute text-4xl text-[#a3262e]/20 font-bold -mt-10 right-0 top-0">
+                {item.year}
+              </div>
+              <h1 className="text-2xl font-bold">{item.position}</h1>
+              <p className="text-xl text-gray-500">{item.title}</p>
+              <p className="pt-5 text-justify text-lg">{item.desc}</p>
             </div>
-            <h1 className="text-2xl font-bold">Graduation</h1>
-            <p className="text-xl text-gray-500">
-              Nueva Ecija University of Science and Technology
-            </p>
-            <p className="pt-5 text-justify text-lg">
-              Bachelor's degree in Information Technology.
-            </p>
           </div>
-          {/* Intership */}
-          <div className="relative border border-gray-100 ease-out duration-500 hover:scale-105 rounded-lg max-w-2xl shadow-2xl p-5">
-            <div className="absolute text-4xl text-[#a3262e]/20 font-bold -mt-10 right-0 top-0">
-              2023
-            </div>
-            <h1 className="text-2xl font-bold">Internship</h1>
-            <p className="text-xl text-gray-500">iSynergies Inc</p>
-            <p className="pt-5 text-justify text-lg">
-              I was responsible for performing a wide range of software
-              development tasks. This included actively engaging in both
-              front-end and back-end development, allowing me to gain a
-              comprehensive understanding of the full software development
-              stack. I collaborated closely with senior software developers,
-              contributing to the team's success by leveraging their expertise
-              and mentorship to enhance my own skills and deliver high-quality
-              software solutions.
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
       <div className="border mt-24 m-5"></div>
       <div className="flex flex-col pb-24 mx-5">
@@ -69,104 +41,21 @@ function Experience() {
         </div>
 
         {/* Certificates */}
-        <div className="flex flex-col items-center justify-between pt-24">
-          <div className="items-center grid MobileS:grid-cols-1 Laptop:grid-cols-2 space-y-10">
-            <div>
-              <h1 className="text-2xl font-bold">IRCITE</h1>
-              <p className="text-xl">Desc</p>
-              <p className="text-xl">Date</p>
-            </div>
-            <div className="py-5">
-              <img src={Cert6} alt="" className="h-auto w-96 rounded-xl" />
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold">Cert Name</h1>
-              <p className="text-xl">Desc</p>
-              <p className="text-xl">Date</p>
-            </div>
-            <div className="py-5">
-              <img src={Cert8} alt="" className="h-auto w-96 rounded-xl	" />
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold">Cert Name</h1>
-              <p className="text-xl">Desc</p>
-              <p className="text-xl">Date</p>
-            </div>
-            <div className="py-5">
-              <img src={Cert1} alt="" className="h-auto w-96 rounded-xl	" />
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold">Cert Name</h1>
-              <p className="text-xl">Desc</p>
-              <p className="text-xl">Date</p>
-            </div>{" "}
-            <div className="py-5">
-              <img src={Cert4} alt="" className="h-auto w-96 rounded-xl	" />
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold">Cert Name</h1>
-              <p className="text-xl">Desc</p>
-              <p className="text-xl">Date</p>
-            </div>
-            <div className="py-5">
-              <img src={Cert5} alt="" className="h-auto w-96 rounded-xl	" />
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold">Cert Name</h1>
-              <p className="text-xl">Desc</p>
-              <p className="text-xl">Date</p>
-            </div>
-            <div className="py-5">
-              <img src={Cert3} alt="" className="h-auto w-96 rounded-xl	" />
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold">Cert Name</h1>
-              <p className="text-xl">Desc</p>
-              <p className="text-xl">Date</p>
-            </div>
-            <div className="py-5">
-              <img src={Cert7} alt="" className="h-auto w-96 rounded-xl	" />
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold">Cert Name</h1>
-              <p className="text-xl">Desc</p>
-              <p className="text-xl">Date</p>
-            </div>
-            <div className="py-5">
-              <img src={Cert2} alt="" className="h-auto w-96 rounded-xl	" />
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold">Cert Name</h1>
-              <p className="text-xl">Desc</p>
-              <p className="text-xl">Date</p>
-            </div>
-            <div className="py-5">
-              <img src={Cert9} alt="" className="h-auto w-96 rounded-xl	" />
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold">Cert Name</h1>
-              <p className="text-xl">Desc</p>
-              <p className="text-xl">Date</p>
-            </div>
-            <div className="py-5">
-              <img src={Cert10} alt="" className="h-auto w-96 rounded-xl	" />
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold">Cert Name</h1>
-              <p className="text-xl">Desc</p>
-              <p className="text-xl">Date</p>
-            </div>
-            <div className="py-5">
-              <img src={Cert11} alt="" className="h-auto w-96 rounded-xl	" />
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold">Cert Name</h1>
-              <p className="text-xl">Desc</p>
-              <p className="text-xl">Date</p>
-            </div>
-            <div className="py-5">
-              <img src={Cert12} alt="" className="h-auto w-96 rounded-xl	" />
-            </div>
+        <div className="flex items-center justify-center pt-24">
+          {/* <div className="items-center grid MobileS:grid-cols-1 Laptop:grid-cols-2 space-y-10 gap-8"> */}
+          <div>
+            {userData.certificates.map((item) => (
+              <div key={item.id} className="py-5">
+                <h1 className="text-xl font-bold">{item.name}</h1>
+                <p className="text-lg">{item.description}</p>
+                <p className="text-lg">{item.date}</p>
+                <img
+                  src={item.imageURL}
+                  alt=""
+                  className="h-auto w-full rounded-xl"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>

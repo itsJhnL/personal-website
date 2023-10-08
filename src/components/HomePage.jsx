@@ -1,12 +1,9 @@
 import React, { useState } from "react";
-// import bg from "../assets/images/bg.png";
 import { NavLink } from "react-router-dom";
 import Footer from "./Footer";
-import loginPage from "../assets/Projects/login.png";
-import Barangay from "../assets/Projects/barangay.png";
-import FreshBites from "../assets/Projects/recentFreshbites.png";
 import "../styles/Wave.css";
 import waving from "../assets/images/wave.png";
+import userData from "./data/data";
 
 export default function HomePage() {
   const [clicked, setClicked] = useState();
@@ -21,7 +18,7 @@ export default function HomePage() {
   };
 
   return (
-    <div>
+    <>
       <div className="bg-[#FFF] h-screen ">
         <div className="flex max-w-6xl mx-auto h-3/4 w-screen MobileS:justify-center Tablet:justify-center">
           <div className="flex flex-col MobileS:gap-2 Laptop:gap-3 items-center justify-center">
@@ -53,7 +50,7 @@ export default function HomePage() {
                 high quality websites and providing remarkable user experiences.
               </p>
             </div> */}
-            <div className="flex gap-5">
+            <div className="flex gap-2">
               <NavLink
                 to="/Contact"
                 onClick={scrollUp}
@@ -82,27 +79,12 @@ export default function HomePage() {
             {/* <p className="border-t-4 border-[#a3262e] mx-auto w-36"></p> */}
           </div>
           <div className="grid grid-cols-2 gap-4 max-w-6xl pb-14 MobileS:grid-cols-1 Laptop:grid-cols-2">
-            <div className="relative overflow-hidden rounded-lg">
-              <img
-                src={FreshBites}
-                alt=""
-                className="hover:scale-105 ease-out duration-500 rounded-lg"
-              />
-            </div>
-            <div className="relative overflow-hidden rounded-lg">
-              <img
-                src={loginPage}
-                alt=""
-                className="hover:scale-105 ease-out duration-500 rounded-lg"
-              />
-            </div>
-            <div className="relative overflow-hidden rounded-lg">
-              <img
-                src={Barangay}
-                alt=""
-                className="hover:scale-105 ease-out duration-500 rounded-lg"
-              />
-            </div>
+            {/* Rendered data */}
+            {userData.recentWork.map((recent) => (
+              <div key={recent.id}>
+                <RecentWorks imgURL={recent.imgURL} />
+              </div>
+            ))}
           </div>
           <NavLink to="/Works" onClick={scrollUp}>
             <div className="border rounded-lg bg-white font-bold text-gray-700 p-3 hover:bg-rose-50">
@@ -114,6 +96,19 @@ export default function HomePage() {
         </div>
         <Footer />
       </div>
-    </div>
+    </>
   );
 }
+
+//Pass data with a render prop
+const RecentWorks = ({ imgURL }) => {
+  return (
+    <div className="relative overflow-hidden rounded-lg">
+      <img
+        src={imgURL}
+        alt=""
+        className="hover:scale-105 ease-out duration-500 rounded-lg"
+      />
+    </div>
+  );
+};

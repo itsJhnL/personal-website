@@ -15,23 +15,23 @@ function About() {
           </header>
           <p className="border-t-4 border-[#a3262e] mx-auto w-20"></p>
         </div>
-        <div className="rounded-full border-8 overflow-hidden mx-auto pb-8 MobileS:block MobileS:h-60 MobileS:w-60 Tablet:h-60 Tablet:block Laptop:hidden">
+        <div className="rounded-full border-8 overflow-hidden mx-auto pb-8 MobileS:block MobileS:h-60 MobileS:w-60 Tablet:hidden">
           <img src={Picture} alt="" className="object-cover h-42" />
         </div>
-        <div className="grid grid-cols-2 gap-7 max-w-6xl mx-auto pb-24 p-4 MobileS:grid-cols-1 Tablet:grid-cols-2">
-          <div className="mb-5">
+        <div className="grid grid-cols-2 MobileS:gap-0 Laptop:gap-8 max-w-6xl mx-auto pb-24 p-4 MobileS:grid-cols-1 Tablet:grid-cols-2">
+          <div className="pb-5 MobileS:mx-5 Laptop:mx-0">
             <sup className="underline underline-offset-4 decoration-[#a3262e]">
               Introduce
             </sup>
-            <h1 className="text-3xl mb-3">
+            <h1 className="text-3xl pb-3">
               Hi! I'm{" "}
               <span className="font-bold text-[#a3262e]">John Leo Bruno</span>
             </h1>
-            <p className="mb-5 text-justify text-gray-700 text-lg">
+            <p className="pb-5 text-justify text-gray-700 text-lg">
               An aspiring{" "}
               <span className="font-bold underline underline-offset-4 decoration-[#a3262e]">
                 <a
-                  href="https://g.co/kgs/jTBr1h"
+                  href="https://g.co/kgs/4PDqqC"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -762,39 +762,15 @@ function About() {
                   </i>
                   <small>Github</small>
                 </div>
-                {/* <div className=" ease-out duration-500 hover:scale-105 flex flex-col items-center justify-center p-5 bg-white rounded-md">
-                  <i></i>
-                  <small></small>
-                </div>
-                <div className=" ease-out duration-500 hover:scale-105 flex flex-col items-center justify-center p-5 bg-white rounded-md">
-                  <i></i>
-                  <small></small>
-                </div>
-                <div className=" ease-out duration-500 hover:scale-105 flex flex-col items-center justify-center p-5 bg-white rounded-md">
-                  <i></i>
-                  <small></small>
-                </div>
-                <div className=" ease-out duration-500 hover:scale-105 flex flex-col items-center justify-center p-5 bg-white rounded-md">
-                  <i></i>
-                  <small></small>
-                </div>
-                <div className=" ease-out duration-500 hover:scale-105 flex flex-col items-center justify-center p-5 bg-white rounded-md">
-                  <i></i>
-                  <small></small>
-                </div>
-                <div className=" ease-out duration-500 hover:scale-105 flex flex-col items-center justify-center p-5 bg-white rounded-md">
-                  <i></i>
-                  <small></small>
-                </div> */}
               </div>
             </div>
           </div>
-          <div>
+          <div className="MobileS:mx-5 Laptop:mx-0">
             <div className="flex items-center justify-center">
               <img
                 src={Picture}
                 alt=""
-                className="h-96 p-4 hover:scale-110 duration-500 ease-in-out MobileS:hidden Laptop:block"
+                className="h-96 p-4 hover:scale-110 duration-500 ease-in-out MobileS:hidden Tablet:block"
               />
             </div>
             <sup className="underline underline-offset-4 decoration-[#a3262e]">

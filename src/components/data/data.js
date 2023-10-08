@@ -1,17 +1,35 @@
 const userData = {
+  recentWork: [
+    {
+      id: 1,
+      imgURL: "/projects/freshbites.png",
+    },
+    {
+      id: 2,
+      imgURL: "/projects/barangay.png",
+    },
+    {
+      id: 3,
+      imgURL: "/projects/login.png",
+    },
+    {
+      id: 4,
+      imgURL: "/projects/linkedin-clone.png",
+    },
+  ],
   experience: [
     {
       id: 1,
-      position: "Graduation",
-      title: "Nueva Ecija University of Science and Technology",
-      desc: "Bachelor's degree in Information Technology.",
+      position: "Internship",
+      title: "iSynergies Inc",
+      desc: "I was responsible for performing a wide range of software development tasks. This included actively engaging in both front-end and back-end development, allowing me to gain a comprehensive understanding of the full software development stack. I collaborated closely with senior software developers, contributing to the team's success by leveraging their expertise and mentorship to enhance my own skills and deliver high-quality software solutions.",
       year: "2023",
     },
     {
       id: 2,
-      position: "Internship",
-      title: "iSynergies Inc",
-      desc: "I was responsible for performing a wide range of software development tasks. This included actively engaging in both front-end and back-end development, allowing me to gain a comprehensive understanding of the full software development stack. I collaborated closely with senior software developers, contributing to the team's success by leveraging their expertise and mentorship to enhance my own skills and deliver high-quality software solutions.",
+      position: "Graduation",
+      title: "Nueva Ecija University of Science and Technology",
+      desc: "Bachelor's degree in Information Technology.",
       year: "2023",
     },
   ],
@@ -105,7 +123,7 @@ const userData = {
   ],
   works: [
     {
-      // id: 1,
+      id: 1,
       imageURL: "/projects/freshbites.png",
       title: "Fresh Bites",
       desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero maxime iste adipisci atque aliquam facere dignissimos sequi ea mollitia molestias?",
@@ -114,7 +132,7 @@ const userData = {
       code: "#",
     },
     {
-      // id: 2,
+      id: 2,
       imageURL: "/projects/barangay.png",
       title: "Barangay Management Information System",
       desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero maxime iste adipisci atque aliquam facere dignissimos sequi ea mollitia molestias?",
@@ -123,7 +141,7 @@ const userData = {
       code: "#",
     },
     {
-      // id: 3,
+      id: 3,
       imageURL: "/projects/login.png",
       title: "Login Page",
       desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero maxime iste adipisci atque aliquam facere dignissimos sequi ea mollitia molestias?",
@@ -132,7 +150,7 @@ const userData = {
       code: "#",
     },
     {
-      // id: 4,
+      id: 4,
       imageURL: "/projects/linkedin-clone.png",
       title: "LinkedIn Clone",
       desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero maxime iste adipisci atque aliquam facere dignissimos sequi ea mollitia molestias?",

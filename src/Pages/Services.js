@@ -14,8 +14,8 @@ function Services() {
           <p className="border-t-4 border-[#a3262e] mx-auto w-20"></p>
         </div>
 
-        <div className="text-center grid grid-cols-3 gap-4 p-4 max-w-6xl mx-auto text-gray-700 MobileS:grid-cols-1 Tablet:grid-cols-2 Laptop:grid-cols-3">
-          <div className="border bg-white p-5 rounded-lg space-y-5 MobileS:transform-none Laptop:hover:scale-105 ease-out duration-500">
+        <div className="text-center grid grid-cols-3 gap-4 MobileS:px-10 Laptop:px-5 max-w-6xl mx-auto text-gray-700 MobileS:grid-cols-1 Tablet:grid-cols-2 Laptop:grid-cols-3">
+          <div className="border bg-white p-5 rounded-lg space-y-5 hover:scale-105 ease-out duration-500">
             <h1 className="font-bold text-lg text-[#a3262e]">
               Web Development
             </h1>
@@ -25,14 +25,14 @@ function Services() {
               frameworks.
             </p>
           </div>
-          <div className="border bg-white p-5 rounded-lg space-y-5 MobileS:transform-none Laptop:hover:scale-105 ease-out duration-500">
+          <div className="border bg-white p-5 rounded-lg space-y-5 hover:scale-105 ease-out duration-500">
             <h1 className="font-bold text-lg text-[#a3262e]">UI / UX Design</h1>
             <p>
               Creating websites with a focus on user experience and visual
               design.
             </p>
           </div>
-          {/* <div className="border bg-white p-5 rounded-lg space-y-5 MobileS:transform-none Laptop:hover:scale-105 ease-out duration-500">
+          {/* <div className="border bg-white p-5 rounded-lg space-y-5 hover:scale-105 ease-out duration-500">
             <h1 className="font-bold text-lg text-[#a3262e]">Mobile Application</h1>
             <p>
               Ensuring that websites are optimized for various devices and
@@ -40,7 +40,7 @@ function Services() {
               platforms.
             </p>
           </div> */}
-          {/* <div className="border bg-white p-5 rounded-lg space-y-5 MobileS:transform-none Laptop:hover:scale-105 ease-out duration-500">
+          {/* <div className="border bg-white p-5 rounded-lg space-y-5 hover:scale-105 ease-out duration-500">
             <h1 className="font-bold text-lg text-[#a3262e]">
               Version Control
             </h1>
@@ -50,7 +50,7 @@ function Services() {
               repositories.
             </p>
           </div> */}
-          <div className="border bg-white p-5 rounded-lg space-y-5 MobileS:transform-none Laptop:hover:scale-105 ease-out duration-500">
+          <div className="border bg-white p-5 rounded-lg space-y-5 hover:scale-105 ease-out duration-500">
             <h1 className="font-bold text-lg text-[#a3262e]">
               Code Quality and Standards
             </h1>
@@ -59,7 +59,7 @@ function Services() {
               practices and coding standards.
             </p>
           </div>
-          <div className="border bg-white p-5 rounded-lg space-y-5 MobileS:transform-none Laptop:hover:scale-105 ease-out duration-500">
+          <div className="border bg-white p-5 rounded-lg space-y-5 hover:scale-105 ease-out duration-500">
             <h1 className="font-bold text-lg text-[#a3262e]">
               Testing and Debugging
             </h1>
@@ -68,7 +68,7 @@ function Services() {
               functionality and a positive user experience.
             </p>
           </div>
-          <div className="border bg-white p-5 rounded-lg space-y-5 MobileS:transform-none Laptop:hover:scale-105 ease-out duration-500">
+          <div className="border bg-white p-5 rounded-lg space-y-5 hover:scale-105 ease-out duration-500">
             <h1 className="font-bold text-lg text-[#a3262e]">
               Continuous Learning
             </h1>
@@ -78,7 +78,7 @@ function Services() {
               solutions.
             </p>
           </div>
-          <div className="border bg-white p-5 rounded-lg space-y-5 MobileS:transform-none Laptop:hover:scale-105 ease-out duration-500">
+          <div className="border bg-white p-5 rounded-lg space-y-5 hover:scale-105 ease-out duration-500">
             <h1 className="font-bold text-lg text-[#a3262e]">Collaboration</h1>
             <p>
               Collaborate with back-end developers, designers, and other team

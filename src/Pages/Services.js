@@ -26,10 +26,11 @@ function Services() {
             </p>
           </div>
           <div className="border bg-white p-5 rounded-lg space-y-5 hover:scale-105 ease-out duration-500">
-            <h1 className="font-bold text-lg text-[#a3262e]">UI / UX Design</h1>
+            <h1 className="font-bold text-lg text-[#a3262e]">Design</h1>
             <p>
-              Creating websites with a focus on user experience and visual
-              design.
+              {/*  Creating websites with a focus on user experience and visual
+              design. */}
+              I appreciate simple content structure, clean design patters and well-considered interactions.
             </p>
           </div>
           {/* <div className="border bg-white p-5 rounded-lg space-y-5 hover:scale-105 ease-out duration-500">

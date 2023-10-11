@@ -103,11 +103,11 @@ export default function HomePage() {
 //Pass data with a render prop
 const RecentWorks = ({ imgURL }) => {
   return (
-    <div className="relative overflow-hidden rounded-lg">
+    <div className="border-2 hover:rounded-lg border-white hover:border-[#a3262e] ease-out duration-500 hover:scale-105 hover:shadow-2xl">
       <img
         src={imgURL}
         alt=""
-        className="hover:scale-105 ease-out duration-500 rounded-lg"
+        className="hover:rounded-md"
       />
     </div>
   );

@@ -36,7 +36,7 @@ function Projects() {
 const ProjectCard = ({ imageURL, title, desc, tech, link, code }) => {
   return (
     <div className="p-5">
-      <div className="bg-gray border-2 rounded-lg border-white hover:border-[#a3262e] ease-out duration-500 hover:scale-105 hover:shadow-2xl">
+      <div className="bg-gray border-2 hover:rounded-t-lg border-white hover:border-[#a3262e] ease-out duration-500 hover:scale-105 hover:shadow-2xl">
         <div className="relative">
           <img src={imageURL} alt="" className="h-auto w-full hover:rounded-t-md" />
         </div>

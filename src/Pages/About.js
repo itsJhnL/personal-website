@@ -430,7 +430,7 @@ function About() {
                   </i>
                   <small>Bootstrap</small>
                 </div>
-                <div className=" ease-out duration-500 hover:scale-105 flex flex-col items-center justify-center p-5 bg-white rounded-md">
+                {/* <div className=" ease-out duration-500 hover:scale-105 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -445,7 +445,7 @@ function About() {
                     </svg>
                   </i>
                   <small>Redux</small>
-                </div>
+                </div> */}
                 <div className=" ease-out duration-500 hover:scale-105 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i>
                     <svg
@@ -494,7 +494,7 @@ function About() {
                   </i>
                   <small>PHP</small>
                 </div>
-                <div className=" ease-out duration-500 hover:scale-105 flex flex-col items-center justify-center p-5 bg-white rounded-md">
+                {/* <div className=" ease-out duration-500 hover:scale-105 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -555,7 +555,7 @@ function About() {
                     </svg>
                   </i>
                   <small>NextJS</small>
-                </div>
+                </div> */}
                 <div className=" ease-out duration-500 hover:scale-105 flex flex-col items-center justify-center p-5 bg-white rounded-md">
                   <i>
                     <svg

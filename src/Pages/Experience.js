@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import userData from "../components/data/data";
 import Footer from "../components/Footer";
 
@@ -85,7 +85,7 @@ const MyExp = ({ year, position, title, desc }) => {
         </div>
         <h1 className="text-2xl font-bold">{position}</h1>
         <p className="text-xl text-gray-500">{title}</p>
-        <p className="pt-5 text-justify text-lg">{desc}</p>
+        <p className="pt-5 Tablet:text-justify MobileS:text-left text-lg">{desc}</p>
       </div>
     </div>
   );
@@ -93,13 +93,13 @@ const MyExp = ({ year, position, title, desc }) => {
 
 const MyCerts = ({ name, description, date, imageURL }) => {
   return (
-    <div className="grid grid-cols-2 py-5">
+    <div className="grid MobileS:grid-cols-1 Laptop:grid-cols-2 py-5">
       <div>
         <h1 className="text-xl font-bold">{name}</h1>
         <p className="text-lg">{description}</p>
         <p className="text-lg">{date}</p>
       </div>
-      <img src={imageURL} alt="" className="h-full w-full p-10 rounded-xl" />
+      <img src={imageURL} alt="" className="object-scale-down h-full w-full p-5 rounded-xl" />
     </div>
   );
 };

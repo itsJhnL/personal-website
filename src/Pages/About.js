@@ -23,7 +23,7 @@ function About() {
             <sup className="underline underline-offset-4 decoration-[#a3262e]">
               Introduce
             </sup>
-            <h1 className="text-3xl pb-3">
+            <h1 className="MobileS:text-2xl Tablet:text-3xl pb-3">
               Hi! I'm{" "}
               <span className="font-bold text-[#a3262e]">John Leo Bruno</span>
             </h1>

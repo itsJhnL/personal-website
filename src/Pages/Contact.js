@@ -14,7 +14,7 @@ function Contact() {
         </div>
         <div className="flex max-w-6xl mx-auto pb-24">
           <div>
-            <div className="text-4xl text-black font-bold p-5">
+            <div className="MobileS:text-2xl Laptop:text-4xl text-black font-bold p-5">
               <h1>Get in touch, let's talk.</h1>
               <p className="border-t-4 border-[#a3262e] w-24"></p>
             </div>

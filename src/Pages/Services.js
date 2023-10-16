@@ -1,8 +1,9 @@
 import React from "react";
 import Footer from "../components/Footer";
 import "../App.css";
+import userData from "../constants/data";
 
-function Services() {
+export default function Services() {
   return (
     <div className="bg-[#f1f1f1]">
       <div className="flex flex-col items-center justify-center pb-24">
@@ -15,78 +16,15 @@ function Services() {
         </div>
 
         <div className="text-center grid grid-cols-3 gap-4 MobileS:px-10 Laptop:px-5 max-w-6xl mx-auto text-gray-700 MobileS:grid-cols-1 Tablet:grid-cols-2 Laptop:grid-cols-3">
-          <div className="border bg-white p-5 rounded-lg space-y-5 hover:scale-105 ease-out duration-500">
-            <h1 className="font-bold text-lg text-[#a3262e]">
-              Web Development
-            </h1>
-            <p>
-              Developing websites from the ground up utilizing a range of
-              technologies including HTML, CSS, JavaScript, and associated
-              frameworks.
-            </p>
-          </div>
-          <div className="border bg-white p-5 rounded-lg space-y-5 hover:scale-105 ease-out duration-500">
-            <h1 className="font-bold text-lg text-[#a3262e]">Design</h1>
-            <p>
-              {/*  Creating websites with a focus on user experience and visual
-              design. */}
-              I appreciate simple content structure, clean design patters and well-considered interactions.
-            </p>
-          </div>
-          {/* <div className="border bg-white p-5 rounded-lg space-y-5 hover:scale-105 ease-out duration-500">
-            <h1 className="font-bold text-lg text-[#a3262e]">Mobile Application</h1>
-            <p>
-              Ensuring that websites are optimized for various devices and
-              screen sizes, providing a consistent user experience across
-              platforms.
-            </p>
-          </div> */}
-          {/* <div className="border bg-white p-5 rounded-lg space-y-5 hover:scale-105 ease-out duration-500">
-            <h1 className="font-bold text-lg text-[#a3262e]">
-              Version Control
-            </h1>
-            <p>
-              Utilizing version control systems such as Git to monitor
-              modifications, collaborate within teams, and oversee code
-              repositories.
-            </p>
-          </div> */}
-          <div className="border bg-white p-5 rounded-lg space-y-5 hover:scale-105 ease-out duration-500">
-            <h1 className="font-bold text-lg text-[#a3262e]">
-              Code Quality and Standards
-            </h1>
-            <p>
-              Write clean, organized, and maintainable code following best
-              practices and coding standards.
-            </p>
-          </div>
-          <div className="border bg-white p-5 rounded-lg space-y-5 hover:scale-105 ease-out duration-500">
-            <h1 className="font-bold text-lg text-[#a3262e]">
-              Testing and Debugging
-            </h1>
-            <p>
-              Debugging and troubleshooting front-end issues to ensure smooth
-              functionality and a positive user experience.
-            </p>
-          </div>
-          <div className="border bg-white p-5 rounded-lg space-y-5 hover:scale-105 ease-out duration-500">
-            <h1 className="font-bold text-lg text-[#a3262e]">
-              Continuous Learning
-            </h1>
-            <p>
-              Stay updated with the latest front-end technologies, trends, and
-              industry best practices to provide modern and innovative
-              solutions.
-            </p>
-          </div>
-          <div className="border bg-white p-5 rounded-lg space-y-5 hover:scale-105 ease-out duration-500">
-            <h1 className="font-bold text-lg text-[#a3262e]">Collaboration</h1>
-            <p>
-              Collaborate with back-end developers, designers, and other team
-              members to ensure seamless integration and a cohesive final
-              product.
-            </p>
-          </div>
+          {userData.services.map((ser) => (
+            <div key={ser.id}>
+              <ServicesData
+                title={ser.title}
+                desc={ser.desc}
+                icon={ser.icon}
+              />
+            </div>
+          ))}
         </div>
       </div>
       <Footer />
@@ -94,4 +32,21 @@ function Services() {
   );
 }
 
-export default Services;
+const ServicesData = ({ title, desc, icon }) => {
+  return (
+    <>
+
+      <div className="relative h-full border bg-white p-5 rounded-lg space-y-5 hover:scale-105 hover:shadow-2xl ease-out duration-500">
+        <div className="flex items-center justify-center text-4xl text-[#a3262e]">
+          {icon}
+        </div>
+        <h1 className="font-bold text-lg text-[#a3262e]">
+          {title}
+        </h1>
+        <p>
+          {desc}
+        </p>
+      </div>
+    </>
+  )
+}

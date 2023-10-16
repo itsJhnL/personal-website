@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Footer from "./Footer";
 import "../styles/Wave.css";
-import waving from "../assets/images/wave.png";
-import userData from "./data/data";
+import userData from "../constants/data";
 
 export default function HomePage() {
   const [clicked, setClicked] = useState();
@@ -27,7 +26,7 @@ export default function HomePage() {
                 Hey there{" "}
                 <span className="wave">
                   <img
-                    src={waving}
+                    src={userData.hero.imageURL}
                     alt=""
                     className="overflow-clip"
                     style={{ height: "20px" }}
@@ -36,12 +35,12 @@ export default function HomePage() {
                 , I am
               </h1>
               <p className="font-extrabold text-[#a3262e] MobileS:text-4xl Tablet:text-6xl Laptop:text-8xl">
-                John Leo Bruno
+                {userData.hero.name}
               </p>
             </div>
             <div className="text-xl">
               <p className="font-medium underline underline-offset-4 decoration-[#a3262e]">
-                Software Developer
+                {userData.hero.career}
               </p>
             </div>
             {/* <div className="Tablet:max-w-lg Laptop:max-w-3xl">
@@ -59,10 +58,10 @@ export default function HomePage() {
                 {clicked ? "Scrolling..." : "Let's work together!"}
               </NavLink>
               <a
-                href="https://drive.google.com/file/d/1k5sZ5ZYl4GGZ6OlfRsfEXX9gI5_AI3Nx/view?usp=sharing"
+                href={userData.hero.resume}
                 target="blank"
                 rel="noopenner"
-                className="rounded-lg text-base font-medium border border-[#a3262e] text-[#a3262e] p-2 px-6 hover:bg-rose-50"
+                className="rounded-lg text-base font-medium border border-[#a3262e] text-[#a3262e] p-2 px-6 hover:bg-[#a3262e]/20"
               >
                 View Resume
               </a>
@@ -87,9 +86,9 @@ export default function HomePage() {
             ))}
           </div>
           <NavLink to="/Works" onClick={scrollUp}>
-            <div className="border rounded-lg bg-white font-bold text-gray-700 p-3 hover:bg-rose-50">
+            <div className="border rounded-lg bg-white font-bold text-gray-700 p-3 hover:bg-[#a3262e]/20">
               <span className="text-[#a3262e]">
-                {clicked ? "Scrolling..." : "View All"}
+                {clicked ? "View All." : "View All"}
               </span>
             </div>
           </NavLink>
@@ -104,11 +103,7 @@ export default function HomePage() {
 const RecentWorks = ({ imgURL }) => {
   return (
     <div className="border-2 hover:rounded-lg border-white hover:border-[#a3262e] ease-out duration-500 hover:scale-105 hover:shadow-2xl">
-      <img
-        src={imgURL}
-        alt=""
-        className="hover:rounded-md"
-      />
+      <img src={imgURL} alt="" className="hover:rounded-md" />
     </div>
   );
 };

@@ -1,0 +1,375 @@
+import { FaHtml5 } from "@react-icons/all-files/fa/FaHtml5";
+import { FaCss3Alt } from "@react-icons/all-files/fa/FaCss3Alt";
+import { SiJavascript } from "@react-icons/all-files/si/SiJavascript";
+import { FaReact } from "@react-icons/all-files/fa/FaReact";
+import { SiTailwindcss } from "@react-icons/all-files/si/SiTailwindcss";
+import { SiMaterialUi } from "@react-icons/all-files/si/SiMaterialUi";
+import { FaBootstrap } from "@react-icons/all-files/fa/FaBootstrap";
+import { SiPhp } from "@react-icons/all-files/si/SiPhp";
+import { SiFirebase } from "@react-icons/all-files/si/SiFirebase";
+import { GrMysql } from "@react-icons/all-files/gr/GrMysql";
+import { FaFigma } from "@react-icons/all-files/fa/FaFigma";
+import { FaGithub } from "@react-icons/all-files/fa/FaGithub";
+import { FaLinkedinIn } from "@react-icons/all-files/fa/FaLinkedinIn";
+import { FaBehance } from "@react-icons/all-files/fa/FaBehance";
+import { AiFillCode } from "@react-icons/all-files/ai/AiFillCode"
+import { FaBug } from "@react-icons/all-files/fa/FaBug"
+import { FaLaptopCode } from "@react-icons/all-files/fa/FaLaptopCode"
+import { SiGooglemessages } from "@react-icons/all-files/si/SiGooglemessages"
+import { FaCode } from "@react-icons/all-files/fa/FaCode";
+import { FaPencilRuler } from "@react-icons/all-files/fa/FaPencilRuler"
+import { FaGraduationCap } from "@react-icons/all-files/fa/FaGraduationCap"
+import { MdLocationOn } from "@react-icons/all-files/md/MdLocationOn"
+import { MdPhoneForwarded } from "@react-icons/all-files/md/MdPhoneForwarded"
+import { MdEmail } from "@react-icons/all-files/md/MdEmail"
+import { FaFacebookF } from "@react-icons/all-files/fa/FaFacebookF"
+import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter"
+import { FaInstagramSquare } from "@react-icons/all-files/fa/FaInstagramSquare"
+
+const userData = {
+  hero:
+  {
+    name: "John Leo Bruno",
+    career: "Software Developer",
+    resume: "/resume/JOHN LEO BRUNO - RESUME.pdf",
+    imageURL: "/wave.png",
+  },
+  navBarLinks:
+  {
+    linkedin: "https://www.linkedin.com/in/johnleobruno/",
+    github: "https://github.com/itsJhnL",
+    behance: "https://www.behance.net/janggodev",
+    linkedin_icon: <FaLinkedinIn size={21} />,
+    github_icon: <FaGithub size={21} />,
+    behance_icon: <FaBehance size={21} />,
+  },
+  recentWork: [
+    {
+      id: 1,
+      imgURL: "/projects/freshbites.png",
+    },
+    {
+      id: 2,
+      imgURL: "/projects/barangay.png",
+    },
+    {
+      id: 3,
+      imgURL: "/projects/login.png",
+    },
+    {
+      id: 4,
+      imgURL: "/projects/linkedin-clone.png",
+    },
+  ],
+  experience: [
+    {
+      id: 1,
+      position: "Internship",
+      title: "iSynergies Inc",
+      desc: "I was responsible for performing a wide range of software development tasks. This included actively engaging in both front-end and back-end development, allowing me to gain a comprehensive understanding of the full software development stack. I collaborated closely with senior software developers, contributing to the team's success by leveraging their expertise and mentorship to enhance my own skills and deliver high-quality software solutions.",
+      year: "2023",
+    },
+    {
+      id: 2,
+      position: "Graduation",
+      title: "Nueva Ecija University of Science and Technology",
+      desc: "Bachelor's degree in Information Technology.",
+      year: "2023",
+    },
+  ],
+  certificates: [
+    {
+      id: 1,
+      name: "On-the Job Training",
+      description:
+        "I completed 500 hours of On-the-Job training at Isynergies Inc., where I learned valuable skills to become a proficient developer. My journey began with building web-based applications during my internship.",
+      date: "May 11, 2023",
+      imageURL: "/certificates/OJT.jpeg",
+    },
+    {
+      id: 2,
+      name: "International Research Conference on Information Technology Education.",
+      description:
+        "Our team leader successfully presented our capstone project at the IRCITE event. Catching the Waves of Technological Advances through I.T Research and Breakthrough Innovations.",
+      date: "May 05, 2023",
+      imageURL: "/certificates/IRCITE.jpg",
+    },
+    {
+      id: 3,
+      name: "I.T Works Development Team",
+      description: "It allowed me to grasp the fundamental concepts of web development.",
+      date: "February 22, 2021",
+      imageURL: "/certificates/WebApp.jpg",
+    },
+    {
+      id: 4,
+      name: "Full-Stack Dev Road Map",
+      description: "I was introduced to both Front-End and Back-End technologies, which led me to aspire to become a Full-Stack Developer. Exploring back-end technologies fascinated me, and it sparked my dream of becoming a proficient full-stack developer.",
+      date: "March 12, 2021",
+      imageURL: "/certificates/Fullstack-dev-roadmap.jpg",
+    },
+    {
+      id: 5,
+      name: "Python Programming for Beginners",
+      description: "Learned basic syntax like declaring variables and printing",
+      date: "March 13, 2021",
+      imageURL: "/certificates/Python-programming.jpg",
+    },
+    {
+      id: 6,
+      name: "Introduction to Arduino",
+      description: "",
+      date: "March 04, 2021",
+      imageURL: "/certificates/Introduction-to-Arduino.jpg",
+    },
+    {
+      id: 7,
+      name: "Mobile Development using IONIC for beginners",
+      description: "",
+      date: "February 13, 2021",
+      imageURL: "/certificates/Mobile-development-using-IONIC.jpg",
+    },
+    {
+      id: 8,
+      name: "Animation and Game Development",
+      description: "",
+      date: "March 03, 2021",
+      imageURL: "/certificates/Animation-and-Game-development.jpg",
+    },
+    {
+      id: 9,
+      name: "Introduction to Progressive Web Apps",
+      description: "",
+      date: "March 26, 2021",
+      imageURL: "/certificates/Introduction-to-progressive-web-apps.jpg",
+    },
+    {
+      id: 10,
+      name: "Data Science",
+      description: "",
+      date: "March 02, 2021",
+      imageURL: "/certificates/Datascience.jpg",
+    },
+    {
+      id: 11,
+      name: "Introduction to Wordpress Plugins",
+      description: "",
+      date: "February 22, 2021",
+      imageURL: "/certificates/Wordpress-Plugins.jpg",
+    },
+    {
+      id: 12,
+      name: "Wordpress Explained: Dashboard Navigation",
+      description: "",
+      date: "February 15, 2021",
+      imageURL: "/certificates/Wordpress.jpg",
+    },
+    {
+      id: 13,
+      name: "Integrated Cybersecuriy Management and System",
+      description: "",
+      date: "March 19, 2021",
+      imageURL:
+        "/certificates/Integrated-cybersecurity-management-and-system.jpg",
+    },
+  ],
+  works: [
+    {
+      id: 1,
+      imageURL: "/projects/freshbites.png",
+      title: "Fresh Bites",
+      desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero maxime iste adipisci atque aliquam facere dignissimos sequi ea mollitia molestias?",
+      tech: "React, Tailwind CSS",
+      link: "https://freshbites.vercel.app/",
+      code: "https://github.com/itsJhnL/fresh-bites",
+    },
+    {
+      id: 2,
+      imageURL: "/projects/barangay.png",
+      title: "Barangay Management Information System",
+      desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero maxime iste adipisci atque aliquam facere dignissimos sequi ea mollitia molestias?",
+      tech: "HTML, CSS, JavaScript, JQuery, PHP, Bootstrap, MySQL.",
+      link: "#",
+      code: "https://github.com/itsJhnL/barangay-management-system",
+    },
+    {
+      id: 3,
+      imageURL: "/projects/login.png",
+      title: "Responsive Login Page",
+      desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero maxime iste adipisci atque aliquam facere dignissimos sequi ea mollitia molestias?",
+      tech: "HTML, CSS",
+      link: "https://login-page-lac-five.vercel.app/",
+      code: "https://github.com/itsJhnL/login-page",
+    },
+    {
+      id: 4,
+      imageURL: "/projects/linkedin-clone.png",
+      title: "LinkedIn Clone",
+      desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero maxime iste adipisci atque aliquam facere dignissimos sequi ea mollitia molestias?",
+      tech: "React, Redux, CSS, Firebase, MaterialUI-Icons",
+      link: "https://linkedin-duplicate.vercel.app/",
+      code: "https://github.com/itsJhnL/linkedin-clone",
+    },
+  ],
+  about: {
+    imageURL: "/IMG_2777.jpeg",
+    introduce: [
+      {
+        id: 0,
+        title: "Introduce",
+        name: "John Leo Bruno",
+        link: "https://g.co/kgs/4PDqqC",
+        career: "Software Developer",
+        desc1: "based in Philippines. Since I started my journey as a front-end developer, I've worked on personal projects, crafting responsive websites that are both fast and user-friendly while following best practices. I have a quiet confidence, a natural, and I'm always working to improve my skills and constantly working on getting better at solving problems.",
+        desc2: "When I'm not writing code, I tidy up my workspace to create a conducive environment. At times, I engage in designing from scratch, and I derive pleasure from sharing my web development expertise through blogs and short videos on platforms like",
+        tiktok: "https://www.tiktok.com/@janggodev",
+        medium: "https://medium.com/@johnleobruno",
+      },
+    ],
+    techstacks: [
+      {
+        id: 0,
+        icon: <FaHtml5 size={35} />,
+        desc: "HTML5",
+      },
+      {
+        id: 1,
+        icon: <FaCss3Alt size={35} />,
+        desc: "CSS3"
+      },
+      {
+        id: 2,
+        icon: <SiJavascript size={35} />,
+        desc: "JavaScript"
+      },
+      {
+        id: 3,
+        icon: <FaReact size={35} />,
+        desc: "ReactJS"
+      },
+      {
+        id: 4,
+        icon: <SiTailwindcss size={35} />,
+        desc: "Tailwind CSS"
+      },
+      {
+        id: 5,
+        icon: <SiMaterialUi size={35} />,
+        desc: "Material UI"
+      },
+      {
+        id: 6,
+        icon: <FaBootstrap size={35} />,
+        desc: "Bootstrap"
+      },
+      {
+        id: 7,
+        icon: <SiPhp size={35} />,
+        desc: "PHP"
+      },
+      {
+        id: 8,
+        icon: <SiFirebase size={35} />,
+        desc: "Firebase"
+      },
+      {
+        id: 9,
+        icon: <GrMysql size={35} />,
+        desc: "MySQL"
+      },
+      {
+        id: 10,
+        icon: <FaFigma size={35} />,
+        desc: "Figma"
+      },
+      {
+        id: 11,
+        icon: <FaGithub size={35} />,
+        desc: "Github",
+      }
+    ],
+    mainSkills: [
+      {
+        id: 0,
+        title: "Web Development",
+        desc: "Developing websites and web applications using JavaScript and its frameworks.",
+        icon: <FaCode size={24} color={"#a3262e"} />,
+      },
+      {
+        id: 1,
+        title: "Web and User Interface Design",
+        desc: "Website Creation, User Experience, Visual Design.",
+        icon: <FaPencilRuler size={20} color={"#a3262e"} />,
+      }
+    ],
+    education: [
+      {
+        id: 0,
+        title: "BS in Information Technology",
+        major: "Major in Web Systems Technology",
+        desc: "Nueva Ecija University of Science and Technology - Cabanatuan City Nueva Ecija",
+        icon: <FaGraduationCap size={24} color={"#a3262e"} />,
+      }
+    ]
+  },
+  services: [
+    {
+      id: 0,
+      title: "Web Development",
+      desc: "Developing websites from the ground up utilizing a range of technologies including HTML, CSS, JavaScript, and associated frameworks.",
+      icon: <FaCode />,
+    },
+    {
+      id: 1,
+      title: "Design",
+      desc: "I appreciate simple content structure, clean design patters and well-considered interactions.",
+      icon: <FaPencilRuler />,
+    },
+    {
+      id: 2,
+      title: "Code Quality and Standards",
+      desc: "Write clean, organized, and maintainable code following best practices and coding standards.",
+      icon: <AiFillCode />,
+    },
+    {
+      id: 3,
+      title: "Testing and Debugging",
+      desc: "Debugging and troubleshooting front-end issues to ensure smooth functionality and a positive user experience.",
+      icon: <FaBug />,
+    },
+    {
+      id: 4,
+      title: "Continuous Learning",
+      desc: "Stay updated with the latest front-end technologies, trends, and industry best practices to provide modern and innovative solutions.",
+      icon: <FaLaptopCode />,
+    },
+    {
+      id: 5,
+      title: "Collaboration",
+      desc: "Collaborate with back-end developers, designers, and other team members to ensure seamless integration and a cohesive final product.",
+      icon: <SiGooglemessages />,
+    },
+  ],
+  contact: {
+    title: "Get in touch, let's talk.",
+    desc: "If you believe my skills align with turning your ideas into reality, I am open to full-time, part-time, and freelance opportunities. Please feel free to reach out, and let's discuss everything. I'd be grateful for the opportunity to collaborate with you.",
+    address: "Nueva Ecija, Philippines",
+    number: "(+63) 906-360-4260",
+    email: "johnleo.bruno@gmail.com",
+    link: "mailto:johnleo.bruno@gmail.com",
+    address_icon: <MdLocationOn size={24} />,
+    email_icon: <MdEmail size={24} />,
+    number_icon: <MdPhoneForwarded size={24} />,
+  },
+  socialLinks: {
+    title: "Social Links:",
+    facebook: "https://www.facebook.com/LeoXyRDG/",
+    twitter: "https://twitter.com/LeoXyRealDeal",
+    instagram: "https://www.instagram.com/janggodev/",
+    fb: <FaFacebookF size={24} />,
+    twtr: <FaTwitter size={24} />,
+    insta: <FaInstagramSquare size={24} />,
+  }
+};
+
+export default userData;

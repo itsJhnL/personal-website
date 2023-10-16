@@ -1,5 +1,5 @@
 import React from "react";
-import userData from "../components/data/data";
+import userData from "../constants/data";
 import Footer from "../components/Footer";
 
 function Projects() {
@@ -48,11 +48,11 @@ const ProjectCard = ({ imageURL, title, desc, tech, link, code }) => {
           <h1 className="text-lg font-bold">Tech Used:</h1>
           <p>{tech}</p>
         </div>
-        <div className="m-5 space-x-5">
-          <a href={link} target="blank" rel="noopenner">
+        <div className="flex m-5 space-x-5">
+          <a href={link} target="blank" rel="noopenner" className="border-2 hover:text-white hover:border-[#a3262e] hover:bg-[#a3262e] px-4 py-2">
             View Demo
           </a>
-          <a href={code} rel="noopenner">
+          <a href={code} target="blank" rel="noopenner" className="border-2 hover:text-white hover:border-[#a3262e] hover:bg-[#a3262e] px-4 py-2">
             Github
           </a>
         </div>

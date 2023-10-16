@@ -1,5 +1,5 @@
 import React from "react";
-import userData from "../components/data/data";
+import userData from "../constants/data";
 import Footer from "../components/Footer";
 
 export default function Experience() {
@@ -78,9 +78,9 @@ export default function Experience() {
 //passing the data with a render props
 const MyExp = ({ year, position, title, desc }) => {
   return (
-    <div className="relative mx-5 ">
-      <div className="relative bg-white border border-gray-100 ease-out duration-500 hover:scale-105 rounded-lg shadow-2xl max-w-2xl mx-auto p-5">
-        <div className="absolute text-4xl text-[#a3262e]/20 font-bold -mt-10 right-0 top-0">
+    <div className="relative mx-5">
+      <div className="relative bg-white border border-gray-100 ease-out duration-500 hover:scale-105 rounded-lg hover:shadow-2xl max-w-2xl mx-auto p-5">
+        <div className="absolute text-4xl text-[#a3262e]/20 hover:text-[#a3262e] font-bold -mt-10 right-0 top-0">
           {year}
         </div>
         <h1 className="text-2xl font-bold">{position}</h1>

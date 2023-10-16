@@ -156,7 +156,7 @@ const Introduce = ({ title, name, link, career, desc1, desc2, tiktok, medium }) 
 const TechStacks = ({ desc, icon }) => {
   return (
     <>
-      <div className="relative text-[#a8a6a6] hover:text-[#a3262e] ease-out duration-500 hover:scale-105 hover:shadow-2xl ease-out flex flex-col items-center justify-center p-5 bg-white rounded-md">
+      <div className="relative h-full text-[#a8a6a6] hover:text-[#a3262e] ease-out duration-500 hover:scale-105 hover:shadow-2xl ease-out flex flex-col items-center justify-center p-5 bg-white rounded-md">
         <span className="abosolute">{icon}</span>
         <small>{desc}</small>
       </div>

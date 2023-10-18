@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom";
 import Footer from "./Footer";
 import "../styles/Wave.css";
 import userData from "../constants/data";
+import { lazy } from "react";
+import loading from "./Loading";
 
 export default function HomePage() {
   const [clicked, setClicked] = useState();

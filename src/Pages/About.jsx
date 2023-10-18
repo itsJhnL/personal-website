@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "../components/Footer";
 import "../App.css";
 import userData from "../constants/data";
+import { Lazy } from "react-lazy";
 
 export default function About() {
   return (

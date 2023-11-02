@@ -63,14 +63,28 @@ const userData = {
   ],
   experience: [
     {
+      id: 0,
+      position: "Sales Representative",
+      title: "Sanyang-Furniture",
+      desc: "• Maintained record and sales • Product knowledge • Active listening • Rapport-building skills • Customer relationship management tool skills",
+      year: "2017",
+    },
+    {
       id: 1,
+      position: "Front-End Developer",
+      title: "Freelance",
+      desc: "",
+      year: "2022",
+    },
+    {
+      id: 2,
       position: "Internship",
       title: "iSynergies Inc",
       desc: "I was responsible for performing a wide range of software development tasks. This included actively engaging in both front-end and back-end development, allowing me to gain a comprehensive understanding of the full software development stack. I collaborated closely with senior software developers, contributing to the team's success by leveraging their expertise and mentorship to enhance my own skills and deliver high-quality software solutions.",
       year: "2023",
     },
     {
-      id: 2,
+      id: 3,
       position: "Graduation",
       title: "Nueva Ecija University of Science and Technology",
       desc: "Bachelor's degree in Information Technology.",

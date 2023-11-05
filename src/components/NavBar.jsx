@@ -156,15 +156,15 @@ export default function Main() {
           <div className="text-[#a3262e] MobileS:hidden Tablet:hidden Laptop:block">
             {/* Socials */}
             <ul className="flex flex-row items-center justify-center space-x-6">
-              <a href={userData.navBarLinks.linkedin} target="blank">
+              <a href={userData.navBarLinks.linkedin} target="_blank" rel="noreferrer">
                 {userData.navBarLinks.linkedin_icon}
               </a>
 
-              <a href={userData.navBarLinks.github} target="blank">
+              <a href={userData.navBarLinks.github} target="_blank" rel="noreferrer">
                 {userData.navBarLinks.github_icon}
               </a>
 
-              <a href={userData.navBarLinks.behance} target="blank">
+              <a href={userData.navBarLinks.behance} target="_blank" rel="noreferrer">
                 {userData.navBarLinks.behance_icon}
               </a>
             </ul>

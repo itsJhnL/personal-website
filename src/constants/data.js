@@ -203,7 +203,7 @@ const userData = {
       title: "Barangay Management Information System",
       desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero maxime iste adipisci atque aliquam facere dignissimos sequi ea mollitia molestias?",
       tech: "HTML, CSS, JavaScript, JQuery, PHP, Bootstrap, MySQL.",
-      link: "bmis.infinityfreeapp.com",
+      link: "https://barangay-management-system.vercel.app/",
       code: "https://github.com/itsJhnL/barangay-management-system",
     },
     {

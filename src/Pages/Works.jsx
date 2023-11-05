@@ -49,10 +49,10 @@ const ProjectCard = ({ imageURL, title, desc, tech, link, code }) => {
           <p>{tech}</p>
         </div>
         <div className="flex m-5 space-x-5">
-          <a href={link} target="blank" rel="noopenner" className="border-2 hover:text-white hover:border-[#a3262e] hover:bg-[#a3262e] px-4 py-2">
+          <a href={link} target="_blank" rel="noreferrer" className="border-2 hover:text-white hover:border-[#a3262e] hover:bg-[#a3262e] px-4 py-2">
             View Demo
           </a>
-          <a href={code} target="blank" rel="noopenner" className="border-2 hover:text-white hover:border-[#a3262e] hover:bg-[#a3262e] px-4 py-2">
+          <a href={code} target="_blank" rel="noreferrer" className="border-2 hover:text-white hover:border-[#a3262e] hover:bg-[#a3262e] px-4 py-2">
             Github
           </a>
         </div>

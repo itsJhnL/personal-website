@@ -30,7 +30,7 @@ const userData = {
   hero:
   {
     name: "John Leo Bruno",
-    career: "Software Developer",
+    career: "Web Developer",
     resume: "/resume/JOHN LEO BRUNO - RESUME.pdf",
     imageURL: "/wave.png",
   },
@@ -232,8 +232,8 @@ const userData = {
         id: 0,
         title: "Introduce",
         name: "John Leo Bruno",
-        link: "https://g.co/kgs/4PDqqC",
-        career: "Software Developer",
+        link: "https://g.co/kgs/6Au1hq",
+        career: "Web Developer",
         desc1: "based in Philippines. Since I started my journey as a front-end developer, I've worked on personal projects, crafting responsive websites that are both fast and user-friendly while following best practices. I have a quiet confidence, a natural, and I'm always working to improve my skills and constantly working on getting better at solving problems.",
         desc2: "When I'm not writing code, I tidy up my workspace to create a conducive environment. At times, I engage in designing from scratch, and I derive pleasure from sharing my web development expertise through blogs and short videos on platforms like",
         tiktok: "https://www.tiktok.com/@janggodev",

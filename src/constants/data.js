@@ -90,6 +90,20 @@ const userData = {
       desc: "Bachelor's degree in Information Technology.",
       year: "2023",
     },
+    {
+      id: 4,
+      position: "Data Entry Specialist",
+      title: "Ascendance BPO Inc",
+      desc: "My responsibilities include transcribing and encoding electronic, written, and faxed medical prescription orders, ensuring accuracy and adhering to SIG codes for proper medication administration. I meticulously identify any discrepancies in prescription orders and promptly escalate them to the relevant department for resolution. Additionally, I review and strictly adhere to the client’s standard operating procedures and policies to maintain compliance and quality standards. I respond promptly and accurately to inquiries from our in-house team, providing necessary information and support as required.",
+      year: "2023",
+    },
+    {
+      id: 5,
+      position: "Claim Specialist",
+      title: "Ascendance BPO Inc",
+      desc: "As a claim specialist in the insurance industry, my primary responsibility is to oversee the processing of insurance claims related to patient medications. This involves carefully reviewing each claim to ensure it meets all necessary criteria for payment, including verifying the accuracy of medical prescription orders and adherence to SIG codes. In cases where there are discrepancies or the need for clarification, I initiate overrides or appeals as necessary to facilitate payment. Additionally, I handle incoming calls from healthcare providers, pharmacies, and patients regarding claim status and payment inquiries, providing timely and accurate information to resolve issues effectively. Ensuring that every medication claim is processed correctly and promptly is essential to supporting patient care and maintaining trust within the healthcare network.",
+      year: "2024",
+    },
   ],
   certificates: [
     {

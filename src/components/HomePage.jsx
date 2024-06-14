@@ -57,7 +57,7 @@ export default function HomePage() {
                 onClick={scrollUp}
                 className="rounded-lg text-base font-medium bg-[#a3262e] border border-[#a3262e] text-white p-2"
               >
-                {clicked ? "Scrolling..." : "Let's work together!"}
+                {clicked ? "Scrolling..." : "CONTACT ME"}
               </NavLink>
               <a
                 href={userData.hero.resume}
@@ -65,7 +65,7 @@ export default function HomePage() {
                 rel="noopenner"
                 className="rounded-lg text-base font-medium border border-[#a3262e] text-[#a3262e] p-2 px-6 hover:bg-[#a3262e]/20"
               >
-                View Resume
+                VIEW RESUME
               </a>
             </div>
           </div>

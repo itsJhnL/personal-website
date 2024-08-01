@@ -31,7 +31,7 @@ const userData = {
   {
     name: "John Leo Bruno",
     career: "Web Developer",
-    resume: "/resume/JOHN LEO BRUNO - RESUME.pdf",
+    // resume: "/resume/JOHN LEO BRUNO - RESUME.pdf",
     imageURL: "/wave.png",
   },
   navBarLinks:

@@ -2,9 +2,14 @@ import React from "react";
 import Footer from "../components/Footer";
 import "../App.css";
 import userData from "../constants/data";
-// import { Lazy } from "react-lazy";
+
+import loading from '../components/Loading';
+
 
 export default function About() {
+
+  
+
   return (
     <div className="bg-[#f1f1f1]">
       <div className="flex flex-col items-center justify-center">

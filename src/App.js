@@ -8,11 +8,13 @@ import Experience from "./Pages/Experience";
 import Contact from "./Pages/Contact";
 import Home from "./components/HomePage";
 import NavBar from "./components/NavBar";
+import Maintenance from "./maintenance";
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
+      <Maintenance />
+      {/* <NavBar />
       <Routes>
         <Route exact path="/" element={<Home />}></Route>
         <Route exact path="/About" element={<About />}></Route>
@@ -20,7 +22,7 @@ function App() {
         <Route exact path="/Works" element={<Works />}></Route>
         <Route exact path="/Experience" element={<Experience />}></Route>
         <Route exact path="/Contact" element={<Contact />}></Route>
-      </Routes>
+      </Routes> */}
     </div>
   );
 }

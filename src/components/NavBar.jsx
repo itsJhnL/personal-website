@@ -40,6 +40,18 @@ export default function Main() {
           {clicked ? "About" : "About"}
         </NavLink>
         <NavLink
+          to="/Works"
+          style={({ isActive }) => ({
+            color: isActive ? "#a3262e" : "",
+            fontSize: isActive ? "18px" : "",
+            fontWeight: isActive ? "bold" : "",
+          })}
+          className="text-base text-gray-600 font-normal"
+          onClick={scrollUp}
+        >
+          {clicked ? "Projects" : "Projects"}
+        </NavLink>
+       {/*  <NavLink
           to="/Services"
           style={({ isActive }) => ({
             color: isActive ? "#a3262e" : "",
@@ -50,7 +62,7 @@ export default function Main() {
           onClick={scrollUp}
         >
           {clicked ? "Services" : "Services"}
-        </NavLink>
+        </NavLink> */}
         <NavLink
           to="/Experience"
           style={({ isActive }) => ({
@@ -62,19 +74,6 @@ export default function Main() {
           onClick={scrollUp}
         >
           Experience
-        </NavLink>
-
-        <NavLink
-          to="/Works"
-          style={({ isActive }) => ({
-            color: isActive ? "#a3262e" : "",
-            fontSize: isActive ? "18px" : "",
-            fontWeight: isActive ? "bold" : "",
-          })}
-          className="text-base text-gray-600 font-normal"
-          onClick={scrollUp}
-        >
-          {clicked ? "Works" : "Works"}
         </NavLink>
         <NavLink
           to="/Contact"
@@ -133,15 +132,13 @@ export default function Main() {
 
   return (
     <>
-      <div className="bg-[#FFF]/80 backdrop-blur z-50 sticky top-0">
+      <div className="bg-[#FFF]/80 backdrop-blur z-50 "> {/* sticky top-0 */}
         <nav className="flex flex-row items-center justify-between max-w-6xl mx-auto px-5 py-8">
           <div className="text-xl font-black text-[#a3262e]">
             <NavLink to="/">
-              {"<"}
-              <button className="text-flicker-in-glow " onClick={scrollUp}>
-                {clicked ? "JanggoDev" : "JanggoDev"}
+              <button className="" onClick={scrollUp}> {/* text-flicker-in-glow  */}
+                {clicked ? "JLB" : "JLB"}
               </button>
-              {"/>"}
             </NavLink>
           </div>
           <div className="space-x-8 MobileS:hidden Laptop:block">
@@ -153,8 +150,8 @@ export default function Main() {
               {openNav ? <Close /> : <Menu />}
             </button>
           </div>
-          <div className="text-[#a3262e] MobileS:hidden Tablet:hidden Laptop:block">
-            {/* Socials */}
+          {/* Socials */}
+          {/* <div className="text-[#a3262e] MobileS:hidden Tablet:hidden Laptop:block">
             <ul className="flex flex-row items-center justify-center space-x-6">
               <a href={userData.navBarLinks.linkedin} target="_blank" rel="noreferrer">
                 {userData.navBarLinks.linkedin_icon}
@@ -168,7 +165,7 @@ export default function Main() {
                 {userData.navBarLinks.behance_icon}
               </a>
             </ul>
-          </div>
+          </div> */}
         </nav>
       </div>
       {openNav && (

@@ -8,11 +8,11 @@ function Footer() {
         <p>
           Made by <span className="font-bold text-[#a3262e]">JanggoDev</span>
           {" | "}
-          {""} &copy; 2023. All Rights Reserved
+          {""} &copy; 2024. All Rights Reserved
         </p>
       </div>
+      {/* Socials */}
       <div className="text-2xl MobileS:pt-5 Tablet:pt-0">
-        {/* Socials */}
         <ul className="flex flex-row items-center space-x-6 text-[#a3262e]">
           <a href={userData.navBarLinks.linkedin} target="blank">
             {userData.navBarLinks.linkedin_icon}

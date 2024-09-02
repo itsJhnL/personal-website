@@ -77,10 +77,8 @@ export default function HomePage() {
             <header className="text-6xl font-bold max-w-6xl mx-auto">
               <p className=" text-gray-700">Recent Projects</p>
             </header>
-            {/* <p className="border-t-4 border-[#a3262e] mx-auto w-36"></p> */}
           </div>
           <div className="grid grid-cols-2 gap-4 max-w-6xl pb-14 MobileS:grid-cols-1 Laptop:grid-cols-2">
-            {/* Rendered data */}
             {userData.recentWork.map((recent) => (
               <div key={recent.id}>
                 <RecentWorks imgURL={recent.imgURL} />
@@ -95,8 +93,8 @@ export default function HomePage() {
             </div>
           </NavLink>
         </div>
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 }

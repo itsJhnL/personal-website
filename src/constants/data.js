@@ -62,13 +62,13 @@ const userData = {
     },
   ],
   experience: [
-    {
+    /* {
       id: 0,
       position: "Sales Representative",
       title: "Sanyang-Furniture",
       desc: "• Maintained record and sales • Product knowledge • Active listening • Rapport-building skills • Customer relationship management tool skills",
       year: "2017",
-    },
+    }, */
     {
       id: 1,
       position: "Front-End Developer",
@@ -90,13 +90,13 @@ const userData = {
       desc: "Bachelor's degree in Information Technology.",
       year: "2023",
     },
-    {
+    /* {
       id: 4,
       position: "Data Entry Specialist",
       title: "Ascendance BPO Inc",
       desc: "My responsibilities include transcribing and encoding electronic, written, and faxed medical prescription orders, ensuring accuracy and adhering to SIG codes for proper medication administration. I meticulously identify any discrepancies in prescription orders and promptly escalate them to the relevant department for resolution. Additionally, I review and strictly adhere to the client’s standard operating procedures and policies to maintain compliance and quality standards. I respond promptly and accurately to inquiries from our in-house team, providing necessary information and support as required.",
       year: "2023",
-    },
+    }, */
     {
       id: 5,
       position: "Claim Specialist",
@@ -128,7 +128,7 @@ const userData = {
       description: "It allowed me to grasp the fundamental concepts of web development.",
       date: "February 22, 2021",
       imageURL: "/certificates/WebApp.jpg",
-    },
+    }/* ,
     {
       id: 4,
       name: "Full-Stack Dev Road Map",
@@ -199,7 +199,7 @@ const userData = {
       date: "March 19, 2021",
       imageURL:
         "/certificates/Integrated-cybersecurity-management-and-system.jpg",
-    },
+    }, */
   ],
   works: [
     {
@@ -240,7 +240,7 @@ const userData = {
     },
   ],
   about: {
-    imageURL: "/IMG_2777.jpeg",
+    imageURL: "/me.webp",
     introduce: [
       {
         id: 0,

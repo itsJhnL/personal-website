@@ -9,7 +9,7 @@ function Projects() {
         <div className="text-center py-24">
           <h1 className="font-bold text-lg text-[#a3262e]">MY WORKS</h1>
           <header className="text-6xl font-bold ">
-            <p className=" text-gray-700">Portfolio</p>
+            <p className=" text-gray-700">PROJECTS</p>
           </header>
           <p className="border-t-4 border-[#a3262e] mx-auto w-20"></p>
         </div>

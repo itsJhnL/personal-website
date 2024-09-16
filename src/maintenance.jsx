@@ -2,7 +2,7 @@ import React from "react";
 
 function maintenance() {
     return (
-        <div className="flex justify-center items-center h-screen text-7xl font-bold drop-shadow-2xl shadow-2xl">
+        <div className="flex justify-center items-center font-bold mx-auto h-screen w-screen">
             <p>Website Under Construction!</p>
         </div>
     )

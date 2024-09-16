@@ -14,8 +14,8 @@ function App() {
   return (
     <div className="App">
       <Maintenance />
-      <NavBar />
-      {/* <Routes>
+      {/* <NavBar />
+      <Routes>
         <Route exact path="/" element={<Home />}></Route>
         <Route exact path="/About" element={<About />}></Route>
         <Route exact path="/Services" element={<Services />}></Route>

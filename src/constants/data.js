@@ -12,30 +12,29 @@ import { FaFigma } from "@react-icons/all-files/fa/FaFigma";
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub";
 import { FaLinkedinIn } from "@react-icons/all-files/fa/FaLinkedinIn";
 import { FaBehance } from "@react-icons/all-files/fa/FaBehance";
-import { AiFillCode } from "@react-icons/all-files/ai/AiFillCode"
-import { FaBug } from "@react-icons/all-files/fa/FaBug"
-import { FaLaptopCode } from "@react-icons/all-files/fa/FaLaptopCode"
-import { SiGooglemessages } from "@react-icons/all-files/si/SiGooglemessages"
+import { AiFillCode } from "@react-icons/all-files/ai/AiFillCode";
+import { FaBug } from "@react-icons/all-files/fa/FaBug";
+import { FaLaptopCode } from "@react-icons/all-files/fa/FaLaptopCode";
+import { SiGooglemessages } from "@react-icons/all-files/si/SiGooglemessages";
 import { FaCode } from "@react-icons/all-files/fa/FaCode";
-import { FaPencilRuler } from "@react-icons/all-files/fa/FaPencilRuler"
-import { FaGraduationCap } from "@react-icons/all-files/fa/FaGraduationCap"
-import { MdLocationOn } from "@react-icons/all-files/md/MdLocationOn"
-import { MdPhoneForwarded } from "@react-icons/all-files/md/MdPhoneForwarded"
-import { MdEmail } from "@react-icons/all-files/md/MdEmail"
-import { FaFacebookF } from "@react-icons/all-files/fa/FaFacebookF"
-import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter"
-import { FaInstagramSquare } from "@react-icons/all-files/fa/FaInstagramSquare"
+import { FaPencilRuler } from "@react-icons/all-files/fa/FaPencilRuler";
+import { FaGraduationCap } from "@react-icons/all-files/fa/FaGraduationCap";
+import { MdLocationOn } from "@react-icons/all-files/md/MdLocationOn";
+import { MdPhoneForwarded } from "@react-icons/all-files/md/MdPhoneForwarded";
+import { MdEmail } from "@react-icons/all-files/md/MdEmail";
+import { FaFacebookF } from "@react-icons/all-files/fa/FaFacebookF";
+import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter";
+import { FaInstagramSquare } from "@react-icons/all-files/fa/FaInstagramSquare";
+import { FaGitAlt } from "react-icons/fa";
 
 const userData = {
-  hero:
-  {
+  hero: {
     name: "John Leo Bruno",
-    career: "Web Developer",
+    career: "Aspiring Web Developer",
     // resume: "/resume/JOHN LEO BRUNO - RESUME.pdf",
     imageURL: "/wave.png",
   },
-  navBarLinks:
-  {
+  navBarLinks: {
     linkedin: "https://www.linkedin.com/in/johnleobruno/",
     github: "https://github.com/itsJhnL",
     behance: "https://www.behance.net/janggodev",
@@ -69,13 +68,13 @@ const userData = {
       desc: "• Maintained record and sales • Product knowledge • Active listening • Rapport-building skills • Customer relationship management tool skills",
       year: "2017",
     }, */
-    {
+    /* {
       id: 1,
       position: "Front-End Developer",
       title: "Freelance",
       desc: "",
       year: "2022",
-    },
+    }, */
     {
       id: 2,
       position: "Internship",
@@ -125,10 +124,11 @@ const userData = {
     {
       id: 3,
       name: "I.T Works Development Team",
-      description: "It allowed me to grasp the fundamental concepts of web development.",
+      description:
+        "It allowed me to grasp the fundamental concepts of web development.",
       date: "February 22, 2021",
       imageURL: "/certificates/WebApp.jpg",
-    }/* ,
+    } /* ,
     {
       id: 4,
       name: "Full-Stack Dev Road Map",
@@ -199,13 +199,13 @@ const userData = {
       date: "March 19, 2021",
       imageURL:
         "/certificates/Integrated-cybersecurity-management-and-system.jpg",
-    }, */
+    }, */,
   ],
   works: [
     {
       id: 1,
       imageURL: "/projects/freshbites.png",
-      title: "Fresh Bites",
+      title: "Fresh Bites Landing Page",
       desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero maxime iste adipisci atque aliquam facere dignissimos sequi ea mollitia molestias?",
       tech: "React, Tailwind CSS",
       link: "https://freshbites.vercel.app/",
@@ -217,19 +217,19 @@ const userData = {
       title: "Barangay Management Information System",
       desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero maxime iste adipisci atque aliquam facere dignissimos sequi ea mollitia molestias?",
       tech: "HTML, CSS, JavaScript, JQuery, PHP, Bootstrap, MySQL.",
-      link: "https://barangay-management-system.vercel.app/",
+      // link: "https://barangay-management-system.vercel.app/",
       code: "https://github.com/itsJhnL/barangay-management-system",
     },
-    {
+    /* {
       id: 3,
       imageURL: "/projects/login.png",
-      title: "Responsive Login Page",
+      title: "Login Page",
       desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero maxime iste adipisci atque aliquam facere dignissimos sequi ea mollitia molestias?",
       tech: "HTML, CSS",
       link: "https://login-page-lac-five.vercel.app/",
       code: "https://github.com/itsJhnL/login-page",
-    },
-    {
+    }, */
+    /* {
       id: 4,
       imageURL: "/projects/linkedin-clone.png",
       title: "LinkedIn Clone",
@@ -237,7 +237,7 @@ const userData = {
       tech: "React, Redux, CSS, Firebase, MaterialUI-Icons",
       link: "https://linkedin-duplicate.vercel.app/",
       code: "https://github.com/itsJhnL/linkedin-clone",
-    },
+    }, */
   ],
   about: {
     imageURL: "/me.webp",
@@ -248,8 +248,10 @@ const userData = {
         name: "John Leo Bruno",
         link: "https://g.co/kgs/6Au1hq",
         career: "Web Developer",
-        desc1: "based in Philippines. Since I started my journey as a front-end developer, I've worked on personal projects, crafting responsive websites that are both fast and user-friendly while following best practices. I have a quiet confidence, a natural, and I'm always working to improve my skills and constantly working on getting better at solving problems.",
-        desc2: "When I'm not writing code, I tidy up my workspace to create a conducive environment. At times, I engage in designing from scratch, and I derive pleasure from sharing my web development expertise through blogs and short videos on platforms like",
+        desc1:
+          "based in Philippines. Since I started my journey as a front-end developer, I've worked on personal projects, crafting responsive websites that are both user-friendly and follow best practices. I have a quiet confidence, a natural curiosity, and I'm always working to improve my skills and constantly working on getting better at solving problems.",
+        desc2:
+          "When I'm not writing code, I tidy up my workspace to create a conducive environment. At times, I engage in designing from scratch, and I derive pleasure from sharing my web development expertise through blogs and short videos on platforms like",
         tiktok: "https://www.tiktok.com/@janggodev",
         medium: "https://medium.com/@johnleobruno",
       },
@@ -263,58 +265,63 @@ const userData = {
       {
         id: 1,
         icon: <FaCss3Alt size={35} />,
-        desc: "CSS3"
+        desc: "CSS3",
       },
       {
         id: 2,
         icon: <SiJavascript size={35} />,
-        desc: "JavaScript"
+        desc: "JavaScript",
       },
       {
         id: 3,
         icon: <FaReact size={35} />,
-        desc: "ReactJS"
+        desc: "ReactJS",
       },
       {
         id: 4,
         icon: <SiTailwindcss size={35} />,
-        desc: "Tailwind CSS"
+        desc: "Tailwind CSS",
       },
       {
         id: 5,
         icon: <SiMaterialUi size={35} />,
-        desc: "Material UI"
+        desc: "Material UI",
       },
       {
         id: 6,
         icon: <FaBootstrap size={35} />,
-        desc: "Bootstrap"
+        desc: "Bootstrap",
       },
       {
         id: 7,
         icon: <SiPhp size={35} />,
-        desc: "PHP"
+        desc: "PHP",
       },
       {
         id: 8,
         icon: <SiFirebase size={35} />,
-        desc: "Firebase"
+        desc: "Firebase",
       },
       {
         id: 9,
         icon: <GrMysql size={35} />,
-        desc: "MySQL"
+        desc: "MySQL",
       },
       {
         id: 10,
         icon: <FaFigma size={35} />,
-        desc: "Figma"
+        desc: "Figma",
       },
       {
         id: 11,
+        icon: <FaGitAlt size={35} />,
+        desc: "Git",
+      },
+      {
+        id: 12,
         icon: <FaGithub size={35} />,
         desc: "Github",
-      }
+      },
     ],
     mainSkills: [
       {
@@ -328,7 +335,7 @@ const userData = {
         title: "Web and User Interface Design",
         desc: "Website Creation, User Experience, Visual Design.",
         icon: <FaPencilRuler size={20} color={"#a3262e"} />,
-      }
+      },
     ],
     education: [
       {
@@ -337,8 +344,8 @@ const userData = {
         major: "Major in Web Systems Technology",
         desc: "Nueva Ecija University of Science and Technology - Cabanatuan City Nueva Ecija",
         icon: <FaGraduationCap size={24} color={"#a3262e"} />,
-      }
-    ]
+      },
+    ],
   },
   services: [
     {
@@ -397,7 +404,7 @@ const userData = {
     fb: <FaFacebookF size={24} />,
     twtr: <FaTwitter size={24} />,
     insta: <FaInstagramSquare size={24} />,
-  }
+  },
 };
 
 export default userData;

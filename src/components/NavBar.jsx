@@ -137,7 +137,7 @@ export default function Main() {
           <div className="text-xl font-black text-[#a3262e]">
             <NavLink to="/">
               <button className="" onClick={scrollUp}> {/* text-flicker-in-glow  */}
-                {clicked ? "JLB" : "JLB"}
+                {clicked ? "JanggoDev" : "JanggoDev"}
               </button>
             </NavLink>
           </div>

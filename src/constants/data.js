@@ -26,13 +26,15 @@ import { FaFacebookF } from "@react-icons/all-files/fa/FaFacebookF";
 import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter";
 import { FaInstagramSquare } from "@react-icons/all-files/fa/FaInstagramSquare";
 import { FaGitAlt } from "react-icons/fa";
+import { FaFileLines } from "react-icons/fa6";
 
 const userData = {
   hero: {
     name: "John Leo Bruno",
-    career: "Aspiring Web Developer",
-    // resume: "/resume/JOHN LEO BRUNO - RESUME.pdf",
+    career: "Software Developer",
+    resume: "/resume/John_Leo_Bruno.pdf",
     imageURL: "/wave.png",
+    icon: <FaFileLines size={16} color={"#a3262e"} />,
   },
   navBarLinks: {
     linkedin: "https://www.linkedin.com/in/johnleobruno/",

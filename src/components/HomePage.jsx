@@ -40,7 +40,8 @@ export default function HomePage() {
                 {userData.hero.name}
               </p>
             </div>
-            <div className="text-xl">
+            <div className="flex gap-2 text-xl">
+              <p>Aspiring</p>
               <p className="font-medium underline underline-offset-4 decoration-[#a3262e]">
                 {userData.hero.career}
               </p>
@@ -63,9 +64,10 @@ export default function HomePage() {
                 href={userData.hero.resume}
                 target="blank"
                 rel="noopenner"
-                className="rounded-lg text-base font-medium border border-[#a3262e] text-[#a3262e] p-2 px-6 hover:bg-[#a3262e]/20"
+                className="flex items-center justify-between gap-2 rounded-lg text-base font-medium border border-[#a3262e] text-[#a3262e] p-2 px-6 hover:bg-[#a3262e]/20"
+                download={"John_Leo_Bruno"}
               >
-                VIEW RESUME
+                Download CV {userData.hero.icon}
               </a>
             </div>
           </div>

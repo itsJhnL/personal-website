@@ -58,7 +58,7 @@ export default function HomePage() {
                 onClick={scrollUp}
                 className="rounded-lg text-base font-medium bg-[#a3262e] border border-[#a3262e] text-white p-2"
               >
-                {clicked ? "Scrolling..." : "CONTACT ME"}
+                {clicked ? "Scrolling..." : "Contact me"}
               </NavLink>
               <a
                 href={userData.hero.resume}

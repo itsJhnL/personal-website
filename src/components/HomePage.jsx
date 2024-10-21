@@ -65,7 +65,7 @@ export default function HomePage() {
                 target="blank"
                 rel="noopenner"
                 className="flex items-center justify-between gap-2 rounded-lg text-base font-medium border border-[#a3262e] text-[#a3262e] p-2 px-6 hover:bg-[#a3262e]/20"
-                download={"John_Leo_Bruno"}
+                download={"John Leo Bruno"}
               >
                 Download CV {userData.hero.icon}
               </a>

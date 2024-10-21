@@ -32,7 +32,7 @@ const userData = {
   hero: {
     name: "John Leo Bruno",
     career: "Software Developer",
-    resume: "/resume/John Leo Bruno - Resume.pdf",
+    resume: "/resume/John Leo Bruno.pdf",
     imageURL: "/wave.png",
     icon: <FaFileLines size={16} color={"#a3262e"} />,
   },

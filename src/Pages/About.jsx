@@ -3,13 +3,9 @@ import Footer from "../components/Footer";
 import "../App.css";
 import userData from "../constants/data";
 
-import loading from '../components/Loading';
-
+import loading from "../components/Loading";
 
 export default function About() {
-
-  
-
   return (
     <div className="bg-[#f1f1f1]">
       <div className="flex flex-col items-center justify-center">
@@ -21,7 +17,11 @@ export default function About() {
           <p className="border-t-4 border-[#a3262e] mx-auto w-20"></p>
         </div>
         <div className="rounded-full border-8 overflow-hidden mx-auto pb-8 MobileS:block MobileS:h-60 MobileS:w-60 Tablet:hidden">
-          <img src={userData.about.imageURL} alt="" className="object-cover h-42" />
+          <img
+            src={userData.about.imageURL}
+            alt=""
+            className="object-cover h-42"
+          />
         </div>
         <div className="grid grid-cols-2 MobileS:gap-0 Laptop:gap-8 max-w-6xl mx-auto pb-24 p-4 MobileS:grid-cols-1 Tablet:grid-cols-2">
           {/* Introduction */}
@@ -43,10 +43,13 @@ export default function About() {
           {/* My Display Image */}
           <div className="MobileS:mx-5 Laptop:mx-0">
             <div className="flex items-center justify-center">
-              <img
-                src={userData.about.imageURL}
-                alt="My Display Image"
-                className="h-96 p-2 hover:scale-110 border-2 hover:border-[#a3262e] hover:shadow-2xl duration-500 ease-in-out MobileS:hidden Tablet:block" />
+              <div className="border-2 overflow-hidden">
+                <img
+                  src={userData.about.imageURL}
+                  alt="My Display Image"
+                  className="h-96 p-2 hover:scale-110 duration-300 ease-in-out MobileS:hidden Tablet:block"
+                />
+              </div>
             </div>
           </div>
 
@@ -58,15 +61,11 @@ export default function About() {
             <div className="grid gap-5 MobileS:grid-cols-3 Laptop:grid-cols-4 text-lg">
               {userData.about.techstacks.map((tech) => (
                 <div key={tech.id}>
-                  <TechStacks
-                    icon={tech.icon}
-                    desc={tech.desc}
-                  />
+                  <TechStacks icon={tech.icon} desc={tech.desc} />
                 </div>
               ))}
             </div>
           </div>
-
 
           <div className="pt-3 MobileS:mx-5 Laptop:mx-0">
             {/* Main Skills */}
@@ -109,24 +108,28 @@ export default function About() {
   );
 }
 
-const Introduce = ({ title, name, link, career, desc1, desc2, tiktok, medium }) => {
+const Introduce = ({
+  title,
+  name,
+  link,
+  career,
+  desc1,
+  desc2,
+  tiktok,
+  medium,
+}) => {
   return (
     <>
       <sup className="underline underline-offset-4 decoration-[#a3262e]">
         {title}
       </sup>
       <h1 className="MobileS:text-2xl Tablet:text-3xl pb-3">
-        Hi! I'm{" "}
-        <span className="font-bold text-[#a3262e]">{name}</span>
+        Hi! I'm <span className="font-bold text-[#a3262e]">{name}</span>
       </h1>
       <p className="pb-5 text-justify text-gray-700 text-lg">
         An aspiring{" "}
         <span className="font-bold underline underline-offset-4 decoration-[#a3262e]">
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href={link} target="_blank" rel="noopener noreferrer">
             {career}
           </a>
         </span>{" "}
@@ -134,21 +137,13 @@ const Introduce = ({ title, name, link, career, desc1, desc2, tiktok, medium }) 
       </p>
       <p className="mb-5 text-justify text-gray-700 text-lg">
         {desc2}{" "}
-        <a
-          href={tiktok}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href={tiktok} target="_blank" rel="noopener noreferrer">
           <b className="underline underline-offset-4 decoration-[#a3262e]">
             TikTok
           </b>
         </a>{" "}
         and{" "}
-        <a
-          href={medium}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href={medium} target="_blank" rel="noopener noreferrer">
           <b className="underline underline-offset-4 decoration-[#a3262e]">
             Medium
           </b>
@@ -156,8 +151,8 @@ const Introduce = ({ title, name, link, career, desc1, desc2, tiktok, medium }) 
         .
       </p>
     </>
-  )
-}
+  );
+};
 
 const TechStacks = ({ desc, icon }) => {
   return (
@@ -167,8 +162,8 @@ const TechStacks = ({ desc, icon }) => {
         <small>{desc}</small>
       </div>
     </>
-  )
-}
+  );
+};
 
 const MainSkills = ({ title, desc, icon }) => {
   return (
@@ -176,17 +171,13 @@ const MainSkills = ({ title, desc, icon }) => {
       <div className="ease-out duration-500 hover:scale-105 hover:shadow-2xl bg-white p-5 mb-2 rounded-md text-lg">
         <div className="flex items-center justify-between font-semibold">
           <h1 className="text-[#a3262e]">{title}</h1>
-          <div className="text-gray-600">
-            {icon}
-          </div>
+          <div className="text-gray-600">{icon}</div>
         </div>
-        <small className="text-gray-700">
-          {desc}
-        </small>
+        <small className="text-gray-700">{desc}</small>
       </div>
     </>
-  )
-}
+  );
+};
 
 const Education = ({ title, major, desc, icon }) => {
   return (
@@ -194,17 +185,13 @@ const Education = ({ title, major, desc, icon }) => {
       <div className="ease-out duration-500 hover:scale-105 hover:shadow-2xl bg-white p-5 rounded-md text-lg">
         <div className="flex items-center justify-between font-semibold">
           <h1 className="text-[#a3262e]">{title}</h1>
-          <div className="text-gray-600">
-            {icon}
-          </div>
+          <div className="text-gray-600">{icon}</div>
         </div>
         <sup>{major}</sup>
         <div>
-          <small className="text-gray-700">
-            {desc}
-          </small>
+          <small className="text-gray-700">{desc}</small>
         </div>
       </div>
     </>
-  )
-}
+  );
+};

@@ -242,7 +242,7 @@ const userData = {
     }, */
   ],
   about: {
-    imageURL: "/me.webp",
+    imageURL: "/IMG_2274.jpg",
     introduce: [
       {
         id: 0,

@@ -1,29 +1,45 @@
-import React from "react";
-import Footer from "../components/Footer";
+import React, { useState } from "react";
+// import Footer from "../components/Footer";
 import "../App.css";
 import userData from "../constants/data";
-
-import loading from "../components/Loading";
+import Contact from "./Contact";
+// import loading from "../components/Loading";
+// import { NavLink } from "react-router-dom";
 
 export default function About() {
+  const [clicked, setClicked] = useState();
+
+  //Scroll up fucntion and Syntax
+  const scrollUp = () => {
+    window.scrollTo({
+      top: 0, // Specified position
+      behavior: "auto", // auto scroll to top page, no animation.
+    });
+    setClicked(true);
+  };
+
   return (
     <div className="bg-[#f1f1f1]">
       <div className="flex flex-col items-center justify-center">
         <div className="text-center py-24">
-          <h1 className="font-bold text-lg text-[#a3262e]">WHO AM I</h1>
+          {/* Display Image Mobile mode */}
+          <div className="rounded-full border-8 overflow-hidden mx-auto pb-8 MobileS:block MobileS:h-60 MobileS:w-60 Tablet:hidden">
+            <img
+              src={userData.about.imageURL}
+              alt=""
+              className="object-cover"
+            />
+          </div>
           <header className="text-6xl font-bold max-w-6xl mx-auto">
-            <p className=" text-gray-700">About Me</p>
+            <p className="text-[#a3262e]">John Leo Bruno</p>
           </header>
+          <h1 className="font-bold text-lg text-gray-700">
+            Software Developer
+          </h1>
           <p className="border-t-4 border-[#a3262e] mx-auto w-20"></p>
         </div>
-        <div className="rounded-full border-8 overflow-hidden mx-auto pb-8 MobileS:block MobileS:h-60 MobileS:w-60 Tablet:hidden">
-          <img
-            src={userData.about.imageURL}
-            alt=""
-            className="object-cover h-42"
-          />
-        </div>
-        <div className="grid grid-cols-2 MobileS:gap-0 Laptop:gap-8 max-w-6xl mx-auto pb-24 p-4 MobileS:grid-cols-1 Tablet:grid-cols-2">
+
+        <div className="grid grid-cols-2 MobileS:gap-0 Laptop:gap-8 max-w-6xl mx-auto pb-5 p-4 MobileS:grid-cols-1 Tablet:grid-cols-2">
           {/* Introduction */}
           {userData.about.introduce.map((abt) => (
             <div key={abt.id} className="MobileS:mx-5 Laptop:mx-0">
@@ -37,6 +53,26 @@ export default function About() {
                 tiktok={abt.tiktok}
                 medium={abt.medium}
               />
+              {/* CV download button */}
+              <div className="flex gap-2">
+                {/* Navlink to Contact ME */}
+                {/* <NavLink
+                  to="/Contact"
+                  onClick={scrollUp}
+                  className="rounded-lg text-base font-medium bg-[#a3262e] border border-[#a3262e] text-white p-2"
+                >
+                  {clicked ? "Scrolling..." : "Contact me"}
+                </NavLink> */}
+                <a
+                  href={userData.hero.resume}
+                  target="blank"
+                  rel="noopenner"
+                  className="flex items-center justify-between gap-2 rounded-lg text-base font-medium border border-[#a3262e] text-[#a3262e] p-2 px-6 hover:bg-[#a3262e]/20"
+                  download={"John Leo Bruno"}
+                >
+                  Download CV {userData.hero.icon}
+                </a>
+              </div>
             </div>
           ))}
 
@@ -103,7 +139,9 @@ export default function About() {
           </div>
         </div>
       </div>
-      <Footer />
+
+      {/* hidden */}
+      {/* <Footer /> */}
     </div>
   );
 }
@@ -123,9 +161,22 @@ const Introduce = ({
       <sup className="underline underline-offset-4 decoration-[#a3262e]">
         {title}
       </sup>
-      <h1 className="MobileS:text-2xl Tablet:text-3xl pb-3">
-        Hi! I'm <span className="font-bold text-[#a3262e]">{name}</span>
-      </h1>
+      <div className="flex gap-2">
+        <h1 className="MobileS:text-2xl Tablet:text-3xl pb-3">
+          Hi! I'm <span className="font-bold text-[#a3262e]">{name}</span>
+          {/* hand wave */}
+        </h1>
+        <h1 className="text-center">
+          <span className="wave">
+            <img
+              src={userData.hero.imageURL}
+              alt=""
+              className="overflow-clip"
+              style={{ height: "30px" }}
+            />
+          </span>
+        </h1>
+      </div>
       <p className="pb-5 text-justify text-gray-700 text-lg">
         An aspiring{" "}
         <span className="font-bold underline underline-offset-4 decoration-[#a3262e]">

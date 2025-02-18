@@ -27,10 +27,11 @@ import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter";
 import { FaInstagramSquare } from "@react-icons/all-files/fa/FaInstagramSquare";
 import { FaGitAlt } from "react-icons/fa";
 import { FaFileLines } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
 
 const userData = {
   hero: {
-    name: "John Leo Bruno",
+    name: "John Leo",
     career: "Software Developer",
     resume: "/resume/John Leo Bruno.pdf",
     imageURL: "/wave.png",
@@ -247,11 +248,12 @@ const userData = {
       {
         id: 0,
         title: "Introduce",
-        name: "John Leo Bruno",
-        link: "https://g.co/kgs/6Au1hq",
-        career: "Web Developer",
+        name: "Leo",
+        // link: "https://g.co/kgs/6Au1hq",
+        link: "https://g.co/kgs/fsH2jUz",
+        career: "Software Developer",
         desc1:
-          "based in Philippines. Since I started my journey as a front-end developer, I've worked on personal projects, crafting responsive websites that are both user-friendly and follow best practices. I have a quiet confidence, a natural curiosity, and I'm always working to improve my skills and constantly working on getting better at solving problems.",
+          "based in Philippines. Since I started my journey as a developer, I've worked on personal projects, crafting responsive websites that are both user-friendly and follow best practices. I have a quiet confidence, a natural curiosity, and I'm always working to improve my skills and constantly working on getting better at solving problems.",
         desc2:
           "When I'm not writing code, I tidy up my workspace to create a conducive environment. At times, I engage in designing from scratch, and I derive pleasure from sharing my web development expertise through blogs and short videos on platforms like",
         tiktok: "https://www.tiktok.com/@janggodev",
@@ -395,6 +397,7 @@ const userData = {
     email: "johnleo.bruno@gmail.com",
     link: "mailto:johnleo.bruno@gmail.com",
     address_icon: <MdLocationOn size={24} />,
+    address_link: "https://g.co/kgs/xHsy6mK",
     email_icon: <MdEmail size={24} />,
     number_icon: <MdPhoneForwarded size={24} />,
   },
@@ -404,7 +407,7 @@ const userData = {
     twitter: "https://twitter.com/LeoXyRealDeal",
     instagram: "https://www.instagram.com/janggodev/",
     fb: <FaFacebookF size={24} />,
-    twtr: <FaTwitter size={24} />,
+    twtr: <FaXTwitter size={24} />,
     insta: <FaInstagramSquare size={24} />,
   },
 };

@@ -5,6 +5,8 @@ import "../styles/Wave.css";
 import userData from "../constants/data";
 import { lazy } from "react";
 import loading from "./Loading";
+import About from "../Pages/About";
+import Contact from "../Pages/Contact";
 
 export default function HomePage() {
   const [clicked, setClicked] = useState();
@@ -20,12 +22,13 @@ export default function HomePage() {
 
   return (
     <>
-      <div className="bg-[#FFF] h-screen ">
+      {/* first page is hidden */}
+      <div className="hidden bg-[#FFF] h-screen ">
         <div className="flex max-w-6xl mx-auto h-3/4 w-screen MobileS:justify-center Tablet:justify-center">
-          <div className="flex flex-col MobileS:gap-2 Laptop:gap-3 items-center justify-center">
-            <div className="text-lg text-center">
-              <h1>
-                Hey there{" "}
+          <div className="flex flex-col MobileS:gap-2 Laptop:gap-3 items-start justify-center">
+            <div className="text-lg text-start">
+              {/* hand wave */}
+              {/* <h1>
                 <span className="wave">
                   <img
                     src={userData.hero.imageURL}
@@ -34,14 +37,13 @@ export default function HomePage() {
                     style={{ height: "20px" }}
                   />
                 </span>
-                , I am
-              </h1>
+              </h1> */}
               <p className="font-extrabold text-[#a3262e] MobileS:text-4xl Tablet:text-6xl Laptop:text-8xl">
                 {userData.hero.name}
               </p>
             </div>
             <div className="flex gap-2 text-xl">
-              <p>Aspiring</p>
+              <div className="bg-red-400 h-[1px] w-[70px] hidden md:block"></div>
               <p className="font-medium underline underline-offset-4 decoration-[#a3262e]">
                 {userData.hero.career}
               </p>
@@ -52,7 +54,7 @@ export default function HomePage() {
                 high quality websites and providing remarkable user experiences.
               </p>
             </div> */}
-            <div className="flex gap-2">
+            {/* <div className="flex gap-2">
               <NavLink
                 to="/Contact"
                 onClick={scrollUp}
@@ -69,15 +71,20 @@ export default function HomePage() {
               >
                 Download CV {userData.hero.icon}
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
+
+      {/* About */}
+      <About />
+      {/* Show case projects */}
       <div className="bg-[#f1f1f1]">
-        <div className="flex flex-col items-center justify-center p-4 max-w-6xl mx-auto mb-5">
+        <div className="flex flex-col items-center justify-center p-4 max-w-6xl mx-auto">
           <div className="text-center py-24">
             <header className="text-6xl font-bold max-w-6xl mx-auto">
               <p className=" text-gray-700">Recent Projects</p>
+              <p className="border-t-4 border-[#a3262e] mx-auto w-52 mt-2"></p>
             </header>
           </div>
           <div className="grid grid-cols-2 gap-4 max-w-6xl pb-14 MobileS:grid-cols-1 Laptop:grid-cols-2">
@@ -87,15 +94,9 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-          <NavLink to="/Works" onClick={scrollUp}>
-            <div className="border rounded-lg bg-white font-bold text-gray-700 p-3 hover:bg-[#a3262e]/20">
-              <span className="text-[#a3262e]">
-                {clicked ? "View All." : "View All"}
-              </span>
-            </div>
-          </NavLink>
         </div>
       </div>
+      <Contact />
       <Footer />
     </>
   );

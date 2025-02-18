@@ -26,7 +26,8 @@ export default function Main() {
 
   const NavLinks = () => {
     return (
-      <>
+      //nav tab is hidden
+      <div className="hidden">
         <NavLink
           to="/About"
           style={({ isActive }) => ({
@@ -51,7 +52,7 @@ export default function Main() {
         >
           {clicked ? "Projects" : "Projects"}
         </NavLink>
-       {/*  <NavLink
+        {/*  <NavLink
           to="/Services"
           style={({ isActive }) => ({
             color: isActive ? "#a3262e" : "",
@@ -87,7 +88,7 @@ export default function Main() {
         >
           {clicked ? "Contact" : "Contact"}
         </NavLink>
-      </>
+      </div>
     );
   };
 
@@ -132,12 +133,16 @@ export default function Main() {
 
   return (
     <>
-      <div className="bg-[#FFF]/80 backdrop-blur z-50 "> {/* sticky top-0 */}
-        <nav className="flex flex-row items-center justify-between max-w-6xl mx-auto px-5 py-8">
-          <div className="text-xl font-black text-[#a3262e]">
+      <div className="bg-[#FFF]/80 backdrop-blur z-50 ">
+        {" "}
+        {/* sticky top-0 */}
+        <nav className="flex flex-row items-center jusstify-between max-w-6xl mx-auto px-5 py-8">
+          <div className="font-black text-3xl text-[#a3262e]">
             <NavLink to="/">
-              <button className="" onClick={scrollUp}> {/* text-flicker-in-glow  */}
-                {clicked ? "JanggoDev" : "JanggoDev"}
+              <button className="" onClick={scrollUp}>
+                {" "}
+                {/* text-flicker-in-glow  */}
+                {clicked ? "</>" : "</>"}
               </button>
             </NavLink>
           </div>
@@ -150,22 +155,6 @@ export default function Main() {
               {openNav ? <Close /> : <Menu />}
             </button>
           </div>
-          {/* Socials */}
-          {/* <div className="text-[#a3262e] MobileS:hidden Tablet:hidden Laptop:block">
-            <ul className="flex flex-row items-center justify-center space-x-6">
-              <a href={userData.navBarLinks.linkedin} target="_blank" rel="noreferrer">
-                {userData.navBarLinks.linkedin_icon}
-              </a>
-
-              <a href={userData.navBarLinks.github} target="_blank" rel="noreferrer">
-                {userData.navBarLinks.github_icon}
-              </a>
-
-              <a href={userData.navBarLinks.behance} target="_blank" rel="noreferrer">
-                {userData.navBarLinks.behance_icon}
-              </a>
-            </ul>
-          </div> */}
         </nav>
       </div>
       {openNav && (

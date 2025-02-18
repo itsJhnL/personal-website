@@ -4,14 +4,14 @@ import userData from "../constants/data";
 
 export default function Contact() {
   return (
-    <section>
+    <div className="bg-[#f1f1f1]">
       <div className="flex flex-col items-center justify-center">
         <div className="text-center py-24">
           {/* <h1 className="font-bold text-lg text-[#a3262e]">HIRE ME</h1> */}
           <header className="text-6xl font-bold max-w-6xl mx-auto">
-            <p className=" text-gray-700">Contact</p>
+            <p className=" text-gray-700">Contact Me</p>
           </header>
-          <p className="border-t-4 border-[#a3262e] mx-auto w-20"></p>
+          <p className="border-t-4 border-[#a3262e] mx-auto w-36"></p>
         </div>
         <div className="flex max-w-6xl mx-auto pb-24">
           <div>
@@ -20,14 +20,16 @@ export default function Contact() {
               <p className="border-t-4 border-[#a3262e] w-24"></p>
             </div>
             <div className="text-base text-justify text-black font-normal px-5">
-              <p>
-                {userData.contact.desc}
-              </p>
+              <p>{userData.contact.desc}</p>
             </div>
             <div className="p-5 text-black font-medium space-y-3">
               <div className="flex">
-                <i className="pr-5 text-[#a3262e]">{userData.contact.address_icon}</i>
-                <p>{userData.contact.address}</p>
+                <i className="pr-5 text-[#a3262e]">
+                  {userData.contact.address_icon}
+                </i>
+                <a href={userData.contact.address_link} target="_blank">
+                  <p>{userData.contact.address}</p>
+                </a>
               </div>
               <div className="flex">
                 <i className="pr-5 text-[#a3262e]">
@@ -50,8 +52,10 @@ export default function Contact() {
                 </p>
               </div>
               {/* Socials */}
-              <div className="flex space-x-5 text-[#a3262e] pt-20">
-                <h1 className="text-xl font-semibold">{userData.socialLinks.title}</h1>
+              {/* <div className="flex space-x-5 text-[#a3262e] pt-20">
+                <h1 className="text-xl font-semibold">
+                  {userData.socialLinks.title}
+                </h1>
                 <div>
                   <a
                     href={userData.socialLinks.facebook}
@@ -85,7 +89,7 @@ export default function Contact() {
                     </i>
                   </a>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
           {/* <div className="flex border p-5">
@@ -154,9 +158,7 @@ export default function Contact() {
           </div> */}
         </div>
       </div>
-      <Footer />
-    </section>
+      {/* <Footer /> */}
+    </div>
   );
 }
-
-

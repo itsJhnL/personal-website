@@ -136,7 +136,7 @@ export default function Main() {
       <div className="bg-[#FFF]/80 backdrop-blur z-50 ">
         {" "}
         {/* sticky top-0 */}
-        <nav className="flex flex-row items-center jusstify-between max-w-6xl mx-auto px-5 py-8">
+        <nav className="flex flex-row items-center justify-center max-w-6xl mx-auto px-5 py-8">
           <div className="font-black text-3xl text-[#a3262e]">
             <NavLink to="/">
               <button className="" onClick={scrollUp}>
@@ -150,7 +150,7 @@ export default function Main() {
             {/* Navbar */}
             <NavLinks />
           </div>
-          <div className="flex Laptop:hidden">
+          <div className="flex hidden">
             <button className="text-[#a3262e]" onClick={showNav}>
               {openNav ? <Close /> : <Menu />}
             </button>

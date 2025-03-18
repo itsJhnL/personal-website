@@ -54,7 +54,7 @@ export default function About() {
                 medium={abt.medium}
               />
               {/* CV download button */}
-              <div className="flex gap-2">
+              <div className="flex gap-2 pb-5">
                 {/* Navlink to Contact ME */}
                 {/* <NavLink
                   to="/Contact"

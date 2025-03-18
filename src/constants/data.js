@@ -243,7 +243,7 @@ const userData = {
     }, */
   ],
   about: {
-    imageURL: "/John2.jpg",
+    imageURL: "/John2.png",
     introduce: [
       {
         id: 0,

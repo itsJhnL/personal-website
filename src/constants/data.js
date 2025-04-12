@@ -48,7 +48,7 @@ const userData = {
   recentWork: [
     {
       id: 1,
-      imgURL: "/projects/freshbitesv2.png",
+      imgURL: "/projects/freshbitev2.png",
     },
     {
       id: 2,

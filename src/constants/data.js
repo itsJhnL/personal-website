@@ -48,7 +48,7 @@ const userData = {
   recentWork: [
     {
       id: 1,
-      imgURL: "/projects/freshbites.png",
+      imgURL: "/projects/freshbitesv2.png",
     },
     {
       id: 2,
@@ -207,7 +207,7 @@ const userData = {
   works: [
     {
       id: 1,
-      imageURL: "/projects/freshbitesv2.png",
+      imageURL: "/projects/freshbites.png",
       title: "Fresh Bites Landing Page",
       desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero maxime iste adipisci atque aliquam facere dignissimos sequi ea mollitia molestias?",
       tech: "React, Tailwind CSS",

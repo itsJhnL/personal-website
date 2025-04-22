@@ -405,7 +405,7 @@ const userData = {
     title: "Social Links:",
     facebook: "https://www.facebook.com/LeoXyRDG/",
     twitter: "https://twitter.com/LeoXyRealDeal",
-    instagram: "https://www.instagram.com/janggodev/",
+    instagram: "https://www.instagram.com/jhnleo.dev/",
     fb: <FaFacebookF size={24} />,
     twtr: <FaXTwitter size={24} />,
     insta: <FaInstagramSquare size={24} />,

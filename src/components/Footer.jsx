@@ -14,10 +14,10 @@ function Footer() {
       {/* Socials */}
       <div className="text-2xl MobileS:pt-5 Tablet:pt-0">
         <ul className="flex flex-row items-center space-x-6 text-[#a3262e]">
-          <a href={userData.socialLinks.twitter} target="_blank">
+          <a href={userData.socialLinks.facebook} target="_blank">
             {userData.socialLinks.fb}
           </a>
-          <a href={userData.socialLinks.twitter} target="_blank">
+          <a href={userData.socialLinks.instagram} target="_blank">
             {userData.socialLinks.insta}
           </a>
           <a href={userData.socialLinks.twitter} target="_blank">

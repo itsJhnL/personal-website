@@ -30,7 +30,7 @@ export default function About() {
               className="object-cover"
             />
           </div>
-          <header className="text-6xl font-bold max-w-6xl mx-auto">
+          <header className="MobileS:text-5xl MobileL:text-6xl font-bold max-w-6xl mx-auto pt-5">
             <p className="text-[#a3262e]">John Leo Bruno</p>
           </header>
           <h1 className="font-bold text-lg text-gray-700">

@@ -179,7 +179,7 @@ const Introduce = ({
         </h1>
       </div>
       <p className="pb-5 text-justify text-gray-700 text-lg">
-        An aspiring{" "}
+        A{" "}
         <span className="font-bold underline underline-offset-4 decoration-[#a3262e]">
           <a href={link} target="_blank" rel="noopener noreferrer">
             {career}

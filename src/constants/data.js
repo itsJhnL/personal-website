@@ -250,13 +250,14 @@ const userData = {
         title: "Introduce",
         name: "Leo",
         // link: "https://g.co/kgs/6Au1hq",
-        link: "https://g.co/kgs/fsH2jUz",
+        // link: "https://g.co/kgs/fsH2jUz",
+        link: "https://www.google.com/search?q=What+does+a+software+developer+do",
         career: "Software Developer",
         desc1:
           "based in Philippines. Since I started my journey as a developer, I've worked on personal projects, crafting responsive websites that are both user-friendly and follow best practices. I have a quiet confidence, a natural curiosity, and I'm always working to improve my skills and constantly working on getting better at solving problems.",
         desc2:
           "When I'm not writing code, I tidy up my workspace to create a conducive environment. At times, I engage in designing from scratch, and I derive pleasure from sharing my web development expertise through blogs and short videos on platforms like",
-        tiktok: "https://www.tiktok.com/@janggodev",
+        tiktok: "https://www.tiktok.com/@Jjanggzxc",
         medium: "https://medium.com/@johnleobruno",
       },
     ],

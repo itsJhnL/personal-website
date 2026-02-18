@@ -23,7 +23,6 @@ import { MdLocationOn } from "@react-icons/all-files/md/MdLocationOn";
 import { MdPhoneForwarded } from "@react-icons/all-files/md/MdPhoneForwarded";
 import { MdEmail } from "@react-icons/all-files/md/MdEmail";
 import { FaFacebookF } from "@react-icons/all-files/fa/FaFacebookF";
-import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter";
 import { FaInstagramSquare } from "@react-icons/all-files/fa/FaInstagramSquare";
 import { FaGitAlt } from "react-icons/fa";
 import { FaFileLines } from "react-icons/fa6";

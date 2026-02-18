@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import "../styles/Nav.css";
-import userData from "../constants/data";
 
 export default function Main() {
   // Open nav start here

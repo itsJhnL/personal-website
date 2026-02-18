@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Footer from "../components/Footer";
 import userData from "../constants/data";
 import { fadeInUp, pageTransition } from "../utils/motion";
 
@@ -40,7 +39,11 @@ export default function Contact() {
                 <i className="pr-5 text-[#a3262e]">
                   {userData.contact.address_icon}
                 </i>
-                <a href={userData.contact.address_link} target="_blank">
+                <a
+                  href={userData.contact.address_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <p>{userData.contact.address}</p>
                 </a>
               </div>

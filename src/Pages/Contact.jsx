@@ -1,10 +1,18 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Footer from "../components/Footer";
 import userData from "../constants/data";
+import { fadeInUp, pageTransition } from "../utils/motion";
 
 export default function Contact() {
   return (
-    <div className="bg-[#f1f1f1]">
+    <motion.div
+      className="bg-[#f1f1f1]"
+      initial={pageTransition.initial}
+      animate={pageTransition.animate}
+      exit={pageTransition.exit}
+      transition={pageTransition.transition}
+    >
       <div className="flex flex-col items-center justify-center">
         <div className="text-center py-24">
           {/* <h1 className="font-bold text-lg text-[#a3262e]">HIRE ME</h1> */}
@@ -14,7 +22,12 @@ export default function Contact() {
           <p className="border-t-4 border-[#a3262e] mx-auto w-36"></p>
         </div>
         <div className="flex max-w-6xl mx-auto pb-24">
-          <div>
+          <motion.div
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.1 }}
+          >
             <div className="MobileS:text-2xl Laptop:text-4xl text-black font-bold p-5">
               <h1>{userData.contact.title}</h1>
               <p className="border-t-4 border-[#a3262e] w-24"></p>
@@ -91,7 +104,7 @@ export default function Contact() {
                 </div>
               </div> */}
             </div>
-          </div>
+          </motion.div>
           {/* <div className="flex border p-5">
             <form action="">
               <div className="space-y-5">
@@ -159,6 +172,6 @@ export default function Contact() {
         </div>
       </div>
       {/* <Footer /> */}
-    </div>
+    </motion.div>
   );
 }

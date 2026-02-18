@@ -1,10 +1,18 @@
 import React from "react";
+import { motion } from "framer-motion";
 import userData from "../constants/data";
 import Footer from "../components/Footer";
+import { fadeInUp, pageTransition, staggerContainer } from "../utils/motion";
 
 export default function Experience() {
   return (
-    <div className="bg-[#f1f1f1]">
+    <motion.div
+      className="bg-[#f1f1f1]"
+      initial={pageTransition.initial}
+      animate={pageTransition.animate}
+      exit={pageTransition.exit}
+      transition={pageTransition.transition}
+    >
       <div className="max-w-6xl mx-auto">
         {/* Experience */}
         <div className="p-5">
@@ -15,9 +23,15 @@ export default function Experience() {
             </header>
             <p className="border-t-4 border-[#a3262e] mx-auto w-20"></p>
           </div>
-          <div className="flex flex-col-reverse">
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.1 }}
+            className="flex flex-col-reverse"
+          >
             {userData.experience.map((exp, idx) => (
-              <div key={exp.id}>
+              <motion.div key={exp.id} variants={fadeInUp}>
                 {/* Adding divison line starts here */}
                 {idx === userData.experience.length - 1 ? null : (
                   <div className="flex flex-col items-center -mt-2">
@@ -37,9 +51,9 @@ export default function Experience() {
                   title={exp.title}
                   desc={exp.desc}
                 />
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
         <div className="border mt-24 m-5"></div>
         <div className="flex flex-col pb-24 p-5">
@@ -53,11 +67,17 @@ export default function Experience() {
           </div>
 
           {/* Certificates */}
-          <div className="flex items-center justify-center pt-24">
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.1 }}
+            className="flex items-center justify-center pt-24"
+          >
             {/* <div className="items-center grid MobileS:grid-cols-1 Laptop:grid-cols-2 space-y-10 gap-8"> */}
             <div className="mx-5">
               {userData.certificates.map((cert) => (
-                <div key={cert.id}>
+                <motion.div key={cert.id} variants={fadeInUp}>
                   {/* Rendered data using props */}
                   <MyCerts
                     name={cert.name}
@@ -65,14 +85,14 @@ export default function Experience() {
                     date={cert.date}
                     imageURL={cert.imageURL}
                   />
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
         <Footer />
       </div>
-    </div>
+    </motion.div>
   );
 }
 //passing the data with a render props

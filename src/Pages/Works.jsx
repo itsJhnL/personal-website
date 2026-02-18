@@ -1,10 +1,18 @@
 import React from "react";
+import { motion } from "framer-motion";
 import userData from "../constants/data";
 import Footer from "../components/Footer";
+import { fadeInUp, pageTransition, staggerContainer } from "../utils/motion";
 
 function Projects() {
   return (
-    <div className="bg-[#f1f1f1]">
+    <motion.div
+      className="bg-[#f1f1f1]"
+      initial={pageTransition.initial}
+      animate={pageTransition.animate}
+      exit={pageTransition.exit}
+      transition={pageTransition.transition}
+    >
       <div className="flex flex-col items-center justify-center mx-5">
         <div className="text-center py-24">
           <h1 className="font-bold text-lg text-[#a3262e]">MY WORKS</h1>
@@ -13,9 +21,15 @@ function Projects() {
           </header>
           <p className="border-t-4 border-[#a3262e] mx-auto w-20"></p>
         </div>
-        <div className="max-w-6xl mx-auto grid MobileS:grid-cols-1 Tablet:grid-cols-2">
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.1 }}
+          className="max-w-6xl mx-auto grid MobileS:grid-cols-1 Tablet:grid-cols-2"
+        >
           {userData.works.map((item) => (
-            <div key={item.id}>
+            <motion.div key={item.id} variants={fadeInUp}>
               <ProjectCard
                 title={item.title}
                 imageURL={item.imageURL}
@@ -24,12 +38,12 @@ function Projects() {
                 link={item.link}
                 code={item.code}
               />
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
       <Footer />
-    </div>
+    </motion.div>
   );
 }
 

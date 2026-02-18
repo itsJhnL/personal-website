@@ -1,11 +1,19 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Footer from "../components/Footer";
 import "../App.css";
 import userData from "../constants/data";
+import { fadeInUp, pageTransition, staggerContainer } from "../utils/motion";
 
 export default function Services() {
   return (
-    <div className="bg-[#f1f1f1]">
+    <motion.div
+      className="bg-[#f1f1f1]"
+      initial={pageTransition.initial}
+      animate={pageTransition.animate}
+      exit={pageTransition.exit}
+      transition={pageTransition.transition}
+    >
       <div className="flex flex-col items-center justify-center pb-24">
         <div className="text-center py-24">
           <h1 className="font-bold text-lg text-[#a3262e]">WHAT I DO</h1>
@@ -15,20 +23,26 @@ export default function Services() {
           <p className="border-t-4 border-[#a3262e] mx-auto w-20"></p>
         </div>
 
-        <div className="text-center grid grid-cols-3 gap-4 MobileS:px-10 Laptop:px-5 max-w-6xl mx-auto text-gray-700 MobileS:grid-cols-1 Tablet:grid-cols-2 Laptop:grid-cols-3">
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.1 }}
+          className="text-center grid grid-cols-3 gap-4 MobileS:px-10 Laptop:px-5 max-w-6xl mx-auto text-gray-700 MobileS:grid-cols-1 Tablet:grid-cols-2 Laptop:grid-cols-3"
+        >
           {userData.services.map((ser) => (
-            <div key={ser.id}>
+            <motion.div key={ser.id} variants={fadeInUp}>
               <ServicesData
                 title={ser.title}
                 desc={ser.desc}
                 icon={ser.icon}
               />
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
       <Footer />
-    </div>
+    </motion.div>
   );
 }
 

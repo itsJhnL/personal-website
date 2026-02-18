@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 import "../styles/Nav.css";
 import userData from "../constants/data";
 
@@ -24,18 +25,23 @@ export default function Main() {
 
   // const styleNav = {};
 
-  const NavLinks = () => {
+  const NavLinks = ({ mobile = false }) => {
     return (
-      //nav tab is hidden
-      <div className="hidden">
+      <div
+        className={
+          mobile
+            ? "flex flex-col items-center gap-7"
+            : "flex items-center gap-7"
+        }
+      >
         <NavLink
           to="/About"
           style={({ isActive }) => ({
             color: isActive ? "#a3262e" : "",
-            fontSize: isActive ? "18px" : "",
+            fontSize: isActive ? "16px" : "",
             fontWeight: isActive ? "bold" : "",
           })}
-          className="text-base text-gray-600 font-normal"
+          className="text-base text-gray-700 font-medium hover:text-[#a3262e] duration-300"
           onClick={scrollUp}
         >
           {clicked ? "About" : "About"}
@@ -44,10 +50,10 @@ export default function Main() {
           to="/Works"
           style={({ isActive }) => ({
             color: isActive ? "#a3262e" : "",
-            fontSize: isActive ? "18px" : "",
+            fontSize: isActive ? "16px" : "",
             fontWeight: isActive ? "bold" : "",
           })}
-          className="text-base text-gray-600 font-normal"
+          className="text-base text-gray-700 font-medium hover:text-[#a3262e] duration-300"
           onClick={scrollUp}
         >
           {clicked ? "Projects" : "Projects"}
@@ -68,10 +74,10 @@ export default function Main() {
           to="/Experience"
           style={({ isActive }) => ({
             color: isActive ? "#a3262e" : "",
-            fontSize: isActive ? "18px" : "",
+            fontSize: isActive ? "16px" : "",
             fontWeight: isActive ? "bold" : "",
           })}
-          className="text-base text-gray-600 font-normal"
+          className="text-base text-gray-700 font-medium hover:text-[#a3262e] duration-300"
           onClick={scrollUp}
         >
           Experience
@@ -80,10 +86,10 @@ export default function Main() {
           to="/Contact"
           style={({ isActive }) => ({
             color: isActive ? "#a3262e" : "",
-            fontSize: isActive ? "18px" : "",
+            fontSize: isActive ? "16px" : "",
             fontWeight: isActive ? "bold" : "",
           })}
-          className="text-base text-gray-600 font-normal"
+          className="text-base text-gray-700 font-medium hover:text-[#a3262e] duration-300"
           onClick={scrollUp}
         >
           {clicked ? "Contact" : "Contact"}
@@ -133,48 +139,46 @@ export default function Main() {
 
   return (
     <>
-      <div className="bg-[#FFF]/80 backdrop-blur z-50 ">
-        {" "}
-        {/* sticky top-0 */}
-        <nav className="flex flex-row items-center justify-center max-w-6xl mx-auto px-5 py-8 hidden">
+      <div className="bg-[#FFF]/80 backdrop-blur z-50 sticky top-0 border-b border-white/40">
+        <nav className="flex flex-row items-center justify-between max-w-6xl mx-auto px-5 py-4">
           <div className="font-black text-3xl text-[#a3262e]">
             <NavLink to="/">
               <button className="" onClick={scrollUp}>
-                {" "}
-                {/* text-flicker-in-glow  */}
                 {clicked ? "</>" : "</>"}
               </button>
             </NavLink>
           </div>
-          <div className="space-x-8 MobileS:hidden Laptop:block">
+          <div className="MobileS:hidden Laptop:block">
             {/* Navbar */}
             <NavLinks />
           </div>
-          <div className="flex hidden">
+          <div className="flex Laptop:hidden">
             <button className="text-[#a3262e]" onClick={showNav}>
               {openNav ? <Close /> : <Menu />}
             </button>
           </div>
         </nav>
       </div>
-      {openNav && (
-        <>
-          <div className="z-[300] bg-[#f1f1f1] top-0 fixed flex flex-col items-center justify-center h-[100vh] w-full Laptop:hidden">
-            <span
+      <AnimatePresence>
+        {openNav && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="z-[300] bg-[#f1f1f1]/95 backdrop-blur-md top-0 fixed flex flex-col items-center justify-center h-[100vh] w-full Laptop:hidden"
+          >
+            <button
               className="flex text-[#a3262e] font-bold absolute top-10 right-5"
               onClick={showNav}
             >
               Close{openNav ? <Close /> : ""}
-            </span>
-            <button
-              className="flex flex-col items-center justify-center space-y-10 text-lg"
-              onClick={showNav}
-            >
-              {openNav ? <NavLinks /> : ""}
             </button>
-          </div>
-        </>
-      )}
+            <div onClick={showNav}>
+              <NavLinks mobile />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }

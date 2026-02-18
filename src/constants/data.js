@@ -106,6 +106,13 @@ const userData = {
       desc: "As a claim specialist in the insurance industry, my primary responsibility is to oversee the processing of insurance claims related to patient medications. This involves carefully reviewing each claim to ensure it meets all necessary criteria for payment, including verifying the accuracy of medical prescription orders and adherence to SIG codes. In cases where there are discrepancies or the need for clarification, I initiate overrides or appeals as necessary to facilitate payment. Additionally, I handle incoming calls from healthcare providers, pharmacies, and patients regarding claim status and payment inquiries, providing timely and accurate information to resolve issues effectively. Ensuring that every medication claim is processed correctly and promptly is essential to supporting patient care and maintaining trust within the healthcare network.",
       year: "2024",
     },
+    {
+      id: 6,
+      position: "Assistant System Developer",
+      title: "iSynergies Inc",
+      desc: "Currently working as an Assistant System Developer, contributing to software development tasks and supporting system improvements.",
+      year: "Present",
+    },
   ],
   certificates: [
     {

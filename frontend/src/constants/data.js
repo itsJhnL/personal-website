@@ -63,46 +63,39 @@ const userData = {
     },
   ],
   experience: [
-    /* {
+    {
       id: 0,
-      position: "Sales Representative",
-      title: "Sanyang-Furniture",
-      desc: "• Maintained record and sales • Product knowledge • Active listening • Rapport-building skills • Customer relationship management tool skills",
-      year: "2017",
-    }, */
+      position: "Hello World",
+      title: "",
+      desc: "Wrote my first line of code.",
+      year: "2016",
+    },
     /* {
       id: 1,
-      position: "Front-End Developer",
-      title: "Freelance",
-      desc: "",
-      year: "2022",
+      position: "BS in Information Technology",
+      title: "",
+      desc: "Nueva Ecija University of Science and Technology",
+      year: "2023",
     }, */
     {
       id: 2,
       position: "Internship",
       title: "iSynergies Inc",
-      desc: "I was responsible for performing a wide range of software development tasks. This included actively engaging in both front-end and back-end development, allowing me to gain a comprehensive understanding of the full software development stack. I collaborated closely with senior software developers, contributing to the team's success by leveraging their expertise and mentorship to enhance my own skills and deliver high-quality software solutions.",
+      desc: "I performed a wide range of software development tasks, working on both front-end and back-end systems. I collaborated closely with senior developers, learning from their expertise while contributing to the delivery of high-quality software solutions.",
       year: "2023",
     },
-    {
+    /* {
       id: 3,
       position: "Graduation",
       title: "Nueva Ecija University of Science and Technology",
       desc: "Bachelor's degree in Information Technology.",
-      year: "2023",
-    },
-    /* {
-      id: 4,
-      position: "Data Entry Specialist",
-      title: "Ascendance BPO Inc",
-      desc: "My responsibilities include transcribing and encoding electronic, written, and faxed medical prescription orders, ensuring accuracy and adhering to SIG codes for proper medication administration. I meticulously identify any discrepancies in prescription orders and promptly escalate them to the relevant department for resolution. Additionally, I review and strictly adhere to the client’s standard operating procedures and policies to maintain compliance and quality standards. I respond promptly and accurately to inquiries from our in-house team, providing necessary information and support as required.",
       year: "2023",
     }, */
     {
       id: 5,
       position: "Claim Specialist",
       title: "Ascendance BPO Inc",
-      desc: "As a claim specialist in the insurance industry, my primary responsibility is to oversee the processing of insurance claims related to patient medications. This involves carefully reviewing each claim to ensure it meets all necessary criteria for payment, including verifying the accuracy of medical prescription orders and adherence to SIG codes. In cases where there are discrepancies or the need for clarification, I initiate overrides or appeals as necessary to facilitate payment. Additionally, I handle incoming calls from healthcare providers, pharmacies, and patients regarding claim status and payment inquiries, providing timely and accurate information to resolve issues effectively. Ensuring that every medication claim is processed correctly and promptly is essential to supporting patient care and maintaining trust within the healthcare network.",
+      desc: "As a claims specialist, I review and process medication claims, verify prescriptions and SIG codes, handle overrides and appeals, and respond to claim inquiries to ensure accurate, timely payments that support patient care.",
       year: "2024",
     },
     {
@@ -215,7 +208,7 @@ const userData = {
       id: 1,
       imageURL: "/projects/freshbites.png",
       title: "Fresh Bites Landing Page",
-      desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero maxime iste adipisci atque aliquam facere dignissimos sequi ea mollitia molestias?",
+      desc: "A modern restaurant landing page with a conversion-focused layout, smooth section flow, and responsive components that adapt cleanly across mobile and desktop screens.",
       tech: "React, Tailwind CSS",
       link: "https://freshbites.vercel.app/",
       code: "https://github.com/itsJhnL/fresh-bites",
@@ -224,7 +217,7 @@ const userData = {
       id: 2,
       imageURL: "/projects/barangay.png",
       title: "Barangay Management Information System",
-      desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero maxime iste adipisci atque aliquam facere dignissimos sequi ea mollitia molestias?",
+      desc: "A role-based local records platform that centralizes resident information, document requests, and reporting workflows to improve day-to-day administrative operations.",
       tech: "HTML, CSS, JavaScript, JQuery, PHP, Bootstrap, MySQL.",
       // link: "https://barangay-management-system.vercel.app/",
       code: "https://github.com/itsJhnL/barangay-management-system",

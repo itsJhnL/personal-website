@@ -7,6 +7,7 @@ import Services from "./Pages/Services";
 import Works from "./Pages/Works";
 import Experience from "./Pages/Experience";
 import Contact from "./Pages/Contact";
+import Admin from "./Pages/Admin";
 import Home from "./components/HomePage";
 import NavBar from "./components/NavBar";
 import Maintenance from "./maintenance";
@@ -14,7 +15,8 @@ import NotFound from "./components/NotFound";
 
 function App() {
   const location = useLocation();
-  const isMaintenanceRoute = location.pathname === "/maintenance";
+  const isMaintenanceRoute =
+    location.pathname === "/maintenance" || location.pathname === "/Admin";
 
   useEffect(() => {
     const seoByPath = {
@@ -52,6 +54,10 @@ function App() {
         title: "Maintenance | John Leo Bruno",
         description: "Portfolio is temporarily under maintenance.",
       },
+      "/Admin": {
+        title: "Admin | John Leo Bruno",
+        description: "Admin dashboard for contact message management.",
+      },
     };
 
     const fallback = {
@@ -80,6 +86,7 @@ function App() {
           <Route exact path="/Works" element={<Works />}></Route>
           <Route exact path="/Experience" element={<Experience />}></Route>
           <Route exact path="/Contact" element={<Contact />}></Route>
+          <Route exact path="/Admin" element={<Admin />}></Route>
           <Route exact path="/maintenance" element={<Maintenance />}></Route>
           <Route path="*" element={<NotFound />}></Route>
         </Routes>

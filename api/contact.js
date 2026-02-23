@@ -1,4 +1,8 @@
 module.exports = async (req, res) => {
+  const COOLDOWN_MS = 5 * 60 * 1000;
+  const emailCooldownStore = (globalThis.__emailCooldownStore =
+    globalThis.__emailCooldownStore || new Map());
+
   if (req.method !== "POST") {
     return res.status(405).json({ success: false, message: "Method not allowed." });
   }
@@ -9,6 +13,18 @@ module.exports = async (req, res) => {
     return res
       .status(400)
       .json({ success: false, message: "Name, email, and message are required." });
+  }
+
+  const normalizedEmail = String(email).trim().toLowerCase();
+  const now = Date.now();
+  const lastSentAt = emailCooldownStore.get(normalizedEmail);
+  const elapsed = lastSentAt ? now - lastSentAt : Number.POSITIVE_INFINITY;
+  if (elapsed < COOLDOWN_MS) {
+    const remainingMinutes = Math.ceil((COOLDOWN_MS - elapsed) / 60000);
+    return res.status(429).json({
+      success: false,
+      message: `This email was used recently. Please try again in ${remainingMinutes} minute(s).`,
+    });
   }
 
   if (!process.env.RESEND_API_KEY || !process.env.CONTACT_RECEIVER_EMAIL) {
@@ -47,6 +63,7 @@ module.exports = async (req, res) => {
       });
     }
 
+    emailCooldownStore.set(normalizedEmail, now);
     return res.status(200).json({ success: true, message: "Message sent." });
   } catch (error) {
     return res.status(500).json({

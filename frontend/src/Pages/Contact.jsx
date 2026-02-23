@@ -5,6 +5,34 @@ import Footer from "../components/Footer";
 import { fadeInUp, pageTransition, staggerContainer } from "../utils/motion";
 import { saveAdminMessage } from "../utils/adminStore";
 
+const COOLDOWN_MINUTES = 5;
+const COOLDOWN_MS = COOLDOWN_MINUTES * 60 * 1000;
+const COOLDOWN_KEY = "contact_email_cooldown_v1";
+
+const getCooldownStore = () => {
+  try {
+    const raw = localStorage.getItem(COOLDOWN_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch (error) {
+    return {};
+  }
+};
+
+const setEmailCooldown = (email) => {
+  const store = getCooldownStore();
+  store[email.toLowerCase()] = Date.now();
+  localStorage.setItem(COOLDOWN_KEY, JSON.stringify(store));
+};
+
+const getRemainingCooldownMinutes = (email) => {
+  const store = getCooldownStore();
+  const last = store[email.toLowerCase()];
+  if (!last) return 0;
+  const elapsed = Date.now() - Number(last);
+  if (elapsed >= COOLDOWN_MS) return 0;
+  return Math.ceil((COOLDOWN_MS - elapsed) / 60000);
+};
+
 export default function Contact() {
   const [form, setForm] = useState({
     name: "",
@@ -25,6 +53,17 @@ export default function Contact() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     setStatus({ type: "", text: "" });
+
+    const normalizedEmail = String(form.email || "").trim().toLowerCase();
+    const remainingMinutes = getRemainingCooldownMinutes(normalizedEmail);
+    if (remainingMinutes > 0) {
+      setStatus({
+        type: "error",
+        text: `This email was used recently. Please try again in ${remainingMinutes} minute(s).`,
+      });
+      return;
+    }
+
     setIsSending(true);
 
     try {
@@ -45,6 +84,7 @@ export default function Contact() {
           type: "success",
           text: "Saved to Admin inbox (local mode).",
         });
+        setEmailCooldown(normalizedEmail);
         setForm({ name: "", email: "", subject: "", message: "" });
         return;
       }
@@ -102,6 +142,7 @@ export default function Contact() {
       });
 
       setStatus({ type: "success", text: "Message sent successfully." });
+      setEmailCooldown(normalizedEmail);
       setForm({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
       const isApiUnavailable =
@@ -122,6 +163,7 @@ export default function Contact() {
           type: "success",
           text: "Saved to Admin inbox. Email API is unavailable right now.",
         });
+        setEmailCooldown(normalizedEmail);
         setForm({ name: "", email: "", subject: "", message: "" });
         return;
       }

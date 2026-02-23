@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
-import Footer from "./Footer";
 import "../styles/Wave.css";
 import userData from "../constants/data";
 import About from "../Pages/About";
@@ -118,7 +117,6 @@ export default function HomePage() {
         </motion.div>
       </div>
       <Contact />
-      <Footer />
     </motion.div>
   );
 }

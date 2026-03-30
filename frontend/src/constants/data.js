@@ -240,6 +240,15 @@ const userData = {
       link: "https://linkedin-duplicate.vercel.app/",
       code: "https://github.com/itsJhnL/linkedin-clone",
     }, */
+    {
+      id: 5,
+      imageURL: "/projects/tarakape.png",
+      title: "Tarakape",
+      desc: "TaraKape helps aspiring developers start their coding journey with simple guides, tools, and real talk—samahan mo ng kape.",
+      tech: "React + Vite, Tailwind CSS",
+      link: "https://tarakape.vercel.app/",
+      code: "https://github.com/itsJhnL/tarakape",
+    },
   ],
   about: {
     imageURL: "john2.jpg",

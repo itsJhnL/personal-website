@@ -3,99 +3,54 @@ import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import "../styles/Nav.css";
 
+const navItems = [
+  { label: "About", id: "about" },
+  { label: "Projects", id: "projects" },
+  { label: "Contact", id: "contact" },
+];
+
 export default function Main() {
-  // Open nav start here
-  const [openNav, setOpenNav] = useState();
+  const [openNav, setOpenNav] = useState(false);
 
-  const showNav = () => {
-    setOpenNav(!openNav);
-  };
-  // Open nav close here
-
-  const [clicked, setScroll] = useState();
-
-  const scrollUp = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "auto",
-    });
-    setScroll(true);
+  const toggleNav = () => {
+    setOpenNav((prev) => !prev);
   };
 
-  // const styleNav = {};
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
 
-  const NavLinks = ({ mobile = false }) => {
-    return (
-      <div
-        className={
-          mobile
-            ? "flex flex-col items-center gap-7"
-            : "flex items-center gap-7"
-        }
-      >
-        <NavLink
-          to="/About"
-          style={({ isActive }) => ({
-            color: isActive ? "#a3262e" : "",
-            fontSize: isActive ? "16px" : "",
-            fontWeight: isActive ? "bold" : "",
-          })}
-          className="text-base text-gray-700 font-medium hover:text-[#a3262e] duration-300"
-          onClick={scrollUp}
-        >
-          {clicked ? "About" : "About"}
-        </NavLink>
-        <NavLink
-          to="/Works"
-          style={({ isActive }) => ({
-            color: isActive ? "#a3262e" : "",
-            fontSize: isActive ? "16px" : "",
-            fontWeight: isActive ? "bold" : "",
-          })}
-          className="text-base text-gray-700 font-medium hover:text-[#a3262e] duration-300"
-          onClick={scrollUp}
-        >
-          {clicked ? "Projects" : "Projects"}
-        </NavLink>
-        {/*  <NavLink
-          to="/Services"
-          style={({ isActive }) => ({
-            color: isActive ? "#a3262e" : "",
-            fontSize: isActive ? "18px" : "",
-            fontWeight: isActive ? "bold" : "",
-          })}
-          className="text-base text-gray-600 font-normal"
-          onClick={scrollUp}
-        >
-          {clicked ? "Services" : "Services"}
-        </NavLink> */}
-        <NavLink
-          to="/Experience"
-          style={({ isActive }) => ({
-            color: isActive ? "#a3262e" : "",
-            fontSize: isActive ? "16px" : "",
-            fontWeight: isActive ? "bold" : "",
-          })}
-          className="text-base text-gray-700 font-medium hover:text-[#a3262e] duration-300"
-          onClick={scrollUp}
-        >
-          Experience
-        </NavLink>
-        <NavLink
-          to="/Contact"
-          style={({ isActive }) => ({
-            color: isActive ? "#a3262e" : "",
-            fontSize: isActive ? "16px" : "",
-            fontWeight: isActive ? "bold" : "",
-          })}
-          className="text-base text-gray-700 font-medium hover:text-[#a3262e] duration-300"
-          onClick={scrollUp}
-        >
-          {clicked ? "Contact" : "Contact"}
-        </NavLink>
-      </div>
-    );
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
+
+  const NavLinks = ({ mobile = false }) => (
+    <div
+      className={
+        mobile
+          ? "flex flex-col items-center gap-7"
+          : "flex items-center gap-7"
+      }
+    >
+      {navItems.map((item) => (
+        <button
+          key={item.id}
+          type="button"
+          className="text-base font-medium text-gray-700 duration-300 hover:text-[#2f6b6b]"
+          onClick={() => {
+            scrollToSection(item.id);
+            if (mobile) {
+              setOpenNav(false);
+            }
+          }}
+        >
+          {item.label}
+        </button>
+      ))}
+    </div>
+  );
 
   const Menu = () => {
     return (
@@ -138,21 +93,27 @@ export default function Main() {
 
   return (
     <>
-      <div className="bg-[#FFF]/80 backdrop-blur z-50 sticky top-0 border-b border-white/40">
-        <nav className="flex flex-row items-center justify-between max-w-6xl mx-auto px-5 py-4">
-          <div className="font-black text-3xl text-[#a3262e]">
+      <div className="sticky top-0 z-50 border-b border-white/40 bg-[#fff]/80 backdrop-blur">
+        <nav className="mx-auto flex max-w-6xl flex-row items-center justify-between px-5 py-4">
+          <div className="text-3xl font-black text-[#2f6b6b]">
             <NavLink to="/">
-              <button className="" onClick={scrollUp}>
-                {clicked ? "</>" : "</>"}
+              <button
+                type="button"
+                onClick={() => scrollToSection("top")}
+              >
+                {"</>"}
               </button>
             </NavLink>
           </div>
           <div className="MobileS:hidden Laptop:block">
-            {/* Navbar */}
             <NavLinks />
           </div>
           <div className="flex Laptop:hidden">
-            <button className="text-[#a3262e]" onClick={showNav}>
+            <button
+              type="button"
+              className="text-[#2f6b6b]"
+              onClick={toggleNav}
+            >
               {openNav ? <Close /> : <Menu />}
             </button>
           </div>
@@ -164,17 +125,17 @@ export default function Main() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="z-[300] bg-[#f1f1f1]/95 backdrop-blur-md top-0 fixed flex flex-col items-center justify-center h-[100vh] w-full Laptop:hidden"
+            className="fixed top-0 z-[300] flex h-[100vh] w-full flex-col items-center justify-center bg-[#f7f8fb]/95 backdrop-blur-md Laptop:hidden"
           >
             <button
-              className="flex text-[#a3262e] font-bold absolute top-10 right-5"
-              onClick={showNav}
+              type="button"
+              className="absolute right-5 top-10 flex font-bold text-[#2f6b6b]"
+              onClick={toggleNav}
             >
-              Close{openNav ? <Close /> : ""}
+              Close
+              <Close />
             </button>
-            <div onClick={showNav}>
-              <NavLinks mobile />
-            </div>
+            <NavLinks mobile />
           </motion.div>
         )}
       </AnimatePresence>

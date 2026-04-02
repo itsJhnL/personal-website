@@ -1,66 +1,111 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Footer from "../components/Footer";
 import "../App.css";
-import userData from "../constants/data";
 import { fadeInUp, pageTransition, staggerContainer } from "../utils/motion";
+
+const skillGroups = [
+  {
+    title: "Front End",
+    description: "Building clean and responsive interfaces",
+    items: [
+      "HTML / CSS",
+      "JavaScript",
+      "React",
+      "Tailwind CSS",
+      "Material UI",
+      "Bootstrap",
+    ],
+  },
+  {
+    title: "Backend",
+    description: "Supporting logic, data, and integrations",
+    items: ["PHP", "Firebase", "MySQL"],
+  },
+  {
+    title: "Other Tools",
+    description: "Design, content, and collaboration tools",
+    items: ["Figma", "Canva", "CapCut", "Git", "GitHub"],
+  },
+];
 
 export default function Services() {
   return (
     <motion.div
-      className="bg-[#f1f1f1]"
+      className="bg-[#f7f8fb]"
       initial={pageTransition.initial}
       animate={pageTransition.animate}
       exit={pageTransition.exit}
       transition={pageTransition.transition}
     >
-      <div className="flex flex-col items-center justify-center pb-24">
-        <div className="text-center py-24">
-          <h1 className="font-bold text-lg text-[#a3262e]">WHAT I DO</h1>
-          <header className="text-6xl font-bold max-w-6xl mx-auto">
-            <p className=" text-gray-700">Services</p>
-          </header>
-          <p className="border-t-4 border-[#a3262e] mx-auto w-20"></p>
-        </div>
+      <div className="mx-auto max-w-6xl px-5 pb-24 pt-14">
+        <motion.div
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          className="text-center"
+        >
+          <h2 className="text-4xl font-bold text-[#1f2937] Tablet:text-5xl">
+            Skills
+          </h2>
+          <p className="mx-auto mt-2 text-sm text-[#7b8794]">
+            Technologies that I use
+          </p>
+        </motion.div>
 
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.1 }}
-          className="text-center grid grid-cols-3 gap-4 MobileS:px-10 Laptop:px-5 max-w-6xl mx-auto text-gray-700 MobileS:grid-cols-1 Tablet:grid-cols-2 Laptop:grid-cols-3"
+          className="mt-14 grid gap-6 Tablet:grid-cols-2"
         >
-          {userData.services.map((ser) => (
-            <motion.div key={ser.id} variants={fadeInUp}>
-              <ServicesData
-                title={ser.title}
-                desc={ser.desc}
-                icon={ser.icon}
+          {skillGroups.slice(0, 2).map((group) => (
+            <motion.div key={group.title} variants={fadeInUp}>
+              <SkillGroup
+                title={group.title}
+                description={group.description}
+                items={group.items}
               />
             </motion.div>
           ))}
         </motion.div>
+
+        <motion.div
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.1 }}
+          className="mx-auto mt-6 max-w-2xl"
+        >
+          <SkillGroup
+            title={skillGroups[2].title}
+            description={skillGroups[2].description}
+            items={skillGroups[2].items}
+          />
+        </motion.div>
       </div>
-      <Footer />
     </motion.div>
   );
 }
 
-const ServicesData = ({ title, desc, icon }) => {
+const SkillGroup = ({ title, description, items }) => {
   return (
-    <>
-
-      <div className="relative h-full border bg-white p-5 rounded-lg space-y-5 hover:scale-105 hover:shadow-2xl ease-out duration-500">
-        <div className="flex items-center justify-center text-4xl text-[#a3262e]">
-          {icon}
-        </div>
-        <h1 className="font-bold text-lg text-[#a3262e]">
-          {title}
-        </h1>
-        <p>
-          {desc}
-        </p>
+    <div className="h-full rounded-[1.5rem] border border-[#dbe2ea] bg-white p-6 shadow-[0_10px_30px_rgba(15,23,42,0.05)]">
+      <div className="border-b border-[#e6ebf1] pb-5 text-center">
+        <h3 className="text-xl font-bold text-[#1f2937]">{title}</h3>
+        <p className="mt-2 text-sm text-[#7b8794]">{description}</p>
       </div>
-    </>
-  )
-}
+      <div className="mt-5 flex flex-wrap gap-3">
+        {items.map((item) => (
+          <span
+            key={item}
+            className="rounded-full border border-[#d8e7e5] bg-[#f3f8f8] px-4 py-2 text-sm font-medium text-[#355e5e]"
+          >
+            {item}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+};

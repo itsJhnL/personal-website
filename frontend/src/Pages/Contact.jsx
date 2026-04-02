@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import userData from "../constants/data";
-import Footer from "../components/Footer";
 import { fadeInUp, pageTransition, staggerContainer } from "../utils/motion";
 import { saveAdminMessage } from "../utils/adminStore";
 
@@ -187,24 +185,21 @@ export default function Contact() {
 
   return (
     <motion.div
-      className="relative overflow-hidden bg-gradient-to-b from-[#f7f4f2] via-[#f4f2ef] to-[#ffffff]"
+      className="relative overflow-hidden bg-gradient-to-b from-[#f7f8fb] via-[#f7f8fb] to-[#ffffff]"
       initial={pageTransition.initial}
       animate={pageTransition.animate}
       exit={pageTransition.exit}
       transition={pageTransition.transition}
     >
-      <div className="pointer-events-none absolute -top-28 -left-24 h-80 w-80 rounded-full bg-[#a3262e]/10 blur-3xl" />
-      <div className="pointer-events-none absolute -right-24 top-56 h-72 w-72 rounded-full bg-[#141414]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -top-28 -left-24 h-80 w-80 rounded-full bg-[#2f6b6b]/8 blur-3xl" />
+      <div className="pointer-events-none absolute -right-24 top-56 h-72 w-72 rounded-full bg-[#1f2937]/6 blur-3xl" />
 
       <div className="relative mx-auto max-w-6xl px-5 pb-24 pt-24">
         <div className="py-10 text-center">
-          <h1 className="text-base font-semibold tracking-[0.35em] text-[#a3262e]">
-            LET'S CONNECT
-          </h1>
-          <header className="mt-4 text-4xl font-bold leading-tight text-[#262626] MobileM:text-5xl Tablet:text-6xl">
-            <p>Contact Me</p>
-          </header>
-          <p className="mx-auto mt-5 w-24 border-t-4 border-[#a3262e]"></p>
+          <h2 className="text-4xl font-bold text-[#1f2937] Tablet:text-5xl">
+            Contact Me
+          </h2>
+          <p className="mx-auto mt-2 text-sm text-[#7b8794]">Let&apos;s connect</p>
         </div>
 
         <motion.div
@@ -212,52 +207,13 @@ export default function Contact() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.1 }}
-          className="grid gap-7 Laptop:grid-cols-2"
+          className="mx-auto max-w-3xl"
         >
           <motion.div
             variants={fadeInUp}
-            className="rounded-3xl border border-[#dcd7d2] bg-white/90 p-7 shadow-[0_8px_24px_rgba(12,12,12,0.08)] backdrop-blur"
+            className="rounded-3xl border border-[#dbe2ea] bg-white p-7 shadow-[0_8px_24px_rgba(12,12,12,0.06)]"
           >
-            <h2 className="text-3xl font-bold leading-tight text-[#1f1f1f]">
-              {userData.contact.title}
-            </h2>
-            <p className="mt-5 text-base leading-relaxed text-[#555]">
-              {userData.contact.desc}
-            </p>
-
-            <div className="mt-7 space-y-4">
-              <a
-                href={userData.contact.address_link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 rounded-2xl border border-[#ebe5df] bg-[#f8f5f2] px-4 py-3 transition hover:border-[#a3262e]/35"
-              >
-                <i className="text-[#a3262e]">{userData.contact.address_icon}</i>
-                <span className="text-[#3e3e3e]">{userData.contact.address}</span>
-              </a>
-
-              <div className="flex items-center gap-4 rounded-2xl border border-[#ebe5df] bg-[#f8f5f2] px-4 py-3">
-                <i className="text-[#a3262e]">{userData.contact.number_icon}</i>
-                <span className="text-[#3e3e3e]">{userData.contact.number}</span>
-              </div>
-
-              <a
-                href={userData.contact.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 rounded-2xl border border-[#ebe5df] bg-[#f8f5f2] px-4 py-3 transition hover:border-[#a3262e]/35"
-              >
-                <i className="text-[#a3262e]">{userData.contact.email_icon}</i>
-                <span className="text-[#3e3e3e]">{userData.contact.email}</span>
-              </a>
-            </div>
-          </motion.div>
-
-          <motion.div
-            variants={fadeInUp}
-            className="rounded-3xl border border-[#dcd7d2] bg-white/90 p-7 shadow-[0_8px_24px_rgba(12,12,12,0.08)] backdrop-blur"
-          >
-            <p className="text-sm font-semibold tracking-[0.2em] text-[#a3262e]">
+            <p className="text-sm font-semibold tracking-[0.2em] text-[#2f6b6b]">
               QUICK MESSAGE
             </p>
             <h3 className="mt-3 text-3xl font-bold text-[#1f1f1f]">
@@ -275,7 +231,7 @@ export default function Contact() {
                 onChange={handleChange}
                 placeholder="Your name"
                 required
-                className="w-full rounded-xl border border-[#ddd6d0] bg-[#f8f5f2] px-4 py-3 text-[#333] outline-none transition focus:border-[#a3262e]"
+                className="w-full rounded-xl border border-[#d9e0e8] bg-[#fbfcfe] px-4 py-3 text-[#333] outline-none transition focus:border-[#2f6b6b]"
               />
               <input
                 type="email"
@@ -284,7 +240,7 @@ export default function Contact() {
                 onChange={handleChange}
                 placeholder="Your email"
                 required
-                className="w-full rounded-xl border border-[#ddd6d0] bg-[#f8f5f2] px-4 py-3 text-[#333] outline-none transition focus:border-[#a3262e]"
+                className="w-full rounded-xl border border-[#d9e0e8] bg-[#fbfcfe] px-4 py-3 text-[#333] outline-none transition focus:border-[#2f6b6b]"
               />
               <input
                 type="text"
@@ -292,7 +248,7 @@ export default function Contact() {
                 value={form.subject}
                 onChange={handleChange}
                 placeholder="Subject"
-                className="w-full rounded-xl border border-[#ddd6d0] bg-[#f8f5f2] px-4 py-3 text-[#333] outline-none transition focus:border-[#a3262e]"
+                className="w-full rounded-xl border border-[#d9e0e8] bg-[#fbfcfe] px-4 py-3 text-[#333] outline-none transition focus:border-[#2f6b6b]"
               />
               <textarea
                 name="message"
@@ -301,19 +257,19 @@ export default function Contact() {
                 placeholder="Write your message..."
                 rows="5"
                 required
-                className="w-full resize-none rounded-xl border border-[#ddd6d0] bg-[#f8f5f2] px-4 py-3 text-[#333] outline-none transition focus:border-[#a3262e]"
+                className="w-full resize-none rounded-xl border border-[#d9e0e8] bg-[#fbfcfe] px-4 py-3 text-[#333] outline-none transition focus:border-[#2f6b6b]"
               />
               <button
                 type="submit"
                 disabled={isSending}
-                className="inline-block rounded-full border border-[#a3262e] bg-[#a3262e] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#861f26] disabled:cursor-not-allowed disabled:opacity-70"
+                className="inline-block rounded-full border border-[#2f6b6b] bg-[#2f6b6b] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#255757] disabled:cursor-not-allowed disabled:opacity-70"
               >
                 {isSending ? "Sending..." : "Send a Message"}
               </button>
               {status.text && (
                 <p
                   className={`text-sm font-medium ${
-                    status.type === "success" ? "text-green-700" : "text-[#a3262e]"
+                    status.type === "success" ? "text-[#2f6b6b]" : "text-[#2f6b6b]"
                   }`}
                 >
                   {status.text}
@@ -323,8 +279,6 @@ export default function Contact() {
           </motion.div>
         </motion.div>
       </div>
-
-      <Footer />
     </motion.div>
   );
 }

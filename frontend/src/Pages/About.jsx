@@ -2,231 +2,106 @@ import React from "react";
 import { motion } from "framer-motion";
 import "../App.css";
 import userData from "../constants/data";
-import { fadeInUp, pageTransition, staggerContainer } from "../utils/motion";
-
-const panelClassName =
-  "rounded-2xl border border-white/70 bg-white/80 backdrop-blur p-6 shadow-xl";
+import { fadeInUp, pageTransition } from "../utils/motion";
 
 export default function About() {
+  const intro = userData.about.introduce[0];
+
   return (
     <motion.div
-      className="bg-[#f1f1f1] relative overflow-hidden"
+      className="relative overflow-hidden bg-[#f7f8fb]"
       initial={pageTransition.initial}
       animate={pageTransition.animate}
       exit={pageTransition.exit}
       transition={pageTransition.transition}
     >
-      <div className="absolute -left-20 top-8 h-64 w-64 rounded-full bg-[#a3262e]/10 blur-3xl"></div>
-      <div className="absolute right-0 bottom-0 h-72 w-72 rounded-full bg-[#111827]/10 blur-3xl"></div>
-      <div className="flex flex-col items-center justify-center py-16">
+      <div className="absolute -left-20 top-8 h-64 w-64 rounded-full bg-[#2f6b6b]/8 blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-[#1f2937]/6 blur-3xl"></div>
+
+      <div className="relative mx-auto max-w-6xl px-5 py-20">
         <motion.div
           variants={fadeInUp}
           initial="hidden"
-          animate="show"
-          className="text-center pb-10 px-5"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          className="text-center"
         >
-          <h1 className="text-4xl font-bold text-[#1f2937]">About Me</h1>
-          <p className="mx-auto mt-2 h-1 w-20 rounded-full bg-[#a3262e]" />
+          <h2 className="text-4xl font-bold text-[#1f2937] Tablet:text-5xl">
+            About Me
+          </h2>
+          <p className="mx-auto mt-2 text-sm text-[#7b8794]">My introduction</p>
         </motion.div>
 
         <motion.div
-          variants={staggerContainer}
+          variants={fadeInUp}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.1 }}
-          className="grid grid-cols-2 MobileS:gap-4 Laptop:gap-8 max-w-6xl mx-auto pb-5 p-4 MobileS:grid-cols-1 Tablet:grid-cols-2"
+          className="mx-auto mt-14 max-w-4xl"
         >
-          {userData.about.introduce.map((abt) => (
-            <motion.div
-              key={abt.id}
-              variants={fadeInUp}
-              className={`MobileS:mx-0 Laptop:mx-0 ${panelClassName}`}
-            >
-              <Introduce
-                title={abt.title}
-                name={abt.name}
-                link={abt.link}
-                career={abt.career}
-                desc1={abt.desc1}
-                desc2={abt.desc2}
-                tiktok={abt.tiktok}
-                medium={abt.medium}
-              />
-              <div className="flex gap-2 pt-1">
-                <a
-                  href={userData.hero.resume}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-between gap-2 rounded-xl text-base font-medium border border-[#a3262e] text-[#a3262e] p-2 px-6 hover:bg-[#a3262e]/10 hover:-translate-y-1 duration-300"
-                  download={"John Leo Bruno"}
-                >
-                  Download CV {userData.hero.icon}
-                </a>
-              </div>
-            </motion.div>
-          ))}
-
-          <motion.div
-            variants={fadeInUp}
-            className={`MobileS:mx-0 Laptop:mx-0 ${panelClassName}`}
-          >
-            <h2 className="text-base font-semibold text-[#1f2937]">
-              Technology Stacks
-            </h2>
-            <p className="pt-1 pb-4 text-sm text-gray-500">
-              Core stack for building reliable, modern web products.
+          <div className="text-left">
+            <p className="text-lg leading-8 tracking-[0.01em] text-[#4b5563]">
+              Experienced in building{" "}
+              <span className="font-semibold text-[#1f2937]">web apps</span> and{" "}
+              <span className="font-semibold text-[#1f2937]">
+                responsive websites
+              </span>{" "}
+              with a strong focus on clean implementation and practical user
+              experience. Beyond development, I also bring experience in{" "}
+              <span className="font-semibold text-[#2f6b6b]">
+                medical claims and billing
+              </span>
+              ,{" "}
+              <span className="font-semibold text-[#2f6b6b]">
+                Healthcare VA support
+              </span>
+              ,{" "}
+              <span className="font-semibold text-[#2f6b6b]">
+                AI automation
+              </span>
+              , and{" "}
+              <span className="font-semibold text-[#2f6b6b]">UI/UX design</span>.
             </p>
-            <div className="grid gap-2 pt-1 MobileS:grid-cols-2 Tablet:grid-cols-3 Laptop:grid-cols-4">
-              {userData.about.techstacks.map((tech) => (
-                <TechStacks key={tech.id} icon={tech.icon} desc={tech.desc} />
-              ))}
-            </div>
-          </motion.div>
+            <p className="mt-4 text-lg leading-8 tracking-[0.01em] text-[#4b5563]">
+              I enjoy solving problems from both technical and operational
+              perspectives, whether that means improving a workflow, designing a
+              cleaner interface, or helping systems run more efficiently. I also
+              enjoy sharing what I learn through blogs and short videos on
+              platforms like{" "}
+              <a
+                href={intro.tiktok}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-[#2f6b6b] underline underline-offset-4"
+              >
+                TikTok
+              </a>{" "}
+              and{" "}
+              <a
+                href={intro.medium}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-[#2f6b6b] underline underline-offset-4"
+              >
+                Medium
+              </a>
+              .
+            </p>
 
-          <motion.div
-            variants={fadeInUp}
-            className={`MobileS:mx-0 Laptop:mx-0 ${panelClassName}`}
-          >
-            <div>
-              <h2 className="text-lg font-semibold text-[#1f2937]">
-                Main Skills
-              </h2>
-              {userData.about.mainSkills.map((skill) => (
-                <MainSkills
-                  key={skill.id}
-                  title={skill.title}
-                  desc={skill.desc}
-                  icon={skill.icon}
-                />
-              ))}
+            <div className="mt-8">
+              <a
+                href={userData.hero.resume}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-xl bg-[#1f2937] px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-[#111827]"
+                download={"John Leo Bruno"}
+              >
+                Download CV {userData.hero.icon}
+              </a>
             </div>
-
-            <div className="pt-7">
-              <h2 className="text-lg font-semibold text-[#1f2937]">
-                Education
-              </h2>
-              {userData.about.education.map((edu) => (
-                <Education
-                  key={edu.id}
-                  title={edu.title}
-                  major={edu.major}
-                  desc={edu.desc}
-                  icon={edu.icon}
-                />
-              ))}
-            </div>
-          </motion.div>
+          </div>
         </motion.div>
       </div>
     </motion.div>
   );
 }
-
-const Introduce = ({
-  title,
-  name,
-  link,
-  career,
-  desc1,
-  desc2,
-  tiktok,
-  medium,
-}) => {
-  return (
-    <>
-      <sup className="underline underline-offset-4 decoration-[#a3262e]">
-        {title}
-      </sup>
-      <div className="flex gap-2">
-        <h1 className="MobileS:text-2xl Tablet:text-3xl pb-2">
-          Hi! I'm <span className="font-bold text-[#a3262e]">{name}</span>
-        </h1>
-        <h1 className="text-center">
-          <span className="wave">
-            <img
-              src={userData.hero.imageURL}
-              alt=""
-              className="overflow-clip"
-              style={{ height: "30px" }}
-            />
-          </span>
-        </h1>
-      </div>
-      <p className="pb-4 text-justify text-gray-700 text-lg leading-relaxed">
-        A{" "}
-        <span className="font-bold underline underline-offset-4 decoration-[#a3262e]">
-          <a href={link} target="_blank" rel="noopener noreferrer">
-            {career}
-          </a>
-        </span>{" "}
-        {desc1}
-      </p>
-      <p className="mb-4 text-justify text-gray-700 text-lg leading-relaxed">
-        {desc2}{" "}
-        <a href={tiktok} target="_blank" rel="noopener noreferrer">
-          <b className="underline underline-offset-4 decoration-[#a3262e]">
-            TikTok
-          </b>
-        </a>{" "}
-        and{" "}
-        <a href={medium} target="_blank" rel="noopener noreferrer">
-          <b className="underline underline-offset-4 decoration-[#a3262e]">
-            Medium
-          </b>
-        </a>
-        .
-      </p>
-    </>
-  );
-};
-
-const TechStacks = ({ desc, icon }) => {
-  return (
-    <motion.div
-      variants={fadeInUp}
-      whileHover={{ y: -3 }}
-      transition={{ duration: 0.2 }}
-      className="group h-full rounded-xl bg-[#f7f7f7] p-3 border border-[#a3262e]/20 hover:bg-[#fff1f2] hover:border-[#a3262e]/60 duration-300"
-    >
-      <div className="flex h-full min-h-[88px] flex-col items-center justify-center gap-1.5 text-center">
-        <span className="text-gray-600 text-xl group-hover:text-[#a3262e] duration-300">
-          {icon}
-        </span>
-        <small className="text-xs font-semibold text-[#374151] group-hover:text-[#a3262e] leading-tight duration-300">
-          {desc}
-        </small>
-      </div>
-    </motion.div>
-  );
-};
-
-const MainSkills = ({ title, desc, icon }) => {
-  return (
-    <motion.div variants={fadeInUp}>
-      <div className="ease-out duration-300 hover:scale-[1.01] hover:shadow-xl bg-white p-5 mt-3 rounded-md text-lg">
-        <div className="flex items-center justify-between font-semibold">
-          <h1 className="text-[#a3262e]">{title}</h1>
-          <div className="text-gray-600">{icon}</div>
-        </div>
-        <small className="text-gray-700">{desc}</small>
-      </div>
-    </motion.div>
-  );
-};
-
-const Education = ({ title, major, desc, icon }) => {
-  return (
-    <motion.div variants={fadeInUp}>
-      <div className="ease-out duration-300 hover:scale-[1.01] hover:shadow-xl bg-white p-5 mt-3 rounded-md text-lg">
-        <div className="flex items-center justify-between font-semibold">
-          <h1 className="text-[#a3262e]">{title}</h1>
-          <div className="text-gray-600">{icon}</div>
-        </div>
-        <sup>{major}</sup>
-        <div>
-          <small className="text-gray-700">{desc}</small>
-        </div>
-      </div>
-    </motion.div>
-  );
-};

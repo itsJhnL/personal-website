@@ -1,10 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
+import { FaArrowRight } from "react-icons/fa";
 import "../styles/Wave.css";
-import userData from "../constants/data";
 import About from "../Pages/About";
+import Services from "../Pages/Services";
+import Works from "../Pages/Works";
 import Contact from "../Pages/Contact";
+import Footer from "./Footer";
 import { fadeInUp, pageTransition, staggerContainer } from "../utils/motion";
 
 export default function HomePage() {
@@ -17,139 +20,76 @@ export default function HomePage() {
 
   return (
     <motion.div
+      id="top"
       initial={pageTransition.initial}
       animate={pageTransition.animate}
       exit={pageTransition.exit}
       transition={pageTransition.transition}
     >
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#fff7f8] via-[#f8f8f8] to-[#f1f1f1] min-h-screen flex items-center">
-        <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-[#a3262e]/15 blur-3xl"></div>
-        <div className="absolute top-12 right-12 h-48 w-48 rounded-full bg-[#1f2937]/10 blur-3xl"></div>
-        <div className="max-w-6xl mx-auto w-full px-5 py-20 MobileS:py-14">
+      <section className="relative flex min-h-screen items-center overflow-hidden bg-[#f7f8fb]">
+        <div className="mx-auto w-full max-w-6xl px-5 py-20 MobileS:py-14">
           <motion.div
             variants={staggerContainer}
             initial="hidden"
             animate="show"
-            className="grid gap-8 items-center Tablet:grid-cols-2"
+            className="flex flex-col items-center justify-center text-center"
           >
-            <motion.div variants={fadeInUp} className="space-y-6">
-              <p className="inline-flex items-center rounded-full border border-[#a3262e]/20 bg-white/70 px-4 py-1 text-sm text-[#a3262e]">
+            <motion.div
+              variants={fadeInUp}
+              className="flex max-w-4xl flex-col items-center space-y-6"
+            >
+              <p className="inline-flex items-center rounded-full border border-[#1f2937]/10 bg-white px-4 py-1.5 text-sm font-medium text-[#1f2937]">
                 Open for freelance and full-time
               </p>
-              <h1 className="font-extrabold leading-tight text-[#1f2937] MobileS:text-4xl Tablet:text-6xl Laptop:text-7xl">
-                {userData.hero.name}
-              </h1>
-              <div className="text-xl font-semibold text-[#a3262e] min-h-[32px]">
-                <TypewriterText text={userData.hero.career} />
-              </div>
-              <p className="max-w-xl text-gray-600 text-lg">
-                I build polished and responsive web experiences with clean code,
-                strong UX decisions, and smooth interactions.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <NavLink
-                  to="/Works"
-                  onClick={scrollUp}
-                  className="rounded-xl bg-[#a3262e] px-6 py-3 text-white font-semibold shadow-lg shadow-[#a3262e]/30 hover:-translate-y-1 duration-300"
-                >
-                  View Projects
-                </NavLink>
-                <a
-                  href={userData.hero.resume}
-                  target="blank"
-                  rel="noreferrer"
-                  className="flex items-center gap-2 rounded-xl border border-[#a3262e] px-6 py-3 font-semibold text-[#a3262e] hover:bg-[#a3262e]/10 duration-300"
-                  download={"John Leo Bruno"}
-                >
-                  Download CV {userData.hero.icon}
-                </a>
-              </div>
-            </motion.div>
-            <motion.div variants={fadeInUp} className="block">
-              <div className="rounded-3xl border border-white/70 bg-white/80 p-8 backdrop-blur shadow-2xl">
-                <p className="text-gray-700 font-semibold pb-5">
-                  Tech Focus
-                </p>
-                <div className="grid MobileS:grid-cols-1 Tablet:grid-cols-2 gap-3 text-sm">
-                  <div className="rounded-xl bg-[#f7f7f7] p-4 border border-[#a3262e]/20">
-                    React + JavaScript
-                  </div>
-                  <div className="rounded-xl bg-[#f7f7f7] p-4 border border-[#a3262e]/20">
-                    UI/UX Design
-                  </div>
-                  <div className="rounded-xl bg-[#f7f7f7] p-4 border border-[#a3262e]/20">
-                    API Integration
-                  </div>
-                  <div className="rounded-xl bg-[#f7f7f7] p-4 border border-[#a3262e]/20">
-                    Performance
-                  </div>
+              <div className="space-y-4">
+                <h1 className="font-semibold leading-none text-[#1f2937] MobileS:text-4xl Tablet:text-6xl Laptop:text-[4.8rem]">
+                  Hello<span className="text-[#2f6b6b]">.</span> I&apos;m{" "}
+                  John Leo
+                  <span className="text-[#2f6b6b]">.</span>
+                </h1>
+                <div className="text-lg font-medium tracking-[0.08em] text-[#4b5563] uppercase">
+                  Full Stack Software Developer
                 </div>
+              </div>
+              <p className="max-w-3xl text-xl font-semibold leading-relaxed text-[#3f3f46] MobileS:text-lg Tablet:text-3xl">
+                I build polished and responsive web experiences with clean
+                code, strong UX decisions, and smooth interactions.
+              </p>
+              <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+                <NavLink
+                  to="/"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    const section = document.getElementById("projects");
+                    if (section) {
+                      section.scrollIntoView({ behavior: "smooth", block: "start" });
+                    } else {
+                      scrollUp();
+                    }
+                  }}
+                  className="inline-flex items-center gap-2 bg-[#2f6b6b] px-8 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white transition duration-300 hover:-translate-y-1 hover:bg-[#255757]"
+                >
+                  View Projects <FaArrowRight size={13} />
+                </NavLink>
               </div>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* About */}
-      <About />
-      {/* Show case projects */}
-      <div className="bg-[#f1f1f1]">
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
-          className="flex flex-col items-center justify-center p-4 max-w-6xl mx-auto"
-        >
-          <div className="text-center py-24">
-            <header className="text-6xl font-bold max-w-6xl mx-auto">
-              <p className=" text-gray-700">Recent Projects</p>
-              <p className="border-t-4 border-[#a3262e] mx-auto w-52 mt-2"></p>
-            </header>
-          </div>
-          <div className="grid grid-cols-2 gap-5 max-w-6xl pb-14 MobileS:grid-cols-1 Laptop:grid-cols-2">
-            {userData.recentWork.map((recent) => (
-              <motion.div key={recent.id} variants={fadeInUp}>
-                <RecentWorks imgURL={recent.imgURL} />
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </div>
-      <Contact />
+      <section id="about" className="scroll-mt-24">
+        <About />
+      </section>
+      <section id="services" className="scroll-mt-24">
+        <Services />
+      </section>
+      <section id="projects" className="scroll-mt-24">
+        <Works />
+      </section>
+      <section id="contact" className="scroll-mt-24">
+        <Contact />
+      </section>
+      <Footer />
     </motion.div>
   );
 }
-
-//Pass data with a render prop
-const RecentWorks = ({ imgURL }) => {
-  return (
-    <motion.div
-      whileHover={{ y: -6 }}
-      transition={{ duration: 0.2 }}
-      className="group relative overflow-hidden rounded-2xl border-2 border-white bg-white shadow-xl"
-    >
-      <img
-        src={imgURL}
-        alt="Recent work preview"
-        className="h-full w-full object-cover duration-500 group-hover:scale-105"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#111827]/70 via-transparent to-transparent opacity-0 duration-300 group-hover:opacity-100" />
-      <div className="absolute bottom-4 left-4 rounded-full bg-white/90 px-4 py-1 text-sm font-semibold text-[#a3262e] opacity-0 duration-300 group-hover:opacity-100">
-        View Project
-      </div>
-    </motion.div>
-  );
-};
-
-const TypewriterText = ({ text }) => {
-  return (
-    <span
-      className="typewriter-text"
-      style={{ "--chars": text.length }}
-      aria-label={text}
-    >
-      {text}
-    </span>
-  );
-};

@@ -34,7 +34,7 @@ const userData = {
     career: "Software Developer",
     resume: "/resume/John Leo Bruno.pdf",
     imageURL: "/wave.png",
-    icon: <FaFileLines size={16} color={"#a3262e"} />,
+    icon: <FaFileLines size={16} color={"#2f6b6b"} />,
   },
   navBarLinks: {
     linkedin: "https://www.linkedin.com/in/johnleobruno/",
@@ -262,9 +262,9 @@ const userData = {
         link: "https://www.google.com/search?q=What+does+a+software+developer+do",
         career: "Software Developer",
         desc1:
-          "based in Philippines. Since I started my journey as a developer, I've worked on personal projects, crafting responsive websites that are both user-friendly and follow best practices. I have a quiet confidence, a natural curiosity, and I'm always working to improve my skills and constantly working on getting better at solving problems.",
+          "based in the Philippines. Alongside building responsive websites and modern web interfaces, I also have experience in medical claims and billing, Healthcare VA support, AI automation, and UI/UX design. Since I started my journey in tech, I've worked on personal and professional projects focused on creating solutions that are both user-friendly and practical.",
         desc2:
-          "When I'm not writing code, I tidy up my workspace to create a conducive environment. At times, I engage in designing from scratch, and I derive pleasure from sharing my web development expertise through blogs and short videos on platforms like",
+          "I enjoy solving problems from both technical and operational perspectives, whether that means improving a workflow, designing a cleaner interface, or helping systems run more efficiently. When I'm not building, I also enjoy sharing what I learn through blogs and short videos on platforms like",
         tiktok: "https://www.tiktok.com/@Jjanggzxc",
         medium: "https://medium.com/@johnleobruno",
       },
@@ -341,13 +341,13 @@ const userData = {
         id: 0,
         title: "Web Development",
         desc: "Developing websites and web applications using JavaScript and its frameworks.",
-        icon: <FaCode size={24} color={"#a3262e"} />,
+        icon: <FaCode size={24} color={"#2f6b6b"} />,
       },
       {
         id: 1,
         title: "Web and User Interface Design",
         desc: "Website Creation, User Experience, Visual Design.",
-        icon: <FaPencilRuler size={20} color={"#a3262e"} />,
+        icon: <FaPencilRuler size={20} color={"#2f6b6b"} />,
       },
     ],
     education: [
@@ -356,7 +356,7 @@ const userData = {
         title: "BS in Information Technology",
         major: "Major in Web Systems Technology",
         desc: "Nueva Ecija University of Science and Technology - Cabanatuan City Nueva Ecija",
-        icon: <FaGraduationCap size={24} color={"#a3262e"} />,
+        icon: <FaGraduationCap size={24} color={"#2f6b6b"} />,
       },
     ],
   },

@@ -48,13 +48,13 @@ export default function HomePage() {
                   <span className="text-[#2f6b6b]">.</span>
                 </h1>
                 <div className="text-lg font-medium tracking-[0.08em] text-[#4b5563] uppercase">
-                  Full Stack Software Developer
+                  I'm a Full Stack Developer
                 </div>
               </div>
-              <p className="max-w-3xl text-xl font-semibold leading-relaxed text-[#3f3f46] MobileS:text-lg Tablet:text-3xl">
+              {/* <p className="max-w-3xl text-xl font-semibold leading-relaxed text-[#3f3f46] MobileS:text-lg Tablet:text-3xl">
                 I build polished and responsive web experiences with clean
                 code, strong UX decisions, and smooth interactions.
-              </p>
+              </p> */}
               <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
                 <NavLink
                   to="/"

@@ -412,7 +412,7 @@ const userData = {
   },
   socialLinks: {
     title: "Social Links:",
-    facebook: "https://www.facebook.com/JLBruno//",
+    facebook: "https://www.facebook.com/JLBruno/",
     twitter: "https://twitter.com/LeoXyRealDeal",
     instagram: "https://www.instagram.com/jhnleo.dev/",
     fb: <FaFacebookF size={24} />,

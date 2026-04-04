@@ -207,8 +207,8 @@ const userData = {
     {
       id: 1,
       imageURL: "/projects/freshbites.png",
-      title: "Fresh Bites Landing Page",
-      desc: "A modern restaurant landing page with a conversion-focused layout, smooth section flow, and responsive components that adapt cleanly across mobile and desktop screens.",
+      title: "FreshBites",
+      desc: "A fully responsive restaurant website with a clean, structured interface and intuitive user experience. Designed to go beyond a simple landing page, it incorporates dynamic sections, smooth transitions, and a layout optimized for real-world usability across devices.",
       tech: "React, Tailwind CSS",
       link: "https://freshbites.vercel.app/",
       code: "https://github.com/itsJhnL/fresh-bites",

@@ -1,9 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import userData from "../constants/data";
 import { fadeInUp, pageTransition, staggerContainer } from "../utils/motion";
+import { useSiteData } from "../utils/siteContentStore";
 
 function Projects() {
+  const userData = useSiteData();
+
   return (
     <motion.div
       className="relative overflow-hidden bg-[#f7f8fb]"

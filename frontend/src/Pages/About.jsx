@@ -1,10 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../App.css";
-import userData from "../constants/data";
 import { fadeInUp, pageTransition } from "../utils/motion";
+import { useSiteData } from "../utils/siteContentStore";
 
 export default function About() {
+  const userData = useSiteData();
   const intro = userData.about.introduce[0];
 
   return (
@@ -46,28 +47,10 @@ export default function About() {
               <span className="font-semibold text-[#1f2937]">
                 responsive websites
               </span>{" "}
-              with a strong focus on clean implementation and practical user
-              experience. Beyond development, I also bring experience in{" "}
-              <span className="font-semibold text-[#2f6b6b]">
-                medical claims and billing
-              </span>
-              ,{" "}
-              <span className="font-semibold text-[#2f6b6b]">
-                Healthcare VA support
-              </span>
-              ,{" "}
-              <span className="font-semibold text-[#2f6b6b]">
-                AI automation
-              </span>
-              , and{" "}
-              <span className="font-semibold text-[#2f6b6b]">UI/UX design</span>.
+              {intro.desc1}
             </p>
             <p className="mt-4 text-lg leading-8 tracking-[0.01em] text-[#4b5563]">
-              I enjoy solving problems from both technical and operational
-              perspectives, whether that means improving a workflow, designing a
-              cleaner interface, or helping systems run more efficiently. I also
-              enjoy sharing what I learn through blogs and short videos on
-              platforms like{" "}
+              {intro.desc2}{" "}
               <a
                 href={intro.tiktok}
                 target="_blank"

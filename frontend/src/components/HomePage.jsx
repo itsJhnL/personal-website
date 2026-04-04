@@ -9,8 +9,11 @@ import Works from "../Pages/Works";
 import Contact from "../Pages/Contact";
 import Footer from "./Footer";
 import { fadeInUp, pageTransition, staggerContainer } from "../utils/motion";
+import { useSiteData } from "../utils/siteContentStore";
 
 export default function HomePage() {
+  const userData = useSiteData();
+
   const scrollUp = () => {
     window.scrollTo({
       top: 0,
@@ -39,16 +42,17 @@ export default function HomePage() {
               className="flex max-w-4xl flex-col items-center space-y-6"
             >
               <p className="inline-flex items-center rounded-full border border-[#1f2937]/10 bg-white px-4 py-1.5 text-sm font-medium text-[#1f2937]">
-                Open for freelance and full-time
+                {userData.hero.availability}
               </p>
               <div className="space-y-4">
                 <h1 className="font-semibold leading-none text-[#1f2937] MobileS:text-4xl Tablet:text-6xl Laptop:text-[4.8rem]">
-                  Hello<span className="text-[#2f6b6b]">.</span> I&apos;m{" "}
-                  John Leo
+                  {userData.hero.headlinePrefix.replace(/\.$/, "")}
+                  <span className="text-[#2f6b6b]">.</span>{" "}
+                  {userData.hero.introText} {userData.hero.name}
                   <span className="text-[#2f6b6b]">.</span>
                 </h1>
                 <div className="text-lg font-medium tracking-[0.08em] text-[#4b5563] uppercase">
-                  I'm a Full Stack Developer
+                  {userData.hero.career}
                 </div>
               </div>
               {/* <p className="max-w-3xl text-xl font-semibold leading-relaxed text-[#3f3f46] MobileS:text-lg Tablet:text-3xl">
@@ -69,7 +73,7 @@ export default function HomePage() {
                   }}
                   className="inline-flex items-center gap-2 bg-[#2f6b6b] px-8 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white transition duration-300 hover:-translate-y-1 hover:bg-[#255757]"
                 >
-                  View Projects <FaArrowRight size={13} />
+                  {userData.hero.ctaLabel} <FaArrowRight size={13} />
                 </NavLink>
               </div>
             </motion.div>

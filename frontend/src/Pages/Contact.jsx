@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { fadeInUp, pageTransition, staggerContainer } from "../utils/motion";
 import { saveAdminMessage } from "../utils/adminStore";
+import { useSiteData } from "../utils/siteContentStore";
 
 const COOLDOWN_MINUTES = 5;
 const COOLDOWN_MS = COOLDOWN_MINUTES * 60 * 1000;
@@ -32,6 +33,7 @@ const getRemainingCooldownMinutes = (email) => {
 };
 
 export default function Contact() {
+  const userData = useSiteData();
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -214,13 +216,13 @@ export default function Contact() {
             className="rounded-3xl border border-[#dbe2ea] bg-white p-7 shadow-[0_8px_24px_rgba(12,12,12,0.06)]"
           >
             <p className="text-sm font-semibold tracking-[0.2em] text-[#2f6b6b]">
-              QUICK MESSAGE
+              {userData.contact.formEyebrow}
             </p>
             <h3 className="mt-3 text-3xl font-bold text-[#1f1f1f]">
-              Send a Message
+              {userData.contact.formTitle}
             </h3>
             <p className="mt-4 text-base leading-relaxed text-[#555]">
-              Share your project idea and I will get back to you quickly.
+              {userData.contact.formDescription}
             </p>
 
             <form onSubmit={handleSubmit} className="mt-6 space-y-4">

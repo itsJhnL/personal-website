@@ -2,33 +2,64 @@ import React from "react";
 import { motion } from "framer-motion";
 import "../App.css";
 import { fadeInUp, pageTransition, staggerContainer } from "../utils/motion";
+import { useSiteData } from "../utils/siteContentStore";
 
-const skillGroups = [
-  {
-    title: "Front End",
-    description: "Building clean and responsive interfaces",
-    items: [
-      "HTML / CSS",
-      "JavaScript",
-      "React",
-      "Tailwind CSS",
-      "Material UI",
-      "Bootstrap",
-    ],
-  },
-  {
-    title: "Backend",
-    description: "Supporting logic, data, and integrations",
-    items: ["PHP", "Firebase", "MySQL"],
-  },
-  {
-    title: "Other Tools",
-    description: "Design, content, and collaboration tools",
-    items: ["Figma", "Canva", "CapCut", "Git", "GitHub"],
-  },
-];
+const buildSkillGroups = (skills = []) => {
+  const frontEndKeywords = [
+    "html",
+    "css",
+    "javascript",
+    "react",
+    "tailwind",
+    "material",
+    "bootstrap",
+  ];
+  const backEndKeywords = ["php", "firebase", "mysql", "node", "api", "database"];
+
+  const frontEnd = [];
+  const backEnd = [];
+  const otherTools = [];
+
+  skills.forEach((item) => {
+    const value = String(item.desc || "");
+    const normalized = value.toLowerCase();
+
+    if (frontEndKeywords.some((keyword) => normalized.includes(keyword))) {
+      frontEnd.push(value);
+      return;
+    }
+
+    if (backEndKeywords.some((keyword) => normalized.includes(keyword))) {
+      backEnd.push(value);
+      return;
+    }
+
+    otherTools.push(value);
+  });
+
+  return [
+    {
+      title: "Front End",
+      description: "Building clean and responsive interfaces",
+      items: frontEnd,
+    },
+    {
+      title: "Backend",
+      description: "Supporting logic, data, and integrations",
+      items: backEnd,
+    },
+    {
+      title: "Other Tools",
+      description: "Design, content, and collaboration tools",
+      items: otherTools,
+    },
+  ];
+};
 
 export default function Services() {
+  const userData = useSiteData();
+  const skillGroups = buildSkillGroups(userData.about.techstacks);
+
   return (
     <motion.div
       className="bg-[#f7f8fb]"
@@ -78,11 +109,13 @@ export default function Services() {
           viewport={{ once: true, amount: 0.1 }}
           className="mx-auto mt-6 max-w-2xl"
         >
-          <SkillGroup
-            title={skillGroups[2].title}
-            description={skillGroups[2].description}
-            items={skillGroups[2].items}
-          />
+          {skillGroups[2] && (
+            <SkillGroup
+              title={skillGroups[2].title}
+              description={skillGroups[2].description}
+              items={skillGroups[2].items}
+            />
+          )}
         </motion.div>
       </div>
     </motion.div>

@@ -1,9 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import userData from "../constants/data";
 import { fadeInUp, pageTransition, staggerContainer } from "../utils/motion";
+import { useSiteData } from "../utils/siteContentStore";
 
 export default function Experience() {
+  const userData = useSiteData();
   const orderedExperience = [...userData.experience].reverse();
 
   return (

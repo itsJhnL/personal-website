@@ -1,8 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import userData from "../constants/data";
+import { useSiteData } from "../utils/siteContentStore";
 
 function Footer() {
+  const userData = useSiteData();
   const currentYear = new Date().getFullYear();
 
   return (

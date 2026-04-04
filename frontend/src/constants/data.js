@@ -28,21 +28,21 @@ import { FaGitAlt } from "react-icons/fa";
 import { FaFileLines } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 
-const userData = {
+export const defaultSiteContent = {
   hero: {
     name: "John Leo",
     career: "Software Developer",
+    availability: "Open for freelance and full-time",
+    headlinePrefix: "Hello.",
+    introText: "I'm",
+    ctaLabel: "View Projects",
     resume: "/resume/John Leo Bruno.pdf",
     imageURL: "/wave.png",
-    icon: <FaFileLines size={16} color={"#2f6b6b"} />,
   },
   navBarLinks: {
     linkedin: "https://www.linkedin.com/in/johnleobruno/",
     github: "https://github.com/itsJhnL",
     behance: "https://www.behance.net/janggodev",
-    linkedin_icon: <FaLinkedinIn size={21} />,
-    github_icon: <FaGithub size={21} />,
-    behance_icon: <FaBehance size={21} />,
   },
   recentWork: [
     {
@@ -70,13 +70,6 @@ const userData = {
       desc: "Wrote my first line of code.",
       year: "2016",
     },
-    /* {
-      id: 1,
-      position: "BS in Information Technology",
-      title: "",
-      desc: "Nueva Ecija University of Science and Technology",
-      year: "2023",
-    }, */
     {
       id: 2,
       position: "Internship",
@@ -84,13 +77,6 @@ const userData = {
       desc: "I performed a wide range of software development tasks, working on both front-end and back-end systems. I collaborated closely with senior developers, learning from their expertise while contributing to the delivery of high-quality software solutions.",
       year: "2023",
     },
-    /* {
-      id: 3,
-      position: "Graduation",
-      title: "Nueva Ecija University of Science and Technology",
-      desc: "Bachelor's degree in Information Technology.",
-      year: "2023",
-    }, */
     {
       id: 5,
       position: "Claim Specialist",
@@ -130,78 +116,7 @@ const userData = {
         "It allowed me to grasp the fundamental concepts of web development.",
       date: "February 22, 2021",
       imageURL: "/certificates/WebApp.jpg",
-    } /* ,
-    {
-      id: 4,
-      name: "Full-Stack Dev Road Map",
-      description: "I was introduced to both Front-End and Back-End technologies, which led me to aspire to become a Full-Stack Developer. Exploring back-end technologies fascinated me, and it sparked my dream of becoming a proficient full-stack developer.",
-      date: "March 12, 2021",
-      imageURL: "/certificates/Fullstack-dev-roadmap.jpg",
     },
-    {
-      id: 5,
-      name: "Python Programming for Beginners",
-      description: "Learned basic syntax like declaring variables and printing",
-      date: "March 13, 2021",
-      imageURL: "/certificates/Python-programming.jpg",
-    },
-    {
-      id: 6,
-      name: "Introduction to Arduino",
-      description: "",
-      date: "March 04, 2021",
-      imageURL: "/certificates/Introduction-to-Arduino.jpg",
-    },
-    {
-      id: 7,
-      name: "Mobile Development using IONIC for beginners",
-      description: "",
-      date: "February 13, 2021",
-      imageURL: "/certificates/Mobile-development-using-IONIC.jpg",
-    },
-    {
-      id: 8,
-      name: "Animation and Game Development",
-      description: "",
-      date: "March 03, 2021",
-      imageURL: "/certificates/Animation-and-Game-development.jpg",
-    },
-    {
-      id: 9,
-      name: "Introduction to Progressive Web Apps",
-      description: "",
-      date: "March 26, 2021",
-      imageURL: "/certificates/Introduction-to-progressive-web-apps.jpg",
-    },
-    {
-      id: 10,
-      name: "Data Science",
-      description: "",
-      date: "March 02, 2021",
-      imageURL: "/certificates/Datascience.jpg",
-    },
-    {
-      id: 11,
-      name: "Introduction to Wordpress Plugins",
-      description: "",
-      date: "February 22, 2021",
-      imageURL: "/certificates/Wordpress-Plugins.jpg",
-    },
-    {
-      id: 12,
-      name: "Wordpress Explained: Dashboard Navigation",
-      description: "",
-      date: "February 15, 2021",
-      imageURL: "/certificates/Wordpress.jpg",
-    },
-    {
-      id: 13,
-      name: "Integrated Cybersecuriy Management and System",
-      description: "",
-      date: "March 19, 2021",
-      imageURL:
-        "/certificates/Integrated-cybersecurity-management-and-system.jpg",
-    }, */,
   ],
   works: [
     {
@@ -219,35 +134,26 @@ const userData = {
       title: "Barangay Management Information System",
       desc: "A role-based local records platform that centralizes resident information, document requests, and reporting workflows to improve day-to-day administrative operations.",
       tech: "HTML, CSS, JavaScript, JQuery, PHP, Bootstrap, MySQL.",
-      // link: "https://barangay-management-system.vercel.app/",
+      link: "",
       code: "https://github.com/itsJhnL/barangay-management-system",
     },
-    /* {
-      id: 3,
-      imageURL: "/projects/login.png",
-      title: "Login Page",
-      desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero maxime iste adipisci atque aliquam facere dignissimos sequi ea mollitia molestias?",
-      tech: "HTML, CSS",
-      link: "https://login-page-lac-five.vercel.app/",
-      code: "https://github.com/itsJhnL/login-page",
-    }, */
-    /* {
-      id: 4,
-      imageURL: "/projects/linkedin-clone.png",
-      title: "LinkedIn Clone",
-      desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero maxime iste adipisci atque aliquam facere dignissimos sequi ea mollitia molestias?",
-      tech: "React, Redux, CSS, Firebase, MaterialUI-Icons",
-      link: "https://linkedin-duplicate.vercel.app/",
-      code: "https://github.com/itsJhnL/linkedin-clone",
-    }, */
     {
-      id: 5,
+      id: 3,
       imageURL: "/projects/tarakape.png",
       title: "Tarakape",
-      desc: "TaraKape helps aspiring developers start their coding journey with simple guides, tools, and real talk—samahan mo ng kape.",
+      desc: "TaraKape helps aspiring developers start their coding journey with simple guides, tools, and real talk samahan mo ng kape.",
       tech: "React + Vite, Tailwind CSS",
       link: "https://tarakape.vercel.app/",
       code: "https://github.com/itsJhnL/tarakape",
+    },
+    {
+      id: 4,
+      imageURL: "/projects/bruno.png",
+      title: "E-Commerce Bruno Website",
+      desc: "A user-friendly e-commerce website designed for seamless shopping, clean UI, and responsive experience—perfect for modern online buyers.",
+      tech: "React + Vite, Tailwind CSS",
+      link: "https://bruno-ecommerce.vercel.app/",
+      code: "https://github.com/itsJhnL/bruno-ecommerce",
     },
   ],
   about: {
@@ -257,8 +163,6 @@ const userData = {
         id: 0,
         title: "Introduce",
         name: "Leo",
-        // link: "https://g.co/kgs/6Au1hq",
-        // link: "https://g.co/kgs/fsH2jUz",
         link: "https://www.google.com/search?q=What+does+a+software+developer+do",
         career: "Software Developer",
         desc1:
@@ -270,84 +174,32 @@ const userData = {
       },
     ],
     techstacks: [
-      {
-        id: 0,
-        icon: <FaHtml5 size={35} />,
-        desc: "HTML5",
-      },
-      {
-        id: 1,
-        icon: <FaCss3Alt size={35} />,
-        desc: "CSS3",
-      },
-      {
-        id: 2,
-        icon: <SiJavascript size={35} />,
-        desc: "JavaScript",
-      },
-      {
-        id: 3,
-        icon: <FaReact size={35} />,
-        desc: "ReactJS",
-      },
-      {
-        id: 4,
-        icon: <SiTailwindcss size={35} />,
-        desc: "Tailwind CSS",
-      },
-      {
-        id: 5,
-        icon: <SiMaterialUi size={35} />,
-        desc: "Material UI",
-      },
-      {
-        id: 6,
-        icon: <FaBootstrap size={35} />,
-        desc: "Bootstrap",
-      },
-      {
-        id: 7,
-        icon: <SiPhp size={35} />,
-        desc: "PHP",
-      },
-      {
-        id: 8,
-        icon: <SiFirebase size={35} />,
-        desc: "Firebase",
-      },
-      {
-        id: 9,
-        icon: <GrMysql size={35} />,
-        desc: "MySQL",
-      },
-      {
-        id: 10,
-        icon: <FaFigma size={35} />,
-        desc: "Figma",
-      },
-      {
-        id: 11,
-        icon: <FaGitAlt size={35} />,
-        desc: "Git",
-      },
-      {
-        id: 12,
-        icon: <FaGithub size={35} />,
-        desc: "Github",
-      },
+      { id: 0, desc: "HTML5", iconKey: "html" },
+      { id: 1, desc: "CSS3", iconKey: "css" },
+      { id: 2, desc: "JavaScript", iconKey: "javascript" },
+      { id: 3, desc: "ReactJS", iconKey: "react" },
+      { id: 4, desc: "Tailwind CSS", iconKey: "tailwind" },
+      { id: 5, desc: "Material UI", iconKey: "material" },
+      { id: 6, desc: "Bootstrap", iconKey: "bootstrap" },
+      { id: 7, desc: "PHP", iconKey: "php" },
+      { id: 8, desc: "Firebase", iconKey: "firebase" },
+      { id: 9, desc: "MySQL", iconKey: "mysql" },
+      { id: 10, desc: "Figma", iconKey: "figma" },
+      { id: 11, desc: "Git", iconKey: "git" },
+      { id: 12, desc: "Github", iconKey: "github" },
     ],
     mainSkills: [
       {
         id: 0,
         title: "Web Development",
         desc: "Developing websites and web applications using JavaScript and its frameworks.",
-        icon: <FaCode size={24} color={"#2f6b6b"} />,
+        iconKey: "code",
       },
       {
         id: 1,
         title: "Web and User Interface Design",
         desc: "Website Creation, User Experience, Visual Design.",
-        icon: <FaPencilRuler size={20} color={"#2f6b6b"} />,
+        iconKey: "design",
       },
     ],
     education: [
@@ -356,7 +208,7 @@ const userData = {
         title: "BS in Information Technology",
         major: "Major in Web Systems Technology",
         desc: "Nueva Ecija University of Science and Technology - Cabanatuan City Nueva Ecija",
-        icon: <FaGraduationCap size={24} color={"#2f6b6b"} />,
+        iconKey: "education",
       },
     ],
   },
@@ -365,60 +217,130 @@ const userData = {
       id: 0,
       title: "Web Development",
       desc: "Developing websites from the ground up utilizing a range of technologies including HTML, CSS, JavaScript, and associated frameworks.",
-      icon: <FaCode />,
+      iconKey: "code",
     },
     {
       id: 1,
       title: "Design",
       desc: "I appreciate simple content structure, clean design patters and well-considered interactions.",
-      icon: <FaPencilRuler />,
+      iconKey: "design",
     },
     {
       id: 2,
       title: "Code Quality and Standards",
       desc: "Write clean, organized, and maintainable code following best practices and coding standards.",
-      icon: <AiFillCode />,
+      iconKey: "quality",
     },
     {
       id: 3,
       title: "Testing and Debugging",
       desc: "Debugging and troubleshooting front-end issues to ensure smooth functionality and a positive user experience.",
-      icon: <FaBug />,
+      iconKey: "bug",
     },
     {
       id: 4,
       title: "Continuous Learning",
       desc: "Stay updated with the latest front-end technologies, trends, and industry best practices to provide modern and innovative solutions.",
-      icon: <FaLaptopCode />,
+      iconKey: "learning",
     },
     {
       id: 5,
       title: "Collaboration",
       desc: "Collaborate with back-end developers, designers, and other team members to ensure seamless integration and a cohesive final product.",
-      icon: <SiGooglemessages />,
+      iconKey: "collaboration",
     },
   ],
   contact: {
     title: "Get in touch, let's talk.",
     desc: "If you believe my skills align with turning your ideas into reality, I am open to full-time, part-time, and freelance opportunities. Please feel free to reach out, and let's discuss everything. I'd be grateful for the opportunity to collaborate with you.",
+    formEyebrow: "QUICK MESSAGE",
+    formTitle: "Send a Message",
+    formDescription: "Share your project idea and I will get back to you quickly.",
     address: "Nueva Ecija, Philippines",
     number: "(+63) 906-360-4260",
     email: "johnleo.bruno@gmail.com",
     link: "mailto:johnleo.bruno@gmail.com",
-    address_icon: <MdLocationOn size={24} />,
     address_link: "https://g.co/kgs/xHsy6mK",
-    email_icon: <MdEmail size={24} />,
-    number_icon: <MdPhoneForwarded size={24} />,
   },
   socialLinks: {
     title: "Social Links:",
     facebook: "https://www.facebook.com/JLBruno/",
     twitter: "https://twitter.com/LeoXyRealDeal",
     instagram: "https://www.instagram.com/jhnleo.dev/",
+  },
+};
+
+const techStackIcons = {
+  html: <FaHtml5 size={35} />,
+  css: <FaCss3Alt size={35} />,
+  javascript: <SiJavascript size={35} />,
+  react: <FaReact size={35} />,
+  tailwind: <SiTailwindcss size={35} />,
+  material: <SiMaterialUi size={35} />,
+  bootstrap: <FaBootstrap size={35} />,
+  php: <SiPhp size={35} />,
+  firebase: <SiFirebase size={35} />,
+  mysql: <GrMysql size={35} />,
+  figma: <FaFigma size={35} />,
+  git: <FaGitAlt size={35} />,
+  github: <FaGithub size={35} />,
+};
+
+const contentIcons = {
+  code: <FaCode size={24} color={"#2f6b6b"} />,
+  design: <FaPencilRuler size={20} color={"#2f6b6b"} />,
+  education: <FaGraduationCap size={24} color={"#2f6b6b"} />,
+  quality: <AiFillCode />,
+  bug: <FaBug />,
+  learning: <FaLaptopCode />,
+  collaboration: <SiGooglemessages />,
+};
+
+export const createSiteData = (content = defaultSiteContent) => ({
+  ...content,
+  hero: {
+    ...content.hero,
+    icon: <FaFileLines size={16} color={"#2f6b6b"} />,
+  },
+  navBarLinks: {
+    ...content.navBarLinks,
+    linkedin_icon: <FaLinkedinIn size={21} />,
+    github_icon: <FaGithub size={21} />,
+    behance_icon: <FaBehance size={21} />,
+  },
+  about: {
+    ...content.about,
+    techstacks: content.about.techstacks.map((item) => ({
+      ...item,
+      icon: techStackIcons[item.iconKey] || null,
+    })),
+    mainSkills: content.about.mainSkills.map((item) => ({
+      ...item,
+      icon: contentIcons[item.iconKey] || null,
+    })),
+    education: content.about.education.map((item) => ({
+      ...item,
+      icon: contentIcons[item.iconKey] || null,
+    })),
+  },
+  services: content.services.map((item) => ({
+    ...item,
+    icon: contentIcons[item.iconKey] || null,
+  })),
+  contact: {
+    ...content.contact,
+    address_icon: <MdLocationOn size={24} />,
+    email_icon: <MdEmail size={24} />,
+    number_icon: <MdPhoneForwarded size={24} />,
+  },
+  socialLinks: {
+    ...content.socialLinks,
     fb: <FaFacebookF size={24} />,
     twtr: <FaXTwitter size={24} />,
     insta: <FaInstagramSquare size={24} />,
   },
-};
+});
+
+const userData = createSiteData(defaultSiteContent);
 
 export default userData;

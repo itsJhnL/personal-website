@@ -130,10 +130,12 @@ export const defaultSiteContent = {
     },
     {
       id: 2,
-      imageURL: "/projects/barangay.png",
-      title: "Barangay Management Information System",
-      desc: "A role-based local records platform that centralizes resident information, document requests, and reporting workflows to improve day-to-day administrative operations.",
-      tech: "HTML, CSS, JavaScript, JQuery, PHP, Bootstrap, MySQL.",
+      imageURL: "/projects/bruno.png",
+      title: "E-Commerce Bruno Website",
+      desc: "A user-friendly e-commerce website designed for seamless shopping, clean UI, and responsive experience—perfect for modern online buyers.",
+      tech: "React + Vite, Tailwind CSS",
+      link: "https://bruno-ecommerce.vercel.app/",
+      code: "https://github.com/itsJhnL/bruno-ecommerce",
     },
     {
       id: 3,
@@ -146,12 +148,18 @@ export const defaultSiteContent = {
     },
     {
       id: 4,
-      imageURL: "/projects/bruno.png",
-      title: "E-Commerce Bruno Website",
-      desc: "A user-friendly e-commerce website designed for seamless shopping, clean UI, and responsive experience—perfect for modern online buyers.",
+      imageURL: "/projects/nova.png",
+      title: "Nova Solutions",
+      desc: "A user-friendly e-commerce website designed for seamless shopping, clean UI, and a responsive experience, perfect for modern online buyers. Built with React, Vite, and Tailwind CSS, focusing on smooth navigation, modern design, and engaging user experience.",
       tech: "React + Vite, Tailwind CSS",
-      link: "https://bruno-ecommerce.vercel.app/",
-      code: "https://github.com/itsJhnL/bruno-ecommerce",
+      link: "https://nova-assist-virtual-support.vercel.app/"
+    },
+    {
+      id: 5,
+      imageURL: "/projects/barangay.png",
+      title: "Barangay Management Information System",
+      desc: "A role-based local records platform that centralizes resident information, document requests, and reporting workflows to improve day-to-day administrative operations.",
+      tech: "HTML, CSS, JavaScript, JQuery, PHP, Bootstrap, MySQL.",
     },
   ],
   about: {

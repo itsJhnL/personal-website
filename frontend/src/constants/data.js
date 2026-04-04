@@ -134,8 +134,6 @@ export const defaultSiteContent = {
       title: "Barangay Management Information System",
       desc: "A role-based local records platform that centralizes resident information, document requests, and reporting workflows to improve day-to-day administrative operations.",
       tech: "HTML, CSS, JavaScript, JQuery, PHP, Bootstrap, MySQL.",
-      link: "",
-      code: "",
     },
     {
       id: 3,

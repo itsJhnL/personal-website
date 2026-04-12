@@ -71,7 +71,7 @@ export default function About() {
               .
             </p>
 
-            <div className="mt-8">
+            {/* <div className="mt-8">
               <a
                 href={userData.hero.resume}
                 target="_blank"
@@ -81,7 +81,7 @@ export default function About() {
               >
                 Download CV {userData.hero.icon}
               </a>
-            </div>
+            </div> */}
           </div>
         </motion.div>
       </div>

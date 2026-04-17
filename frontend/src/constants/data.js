@@ -1,6 +1,7 @@
 import { FaHtml5 } from "@react-icons/all-files/fa/FaHtml5";
 import { FaCss3Alt } from "@react-icons/all-files/fa/FaCss3Alt";
 import { SiJavascript } from "@react-icons/all-files/si/SiJavascript";
+import { SiTypescript } from "@react-icons/all-files/si/SiTypescript";
 import { FaReact } from "@react-icons/all-files/fa/FaReact";
 import { SiTailwindcss } from "@react-icons/all-files/si/SiTailwindcss";
 import { SiMaterialUi } from "@react-icons/all-files/si/SiMaterialUi";
@@ -8,6 +9,17 @@ import { FaBootstrap } from "@react-icons/all-files/fa/FaBootstrap";
 import { SiPhp } from "@react-icons/all-files/si/SiPhp";
 import { SiFirebase } from "@react-icons/all-files/si/SiFirebase";
 import { GrMysql } from "@react-icons/all-files/gr/GrMysql";
+import { SiNextDotJs } from "@react-icons/all-files/si/SiNextDotJs";
+import { SiReact } from "@react-icons/all-files/si/SiReact";
+import { SiFlutter } from "@react-icons/all-files/si/SiFlutter";
+import { SiDart } from "@react-icons/all-files/si/SiDart";
+import { SiPostgresql } from "@react-icons/all-files/si/SiPostgresql";
+import { SiMongodb } from "@react-icons/all-files/si/SiMongodb";
+import { SiGitlab } from "@react-icons/all-files/si/SiGitlab";
+import { SiBitbucket } from "@react-icons/all-files/si/SiBitbucket";
+import { SiPostman } from "@react-icons/all-files/si/SiPostman";
+import { SiSocketDotIo } from "@react-icons/all-files/si/SiSocketDotIo";
+import { SiSketch } from "@react-icons/all-files/si/SiSketch";
 import { FaFigma } from "@react-icons/all-files/fa/FaFigma";
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub";
 import { FaLinkedinIn } from "@react-icons/all-files/fa/FaLinkedinIn";
@@ -25,6 +37,10 @@ import { MdEmail } from "@react-icons/all-files/md/MdEmail";
 import { FaFacebookF } from "@react-icons/all-files/fa/FaFacebookF";
 import { FaInstagramSquare } from "@react-icons/all-files/fa/FaInstagramSquare";
 import { FaGitAlt } from "react-icons/fa";
+import { FaExchangeAlt } from "react-icons/fa";
+import { FaCodeBranch } from "react-icons/fa";
+import { FaLayerGroup } from "react-icons/fa";
+import { FaServer } from "react-icons/fa";
 import { FaFileLines } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 
@@ -180,19 +196,84 @@ export const defaultSiteContent = {
       },
     ],
     techstacks: [
-      { id: 0, desc: "HTML5", iconKey: "html" },
-      { id: 1, desc: "CSS3", iconKey: "css" },
-      { id: 2, desc: "JavaScript", iconKey: "javascript" },
-      { id: 3, desc: "ReactJS", iconKey: "react" },
-      { id: 4, desc: "Tailwind CSS", iconKey: "tailwind" },
-      { id: 5, desc: "Material UI", iconKey: "material" },
-      { id: 6, desc: "Bootstrap", iconKey: "bootstrap" },
-      { id: 7, desc: "PHP", iconKey: "php" },
-      { id: 8, desc: "Firebase", iconKey: "firebase" },
-      { id: 9, desc: "MySQL", iconKey: "mysql" },
-      { id: 10, desc: "Figma", iconKey: "figma" },
-      { id: 11, desc: "Git", iconKey: "git" },
-      { id: 12, desc: "Github", iconKey: "github" },
+      { id: 0, desc: "HTML", iconKey: "html", category: "frontend" },
+      { id: 1, desc: "CSS", iconKey: "css", category: "frontend" },
+      {
+        id: 2,
+        desc: "JavaScript / TypeScript",
+        iconKey: "typescript",
+        category: "frontend",
+      },
+      { id: 3, desc: "Tailwind", iconKey: "tailwind", category: "frontend" },
+      {
+        id: 4,
+        desc: "ReactJS / NextJS",
+        iconKey: "nextjs",
+        category: "frontend",
+      },
+      {
+        id: 5,
+        desc: "React Native",
+        iconKey: "reactnative",
+        category: "frontend",
+      },
+      {
+        id: 6,
+        desc: "Dart / Flutter (Learning)",
+        iconKey: "flutter",
+        category: "frontend",
+      },
+      {
+        id: 7,
+        desc: "JavaScript/TypeScript",
+        iconKey: "javascript",
+        category: "backend",
+      },
+      { id: 8, desc: "ExpressJS", iconKey: "express", category: "backend" },
+      { id: 9, desc: "NestJS", iconKey: "nestjs", category: "backend" },
+      {
+        id: 10,
+        desc: "PostgreSQL",
+        iconKey: "postgresql",
+        category: "backend",
+      },
+      { id: 11, desc: "MongoDB", iconKey: "mongodb", category: "backend" },
+      { id: 12, desc: "Firebase", iconKey: "firebase", category: "backend" },
+      { id: 13, desc: "API", iconKey: "api", category: "backend" },
+      { id: 14, desc: "REST API", iconKey: "restapi", category: "backend" },
+      { id: 15, desc: "AJAX", iconKey: "ajax", category: "backend" },
+      { id: 16, desc: "Git", iconKey: "git", category: "tools" },
+      {
+        id: 17,
+        desc: "GitHub / GitLab / Bitbucket",
+        iconKey: "github",
+        category: "tools",
+      },
+      { id: 18, desc: "Postman", iconKey: "postman", category: "tools" },
+      {
+        id: 19,
+        desc: "Socket.IO",
+        iconKey: "socketio",
+        category: "tools",
+      },
+      {
+        id: 20,
+        desc: "CI/CD Tools",
+        iconKey: "cicd",
+        category: "tools",
+      },
+      {
+        id: 21,
+        desc: "Axios",
+        iconKey: "axios",
+        category: "tools",
+      },
+      {
+        id: 22,
+        desc: "Figma / Sketch",
+        iconKey: "figma",
+        category: "tools",
+      },
     ],
     mainSkills: [
       {
@@ -280,16 +361,35 @@ const techStackIcons = {
   html: <FaHtml5 size={35} />,
   css: <FaCss3Alt size={35} />,
   javascript: <SiJavascript size={35} />,
+  typescript: <SiTypescript size={35} />,
   react: <FaReact size={35} />,
+  nextjs: <SiNextDotJs size={35} />,
+  reactnative: <SiReact size={35} />,
+  flutter: <SiFlutter size={35} />,
+  dart: <SiDart size={35} />,
   tailwind: <SiTailwindcss size={35} />,
   material: <SiMaterialUi size={35} />,
   bootstrap: <FaBootstrap size={35} />,
   php: <SiPhp size={35} />,
   firebase: <SiFirebase size={35} />,
   mysql: <GrMysql size={35} />,
+  express: <FaServer size={35} />,
+  nestjs: <FaLayerGroup size={35} />,
+  postgresql: <SiPostgresql size={35} />,
+  mongodb: <SiMongodb size={35} />,
+  api: <FaServer size={35} />,
+  restapi: <FaLayerGroup size={35} />,
+  ajax: <SiJavascript size={35} />,
   figma: <FaFigma size={35} />,
   git: <FaGitAlt size={35} />,
   github: <FaGithub size={35} />,
+  gitlab: <SiGitlab size={35} />,
+  bitbucket: <SiBitbucket size={35} />,
+  postman: <SiPostman size={35} />,
+  socketio: <SiSocketDotIo size={35} />,
+  cicd: <FaCodeBranch size={35} />,
+  axios: <FaExchangeAlt size={35} />,
+  sketch: <SiSketch size={35} />,
 };
 
 const contentIcons = {

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaMoon, FaSun } from "react-icons/fa";
 import "../styles/Nav.css";
+import { useTheme } from "../utils/theme";
 
 const navItems = [
   { label: "About", id: "about" },
@@ -11,6 +13,7 @@ const navItems = [
 
 export default function Main() {
   const [openNav, setOpenNav] = useState(false);
+  const { isDark, toggleTheme } = useTheme();
 
   const toggleNav = () => {
     setOpenNav((prev) => !prev);
@@ -31,14 +34,16 @@ export default function Main() {
       className={
         mobile
           ? "flex flex-col items-center gap-7"
-          : "flex items-center gap-7"
+          : "flex items-center gap-5"
       }
     >
       {navItems.map((item) => (
         <button
           key={item.id}
           type="button"
-          className="text-base font-medium text-gray-700 duration-300 hover:text-[#2f6b6b]"
+          className={`text-base font-medium duration-300 ${
+            isDark ? "text-slate-200 hover:text-cyan-300" : "text-gray-700 hover:text-[#2f6b6b]"
+          }`}
           onClick={() => {
             scrollToSection(item.id);
             if (mobile) {
@@ -49,6 +54,24 @@ export default function Main() {
           {item.label}
         </button>
       ))}
+      <button
+        type="button"
+        aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+        title={isDark ? "Light mode" : "Dark mode"}
+        className={`inline-flex h-10 w-10 items-center justify-center rounded-full border transition ${
+          isDark
+            ? "border-white/15 bg-white/10 text-white hover:bg-white/15"
+            : "border-[#d6dde6] bg-white text-[#2f6b6b] hover:border-[#2f6b6b]"
+        }`}
+        onClick={() => {
+          toggleTheme();
+          if (mobile) {
+            setOpenNav(false);
+          }
+        }}
+      >
+        {isDark ? <FaSun size={14} /> : <FaMoon size={14} />}
+      </button>
     </div>
   );
 
@@ -93,9 +116,19 @@ export default function Main() {
 
   return (
     <>
-      <div className="sticky top-0 z-50 border-b border-white/40 bg-[#fff]/80 backdrop-blur">
+      <div
+        className={`sticky top-0 z-50 border-b backdrop-blur transition-colors duration-500 ${
+          isDark
+            ? "border-white/10 bg-[#07111f]/80"
+            : "border-white/40 bg-[#fff]/80"
+        }`}
+      >
         <nav className="mx-auto flex max-w-6xl flex-row items-center justify-between px-5 py-4">
-          <div className="text-3xl font-black text-[#2f6b6b]">
+          <div
+            className={`text-3xl font-black ${
+              isDark ? "text-cyan-300" : "text-[#2f6b6b]"
+            }`}
+          >
             <NavLink to="/">
               <button
                 type="button"
@@ -111,7 +144,7 @@ export default function Main() {
           <div className="flex Laptop:hidden">
             <button
               type="button"
-              className="text-[#2f6b6b]"
+              className={isDark ? "text-cyan-300" : "text-[#2f6b6b]"}
               onClick={toggleNav}
             >
               {openNav ? <Close /> : <Menu />}
@@ -125,11 +158,15 @@ export default function Main() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed top-0 z-[300] flex h-[100vh] w-full flex-col items-center justify-center bg-[#f7f8fb]/95 backdrop-blur-md Laptop:hidden"
+            className={`fixed top-0 z-[300] flex h-[100vh] w-full flex-col items-center justify-center backdrop-blur-md Laptop:hidden ${
+              isDark ? "bg-[#07111f]/95" : "bg-[#f7f8fb]/95"
+            }`}
           >
             <button
               type="button"
-              className="absolute right-5 top-10 flex font-bold text-[#2f6b6b]"
+              className={`absolute right-5 top-10 flex font-bold ${
+                isDark ? "text-cyan-300" : "text-[#2f6b6b]"
+              }`}
               onClick={toggleNav}
             >
               Close

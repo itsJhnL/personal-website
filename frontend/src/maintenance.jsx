@@ -5,10 +5,6 @@ import { FaTools } from "react-icons/fa";
 function Maintenance() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#fff8f8] via-[#f8fafc] to-[#eef2ff] text-[#1f2937]">
-      <div className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-[#a3262e]/20 blur-3xl" />
-      <div className="pointer-events-none absolute -right-20 top-20 h-64 w-64 rounded-full bg-[#0f172a]/15 blur-3xl" />
-      <div className="pointer-events-none absolute bottom-0 left-1/3 h-80 w-80 rounded-full bg-[#a3262e]/10 blur-3xl" />
-
       <div className="mx-auto flex min-h-screen max-w-4xl items-center justify-center px-6 py-16">
         <motion.section
           initial={{ opacity: 0, y: 24, scale: 0.98 }}

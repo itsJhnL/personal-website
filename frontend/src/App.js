@@ -7,9 +7,11 @@ import Home from "./components/HomePage";
 import NavBar from "./components/NavBar";
 import Maintenance from "./maintenance";
 import NotFound from "./components/NotFound";
+import { useTheme } from "./utils/theme";
 
 function App() {
   const location = useLocation();
+  const { isDark } = useTheme();
   const isMaintenanceRoute =
     location.pathname === "/maintenance" || location.pathname === "/Admin";
 
@@ -46,7 +48,11 @@ function App() {
   }, [location.pathname]);
 
   return (
-    <div className="App">
+    <div
+      className={`App min-h-screen transition-colors duration-500 ${
+        isDark ? "bg-[#07111f] text-white" : "bg-[#f7f8fb] text-[#1f2937]"
+      }`}
+    >
       {!isMaintenanceRoute && <NavBar />}
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>

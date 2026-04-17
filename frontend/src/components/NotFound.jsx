@@ -5,9 +5,6 @@ import { NavLink } from "react-router-dom";
 export default function NotFound() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#fff7f8] via-[#f8fafc] to-[#eef2ff] px-6 py-20">
-      <div className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-[#a3262e]/20 blur-3xl" />
-      <div className="pointer-events-none absolute right-0 top-20 h-64 w-64 rounded-full bg-[#111827]/15 blur-3xl" />
-
       <div className="mx-auto flex min-h-[70vh] max-w-4xl items-center justify-center">
         <motion.section
           initial={{ opacity: 0, y: 22, scale: 0.98 }}

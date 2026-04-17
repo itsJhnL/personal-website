@@ -1,86 +1,102 @@
-import React from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import "../App.css";
-import { fadeInUp, pageTransition, staggerContainer } from "../utils/motion";
+import {
+  createFadeInUp,
+  createScaleIn,
+  pageTransition,
+  staggerContainer,
+  useParallaxValue,
+} from "../utils/motion";
 import { useSiteData } from "../utils/siteContentStore";
+import { useTheme } from "../utils/theme";
 
 const buildSkillGroups = (skills = []) => {
-  const frontEndKeywords = [
-    "html",
-    "css",
-    "javascript",
-    "react",
-    "tailwind",
-    "material",
-    "bootstrap",
-  ];
-  const backEndKeywords = ["php", "firebase", "mysql", "node", "api", "database"];
-
-  const frontEnd = [];
-  const backEnd = [];
-  const otherTools = [];
+  const groups = {
+    frontend: {
+      title: "Front End",
+      description: "UI and client-side development",
+      eyebrow: "Interactive",
+      accent: "from-[#0f766e] via-[#14b8a6] to-[#67e8f9]",
+      surface: "from-[#effcf9] via-[#ffffff] to-[#eef7ff]",
+      chip: "border-[#b8ebe2] bg-white/80 text-[#155e59]",
+      glow: "bg-[#14b8a6]/15",
+      items: [],
+    },
+    backend: {
+      title: "Backend",
+      description: "Logic, APIs, and databases",
+      eyebrow: "Scalable",
+      accent: "from-[#1d4ed8] via-[#3b82f6] to-[#93c5fd]",
+      surface: "from-[#eff6ff] via-[#ffffff] to-[#f8fbff]",
+      chip: "border-[#cfe0ff] bg-white/80 text-[#1e3a8a]",
+      glow: "bg-[#3b82f6]/15",
+      items: [],
+    },
+    tools: {
+      title: "Other Tools",
+      description: "Workflow and development tools",
+      eyebrow: "Workflow",
+      accent: "from-[#9333ea] via-[#c084fc] to-[#f0abfc]",
+      surface: "from-[#faf5ff] via-[#ffffff] to-[#fff7fb]",
+      chip: "border-[#ecd4ff] bg-white/80 text-[#6b21a8]",
+      glow: "bg-[#c084fc]/15",
+      items: [],
+    },
+  };
 
   skills.forEach((item) => {
-    const value = String(item.desc || "");
-    const normalized = value.toLowerCase();
-
-    if (frontEndKeywords.some((keyword) => normalized.includes(keyword))) {
-      frontEnd.push(value);
-      return;
-    }
-
-    if (backEndKeywords.some((keyword) => normalized.includes(keyword))) {
-      backEnd.push(value);
-      return;
-    }
-
-    otherTools.push(value);
+    const category = item.category || "tools";
+    const group = groups[category] || groups.tools;
+    group.items.push(item);
   });
 
-  return [
-    {
-      title: "Front End",
-      description: "Building clean and responsive interfaces",
-      items: frontEnd,
-    },
-    {
-      title: "Backend",
-      description: "Supporting logic, data, and integrations",
-      items: backEnd,
-    },
-    {
-      title: "Other Tools",
-      description: "Design, content, and collaboration tools",
-      items: otherTools,
-    },
-  ];
+  return Object.values(groups);
 };
 
 export default function Services() {
   const userData = useSiteData();
   const skillGroups = buildSkillGroups(userData.about.techstacks);
+  const { isDark } = useTheme();
+  const sectionRef = useRef(null);
+  const parallaxY = useParallaxValue(sectionRef, 92);
 
   return (
     <motion.div
-      className="bg-[#f7f8fb]"
+      ref={sectionRef}
+      className={`relative overflow-hidden transition-colors duration-500 ${
+        isDark ? "bg-[#07111f]" : "bg-[#f4f7fb]"
+      }`}
       initial={pageTransition.initial}
       animate={pageTransition.animate}
       exit={pageTransition.exit}
       transition={pageTransition.transition}
     >
-      <div className="mx-auto max-w-6xl px-5 pb-24 pt-14">
+      <motion.div
+        style={{ y: parallaxY }}
+        className="relative mx-auto max-w-6xl px-5 pb-24 pt-16"
+      >
         <motion.div
-          variants={fadeInUp}
+          variants={createFadeInUp(0.08)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
           className="text-center"
         >
-          <h2 className="text-4xl font-bold text-[#1f2937] Tablet:text-5xl">
-            Skills
+          <h2
+            className={`text-4xl font-bold Tablet:text-5xl ${
+              isDark ? "text-white" : "text-[#111827]"
+            }`}
+          >
+            Tech Stack
           </h2>
-          <p className="mx-auto mt-2 text-sm text-[#7b8794]">
-            Technologies that I use
+          <p
+            className={`mx-auto mt-3 max-w-2xl text-sm leading-7 transition-colors duration-500 ${
+              isDark ? "text-[#c7d2e0]" : "text-[#667085]"
+            }`}
+          >
+            A clear view of the tools I use across frontend development,
+            backend systems, and delivery workflow.
           </p>
         </motion.div>
 
@@ -91,54 +107,90 @@ export default function Services() {
           viewport={{ once: true, amount: 0.1 }}
           className="mt-14 grid gap-6 Tablet:grid-cols-2"
         >
-          {skillGroups.slice(0, 2).map((group) => (
-            <motion.div key={group.title} variants={fadeInUp}>
-              <SkillGroup
-                title={group.title}
-                description={group.description}
-                items={group.items}
-              />
+          {skillGroups.slice(0, 2).map((group, index) => (
+            <motion.div key={group.title} variants={createScaleIn(0.14 + index * 0.08)}>
+              <SkillGroup group={group} isDark={isDark} />
             </motion.div>
           ))}
         </motion.div>
 
         <motion.div
-          variants={fadeInUp}
+          variants={createScaleIn(0.3)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.1 }}
           className="mx-auto mt-6 max-w-2xl"
         >
-          {skillGroups[2] && (
-            <SkillGroup
-              title={skillGroups[2].title}
-              description={skillGroups[2].description}
-              items={skillGroups[2].items}
-            />
-          )}
+          {skillGroups[2] && <SkillGroup group={skillGroups[2]} isDark={isDark} />}
         </motion.div>
-      </div>
+      </motion.div>
     </motion.div>
   );
 }
 
-const SkillGroup = ({ title, description, items }) => {
+const SkillGroup = ({ group, isDark }) => {
+  const { title, description, items, eyebrow, accent, surface, chip } =
+    group;
+
   return (
-    <div className="h-full rounded-[1.5rem] border border-[#dbe2ea] bg-white p-6 shadow-[0_10px_30px_rgba(15,23,42,0.05)]">
-      <div className="border-b border-[#e6ebf1] pb-5 text-center">
-        <h3 className="text-xl font-bold text-[#1f2937]">{title}</h3>
-        <p className="mt-2 text-sm text-[#7b8794]">{description}</p>
+    <motion.div
+      whileHover={{ y: -8 }}
+      transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+      className={`relative h-full overflow-hidden rounded-[2rem] border p-6 ${
+        isDark
+          ? "border-white/10 bg-[#0f1728] shadow-[0_24px_80px_rgba(0,0,0,0.35)]"
+          : `border-white/60 bg-gradient-to-br ${surface} shadow-[0_24px_80px_rgba(15,23,42,0.08)]`
+      }`}
+    >
+      <div className={`h-1.5 w-full rounded-full bg-gradient-to-r ${accent}`}></div>
+
+      <div
+        className={`relative mt-5 border-b pb-5 ${
+          isDark ? "border-white/10" : "border-[#edf0f3]"
+        }`}
+      >
+        <span
+          className={`text-xs font-semibold uppercase tracking-[0.28em] ${
+            isDark ? "text-[#93c5fd]" : "text-[#6b7280]"
+          }`}
+        >
+          {eyebrow}
+        </span>
+        <h3
+          className={`mt-3 text-2xl font-bold ${
+            isDark ? "text-white" : "text-[#111827]"
+          }`}
+        >
+          {title}
+        </h3>
+        <p
+          className={`mt-2 text-sm leading-7 ${
+            isDark ? "text-[#c7d2e0]" : "text-[#667085]"
+          }`}
+        >
+          {description}
+        </p>
       </div>
-      <div className="mt-5 flex flex-wrap gap-3">
-        {items.map((item) => (
-          <span
-            key={item}
-            className="rounded-full border border-[#d8e7e5] bg-[#f3f8f8] px-4 py-2 text-sm font-medium text-[#355e5e]"
+
+      <div className="relative mt-6 flex flex-wrap gap-3">
+        {items.map((item, index) => (
+          <motion.span
+            key={item.id ?? item.desc}
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            whileHover={{ scale: 1.04 }}
+            transition={{ duration: 0.35, delay: index * 0.04 }}
+            className={`rounded-full border px-4 py-2 text-sm font-semibold shadow-sm backdrop-blur ${
+              isDark
+                ? "border-white/10 bg-white/8 text-white"
+                : chip
+            }`}
           >
-            {item}
-          </span>
+            {item.desc}
+          </motion.span>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };

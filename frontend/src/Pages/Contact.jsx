@@ -1,8 +1,15 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { fadeInUp, pageTransition, staggerContainer } from "../utils/motion";
+import {
+  createFadeInUp,
+  createScaleIn,
+  pageTransition,
+  staggerContainer,
+  useParallaxValue,
+} from "../utils/motion";
 import { saveAdminMessage } from "../utils/adminStore";
 import { useSiteData } from "../utils/siteContentStore";
+import { useTheme } from "../utils/theme";
 
 const COOLDOWN_MINUTES = 5;
 const COOLDOWN_MS = COOLDOWN_MINUTES * 60 * 1000;
@@ -34,6 +41,9 @@ const getRemainingCooldownMinutes = (email) => {
 
 export default function Contact() {
   const userData = useSiteData();
+  const { isDark } = useTheme();
+  const sectionRef = useRef(null);
+  const parallaxY = useParallaxValue(sectionRef, 84);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -187,22 +197,33 @@ export default function Contact() {
 
   return (
     <motion.div
-      className="relative overflow-hidden bg-gradient-to-b from-[#f7f8fb] via-[#f7f8fb] to-[#ffffff]"
+      ref={sectionRef}
+      className={`relative overflow-hidden transition-colors duration-500 ${
+        isDark
+          ? "bg-gradient-to-b from-[#07111f] via-[#07111f] to-[#0b1527]"
+          : "bg-gradient-to-b from-[#f7f8fb] via-[#f7f8fb] to-[#ffffff]"
+      }`}
       initial={pageTransition.initial}
       animate={pageTransition.animate}
       exit={pageTransition.exit}
       transition={pageTransition.transition}
     >
-      <div className="pointer-events-none absolute -top-28 -left-24 h-80 w-80 rounded-full bg-[#2f6b6b]/8 blur-3xl" />
-      <div className="pointer-events-none absolute -right-24 top-56 h-72 w-72 rounded-full bg-[#1f2937]/6 blur-3xl" />
-
-      <div className="relative mx-auto max-w-6xl px-5 pb-24 pt-24">
-        <div className="py-10 text-center">
-          <h2 className="text-4xl font-bold text-[#1f2937] Tablet:text-5xl">
+      <motion.div
+        style={{ y: parallaxY }}
+        className="relative mx-auto max-w-6xl px-5 pb-24 pt-24"
+      >
+        <motion.div
+          variants={createFadeInUp(0.08)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          className="py-10 text-center"
+        >
+          <h2 className={`text-4xl font-bold Tablet:text-5xl ${isDark ? "text-white" : "text-[#1f2937]"}`}>
             Contact Me
           </h2>
-          <p className="mx-auto mt-2 text-sm text-[#7b8794]">Let&apos;s connect</p>
-        </div>
+          <p className={`mx-auto mt-2 text-sm ${isDark ? "text-slate-300" : "text-[#7b8794]"}`}>Let&apos;s connect</p>
+        </motion.div>
 
         <motion.div
           variants={staggerContainer}
@@ -212,75 +233,114 @@ export default function Contact() {
           className="mx-auto max-w-3xl"
         >
           <motion.div
-            variants={fadeInUp}
-            className="rounded-3xl border border-[#dbe2ea] bg-white p-7 shadow-[0_8px_24px_rgba(12,12,12,0.06)]"
+            variants={createScaleIn(0.18)}
+            className={`rounded-3xl border p-7 shadow-[0_8px_24px_rgba(12,12,12,0.06)] ${
+              isDark
+                ? "border-white/10 bg-[#0f1728]"
+                : "border-[#dbe2ea] bg-white"
+            }`}
           >
-            <p className="text-sm font-semibold tracking-[0.2em] text-[#2f6b6b]">
+            <p className={`text-sm font-semibold tracking-[0.2em] ${isDark ? "text-cyan-300" : "text-[#2f6b6b]"}`}>
               {userData.contact.formEyebrow}
             </p>
-            <h3 className="mt-3 text-3xl font-bold text-[#1f1f1f]">
+            <h3 className={`mt-3 text-3xl font-bold ${isDark ? "text-white" : "text-[#1f1f1f]"}`}>
               {userData.contact.formTitle}
             </h3>
-            <p className="mt-4 text-base leading-relaxed text-[#555]">
+            <p className={`mt-4 text-base leading-relaxed ${isDark ? "text-slate-300" : "text-[#555]"}`}>
               {userData.contact.formDescription}
             </p>
 
             <form onSubmit={handleSubmit} className="mt-6 space-y-4">
-              <input
-                type="text"
-                name="name"
-                value={form.name}
-                onChange={handleChange}
-                placeholder="Your name"
-                required
-                className="w-full rounded-xl border border-[#d9e0e8] bg-[#fbfcfe] px-4 py-3 text-[#333] outline-none transition focus:border-[#2f6b6b]"
-              />
-              <input
-                type="email"
-                name="email"
-                value={form.email}
-                onChange={handleChange}
-                placeholder="Your email"
-                required
-                className="w-full rounded-xl border border-[#d9e0e8] bg-[#fbfcfe] px-4 py-3 text-[#333] outline-none transition focus:border-[#2f6b6b]"
-              />
-              <input
-                type="text"
-                name="subject"
-                value={form.subject}
-                onChange={handleChange}
-                placeholder="Subject"
-                className="w-full rounded-xl border border-[#d9e0e8] bg-[#fbfcfe] px-4 py-3 text-[#333] outline-none transition focus:border-[#2f6b6b]"
-              />
-              <textarea
-                name="message"
-                value={form.message}
-                onChange={handleChange}
-                placeholder="Write your message..."
-                rows="5"
-                required
-                className="w-full resize-none rounded-xl border border-[#d9e0e8] bg-[#fbfcfe] px-4 py-3 text-[#333] outline-none transition focus:border-[#2f6b6b]"
-              />
-              <button
-                type="submit"
-                disabled={isSending}
-                className="inline-block rounded-full border border-[#2f6b6b] bg-[#2f6b6b] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#255757] disabled:cursor-not-allowed disabled:opacity-70"
-              >
-                {isSending ? "Sending..." : "Send a Message"}
-              </button>
+              <motion.div variants={createFadeInUp(0.24, 18)}>
+                <input
+                  type="text"
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
+                  placeholder="Your name"
+                  required
+                  className={`w-full rounded-xl border px-4 py-3 outline-none transition ${
+                    isDark
+                      ? "border-white/10 bg-[#111c31] text-white placeholder:text-slate-400 focus:border-cyan-300"
+                      : "border-[#d9e0e8] bg-[#fbfcfe] text-[#333] focus:border-[#2f6b6b]"
+                  }`}
+                />
+              </motion.div>
+              <motion.div variants={createFadeInUp(0.3, 18)}>
+                <input
+                  type="email"
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  placeholder="Your email"
+                  required
+                  className={`w-full rounded-xl border px-4 py-3 outline-none transition ${
+                    isDark
+                      ? "border-white/10 bg-[#111c31] text-white placeholder:text-slate-400 focus:border-cyan-300"
+                      : "border-[#d9e0e8] bg-[#fbfcfe] text-[#333] focus:border-[#2f6b6b]"
+                  }`}
+                />
+              </motion.div>
+              <motion.div variants={createFadeInUp(0.36, 18)}>
+                <input
+                  type="text"
+                  name="subject"
+                  value={form.subject}
+                  onChange={handleChange}
+                  placeholder="Subject"
+                  className={`w-full rounded-xl border px-4 py-3 outline-none transition ${
+                    isDark
+                      ? "border-white/10 bg-[#111c31] text-white placeholder:text-slate-400 focus:border-cyan-300"
+                      : "border-[#d9e0e8] bg-[#fbfcfe] text-[#333] focus:border-[#2f6b6b]"
+                  }`}
+                />
+              </motion.div>
+              <motion.div variants={createFadeInUp(0.42, 18)}>
+                <textarea
+                  name="message"
+                  value={form.message}
+                  onChange={handleChange}
+                  placeholder="Write your message..."
+                  rows="5"
+                  required
+                  className={`w-full resize-none rounded-xl border px-4 py-3 outline-none transition ${
+                    isDark
+                      ? "border-white/10 bg-[#111c31] text-white placeholder:text-slate-400 focus:border-cyan-300"
+                      : "border-[#d9e0e8] bg-[#fbfcfe] text-[#333] focus:border-[#2f6b6b]"
+                  }`}
+                />
+              </motion.div>
+              <motion.div variants={createFadeInUp(0.5, 18)}>
+                <button
+                  type="submit"
+                  disabled={isSending}
+                  className={`inline-block rounded-full border px-6 py-3 text-sm font-semibold text-white transition disabled:cursor-not-allowed disabled:opacity-70 ${
+                    isDark
+                      ? "border-cyan-400 bg-cyan-500 hover:bg-cyan-400"
+                      : "border-[#2f6b6b] bg-[#2f6b6b] hover:bg-[#255757]"
+                  }`}
+                >
+                  {isSending ? "Sending..." : "Send a Message"}
+                </button>
+              </motion.div>
               {status.text && (
-                <p
+                <motion.p
+                  variants={createFadeInUp(0.56, 14)}
                   className={`text-sm font-medium ${
-                    status.type === "success" ? "text-[#2f6b6b]" : "text-[#2f6b6b]"
+                    status.type === "success"
+                      ? isDark
+                        ? "text-cyan-300"
+                        : "text-[#2f6b6b]"
+                      : "text-[#ef4444]"
                   }`}
                 >
                   {status.text}
-                </p>
+                </motion.p>
               )}
             </form>
           </motion.div>
         </motion.div>
-      </div>
+      </motion.div>
     </motion.div>
   );
 }

@@ -15,9 +15,6 @@ export default function Experience() {
       exit={pageTransition.exit}
       transition={pageTransition.transition}
     >
-      <div className="pointer-events-none absolute -top-28 -left-24 h-80 w-80 rounded-full bg-[#2f6b6b]/10 blur-3xl" />
-      <div className="pointer-events-none absolute -right-24 top-56 h-72 w-72 rounded-full bg-[#1f2937]/10 blur-3xl" />
-
       <div className="relative mx-auto max-w-6xl">
         <div className="px-5 pt-24">
           <div className="py-10 text-center">

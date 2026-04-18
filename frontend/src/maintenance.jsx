@@ -54,12 +54,12 @@ function Maintenance() {
             transition={{ delay: 0.4, duration: 0.45 }}
             className="mt-8 flex flex-wrap items-center justify-center gap-3"
           >
-            <a
+            {/* <a
               href="/"
               className="rounded-xl bg-[#a3262e] px-6 py-3 font-semibold text-white shadow-md shadow-[#a3262e]/30 transition hover:-translate-y-1"
             >
               Back To Home
-            </a>
+            </a> */}
             <a
               href="mailto:johnleo.bruno@gmail.com"
               className="rounded-xl border border-[#a3262e] px-6 py-3 font-semibold text-[#a3262e] transition hover:bg-[#a3262e]/10"

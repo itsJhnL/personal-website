@@ -14,23 +14,30 @@ import { useTheme } from "../utils/theme";
 const buildSkillGroups = (skills = []) => {
   const groups = {
     frontend: {
-      title: "Front End",
-      description: "UI and client-side development",
-      eyebrow: "Interactive",
+      title: "Frontend",
+      description: "UI & client-side development",
+      eyebrow: "Client Side",
       accent: "from-[#0f766e] via-[#14b8a6] to-[#67e8f9]",
       surface: "from-[#effcf9] via-[#ffffff] to-[#eef7ff]",
       chip: "border-[#b8ebe2] bg-white/80 text-[#155e59]",
-      glow: "bg-[#14b8a6]/15",
       items: [],
     },
     backend: {
       title: "Backend",
-      description: "Logic, APIs, and databases",
-      eyebrow: "Scalable",
+      description: "APIs & server-side logic",
+      eyebrow: "Server Side",
       accent: "from-[#1d4ed8] via-[#3b82f6] to-[#93c5fd]",
       surface: "from-[#eff6ff] via-[#ffffff] to-[#f8fbff]",
       chip: "border-[#cfe0ff] bg-white/80 text-[#1e3a8a]",
-      glow: "bg-[#3b82f6]/15",
+      items: [],
+    },
+    database: {
+      title: "Databases",
+      description: "Storage, queries, and data services",
+      eyebrow: "Data Layer",
+      accent: "from-[#b45309] via-[#f59e0b] to-[#fde68a]",
+      surface: "from-[#fffbeb] via-[#ffffff] to-[#fff8e1]",
+      chip: "border-[#f4ddb2] bg-white/80 text-[#92400e]",
       items: [],
     },
     tools: {
@@ -40,7 +47,6 @@ const buildSkillGroups = (skills = []) => {
       accent: "from-[#9333ea] via-[#c084fc] to-[#f0abfc]",
       surface: "from-[#faf5ff] via-[#ffffff] to-[#fff7fb]",
       chip: "border-[#ecd4ff] bg-white/80 text-[#6b21a8]",
-      glow: "bg-[#c084fc]/15",
       items: [],
     },
   };
@@ -95,8 +101,8 @@ export default function Services() {
               isDark ? "text-[#c7d2e0]" : "text-[#667085]"
             }`}
           >
-            A clear view of the tools I use across frontend development,
-            backend systems, and delivery workflow.
+            A cleaner breakdown of the technologies I use across frontend,
+            backend, databases, and workflow.
           </p>
         </motion.div>
 
@@ -107,21 +113,11 @@ export default function Services() {
           viewport={{ once: true, amount: 0.1 }}
           className="mt-14 grid gap-6 Tablet:grid-cols-2"
         >
-          {skillGroups.slice(0, 2).map((group, index) => (
+          {skillGroups.map((group, index) => (
             <motion.div key={group.title} variants={createScaleIn(0.14 + index * 0.08)}>
               <SkillGroup group={group} isDark={isDark} />
             </motion.div>
           ))}
-        </motion.div>
-
-        <motion.div
-          variants={createScaleIn(0.3)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.1 }}
-          className="mx-auto mt-6 max-w-2xl"
-        >
-          {skillGroups[2] && <SkillGroup group={skillGroups[2]} isDark={isDark} />}
         </motion.div>
       </motion.div>
     </motion.div>

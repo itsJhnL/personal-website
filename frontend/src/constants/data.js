@@ -200,78 +200,95 @@ export const defaultSiteContent = {
       { id: 1, desc: "CSS", iconKey: "css", category: "frontend" },
       {
         id: 2,
-        desc: "JavaScript / TypeScript",
-        iconKey: "typescript",
+        desc: "JavaScript",
+        iconKey: "javascript",
         category: "frontend",
       },
-      { id: 3, desc: "Tailwind", iconKey: "tailwind", category: "frontend" },
+      { id: 3, desc: "TypeScript", iconKey: "typescript", category: "frontend" },
       {
         id: 4,
-        desc: "ReactJS / NextJS",
-        iconKey: "nextjs",
+        desc: "React",
+        iconKey: "react",
         category: "frontend",
       },
-      {
-        id: 5,
-        desc: "React Native",
-        iconKey: "reactnative",
-        category: "frontend",
-      },
+      { id: 5, desc: "Tailwind CSS", iconKey: "tailwind", category: "frontend" },
       {
         id: 6,
-        desc: "Dart / Flutter (Learning)",
-        iconKey: "flutter",
-        category: "frontend",
-      },
-      {
-        id: 7,
-        desc: "JavaScript/TypeScript",
-        iconKey: "javascript",
+        desc: "Node.js",
+        iconKey: "nodejs",
         category: "backend",
       },
-      { id: 8, desc: "ExpressJS", iconKey: "express", category: "backend" },
-      { id: 9, desc: "NestJS", iconKey: "nestjs", category: "backend" },
+      { id: 7, desc: "Express.js", iconKey: "express", category: "backend" },
+      {
+        id: 8,
+        desc: "REST APIs",
+        iconKey: "restapi",
+        category: "backend",
+      },
+      {
+        id: 9,
+        desc: "Authentication (JWT basics)",
+        iconKey: "auth",
+        category: "backend",
+      },
       {
         id: 10,
+        desc: "MySQL",
+        iconKey: "mysql",
+        category: "database",
+      },
+      {
+        id: 11,
         desc: "PostgreSQL",
         iconKey: "postgresql",
-        category: "backend",
+        category: "database",
       },
-      { id: 11, desc: "MongoDB", iconKey: "mongodb", category: "backend" },
-      { id: 12, desc: "Firebase", iconKey: "firebase", category: "backend" },
-      { id: 13, desc: "API", iconKey: "api", category: "backend" },
-      { id: 14, desc: "REST API", iconKey: "restapi", category: "backend" },
-      { id: 15, desc: "AJAX", iconKey: "ajax", category: "backend" },
-      { id: 16, desc: "Git", iconKey: "git", category: "tools" },
+      {
+        id: 12,
+        desc: "MongoDB",
+        iconKey: "mongodb",
+        category: "database",
+      },
+      {
+        id: 13,
+        desc: "Firebase",
+        iconKey: "firebase",
+        category: "database",
+      },
+      {
+        id: 14,
+        desc: "Supabase",
+        iconKey: "supabase",
+        category: "database",
+      },
+      {
+        id: 15,
+        desc: "Git",
+        iconKey: "git",
+        category: "tools",
+      },
+      {
+        id: 16,
+        desc: "Figma",
+        iconKey: "figma",
+        category: "tools",
+      },
       {
         id: 17,
-        desc: "GitHub / GitLab / Bitbucket",
-        iconKey: "github",
-        category: "tools",
-      },
-      { id: 18, desc: "Postman", iconKey: "postman", category: "tools" },
-      {
-        id: 19,
-        desc: "Socket.IO",
-        iconKey: "socketio",
-        category: "tools",
-      },
-      {
-        id: 20,
-        desc: "CI/CD Tools",
-        iconKey: "cicd",
-        category: "tools",
-      },
-      {
-        id: 21,
         desc: "Axios",
         iconKey: "axios",
         category: "tools",
       },
       {
-        id: 22,
-        desc: "Figma / Sketch",
-        iconKey: "figma",
+        id: 18,
+        desc: "CI/CD Tools",
+        iconKey: "cicd",
+        category: "tools",
+      },
+      {
+        id: 19,
+        desc: "Socket.IO",
+        iconKey: "socketio",
         category: "tools",
       },
     ],
@@ -362,6 +379,7 @@ const techStackIcons = {
   css: <FaCss3Alt size={35} />,
   javascript: <SiJavascript size={35} />,
   typescript: <SiTypescript size={35} />,
+  nodejs: <FaServer size={35} />,
   react: <FaReact size={35} />,
   nextjs: <SiNextDotJs size={35} />,
   reactnative: <SiReact size={35} />,
@@ -377,6 +395,8 @@ const techStackIcons = {
   nestjs: <FaLayerGroup size={35} />,
   postgresql: <SiPostgresql size={35} />,
   mongodb: <SiMongodb size={35} />,
+  supabase: <FaServer size={35} />,
+  auth: <FaLayerGroup size={35} />,
   api: <FaServer size={35} />,
   restapi: <FaLayerGroup size={35} />,
   ajax: <SiJavascript size={35} />,
@@ -402,6 +422,25 @@ const contentIcons = {
   collaboration: <SiGooglemessages />,
 };
 
+const validTechCategories = new Set(["frontend", "backend", "database", "tools"]);
+
+const normalizeTechStackItem = (item, index) => {
+  const defaultItem = defaultSiteContent.about.techstacks[index];
+  const fallbackCategory = defaultItem?.category || "tools";
+  const fallbackIconKey = defaultItem?.iconKey || item.iconKey;
+  const fallbackDescription = defaultItem?.desc || item.desc;
+
+  return {
+    ...defaultItem,
+    ...item,
+    desc: fallbackDescription,
+    iconKey: fallbackIconKey,
+    category: validTechCategories.has(item?.category)
+      ? item.category
+      : fallbackCategory,
+  };
+};
+
 export const createSiteData = (content = defaultSiteContent) => ({
   ...content,
   hero: {
@@ -416,10 +455,17 @@ export const createSiteData = (content = defaultSiteContent) => ({
   },
   about: {
     ...content.about,
-    techstacks: content.about.techstacks.map((item) => ({
-      ...item,
-      icon: techStackIcons[item.iconKey] || null,
-    })),
+    techstacks: defaultSiteContent.about.techstacks.map((defaultItem, index) => {
+      const normalizedItem = normalizeTechStackItem(
+        content.about.techstacks?.[index] ?? defaultItem,
+        index
+      );
+
+      return {
+        ...normalizedItem,
+        icon: techStackIcons[normalizedItem.iconKey] || null,
+      };
+    }),
     mainSkills: content.about.mainSkills.map((item) => ({
       ...item,
       icon: contentIcons[item.iconKey] || null,
